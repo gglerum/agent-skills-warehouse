@@ -1,0 +1,26 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/finding.py",
+      "sha256": "07d5e4076234d2fdbe4e392ccc0e90e67e40faf7cb830cc619ba905e4ac93bbc"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/finding.sh",
+      "sha256": "0d7ee57544fc9870dea1ead05d4a0117fa5ad29148aff8d0df4be89be12d604e"
+    }
+  ],
+  "adaptations": [
+    "Parameterize directories, index files, finding id pattern, feedback prefix and the optional decisions link in a JSON configuration; rename user-test items to feedback items.",
+    "Translate generated headings, table columns and messages to English; keep severity/status vocabularies, group tables, the one-line finding rule and stale-overview checks.",
+    "Drop the repository-specific issue and test-report coupling; add README, configuration example and regression tests."
+  ],
+  "destination_hashes": {
+    "tools/finding-records/README.md": "cebf66b5df6ed7a7435da38a75aa1985b8c7836ab09d3139d4408b3548db3b77",
+    "tools/finding-records/findings.config.example.json": "b903fee36c7f03d7edf0e09e58ebf15fce8cdf7ca231ea933832a26e64b96425",
+    "tools/finding-records/findings.py": "871f0fdd3ccd2d0e1521d8581b00a6903e775cdfaa812f5fa676bcda54834925"
+  }
+}

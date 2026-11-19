@@ -1,0 +1,8 @@
+{
+  "self_exempt": ["tools/floor_guard.py"],
+  "named_suppressions": [
+    {"pattern": "@psalm-suppress\\s+([^*\\n]*)", "allowed": []}
+  ],
+  "constraints_file": "CONSTRAINTS.md",
+  "default_bases": ["origin/main", "main"]
+}

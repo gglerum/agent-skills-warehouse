@@ -43,6 +43,9 @@ def check():
         if p.suffix in ('.py', '.sh', '.php', '.md') and p.name != 'check.py':
             if re.search(r'/home/[A-Za-z0-9_.-]+/|/mnt/[a-z]/Users/', p.read_text(errors='replace')):
                 errors.append('machine-specific path: ' + str(p.relative_to(ROOT)))
+    for agent in sorted((ROOT / 'agents').glob('*.md')):
+        if not agent.name.endswith('.ORIGIN.md') and not (ROOT / 'agents' / (agent.stem + '.ORIGIN.md')).is_file():
+            errors.append(f'agents/{agent.name}: missing ORIGIN record')
     for family in ('tools', 'skills'):
         for folder in sorted((ROOT / family).iterdir()):
             if not folder.is_dir():
@@ -51,7 +54,7 @@ def check():
                 if not (folder / required).is_file():
                     errors.append(f'{folder.relative_to(ROOT)}: missing {required}')
     ledger = json.loads((ROOT / 'inventory.json').read_text())
-    if len(ledger['sources']) != 10 or len(ledger['groups']) != 30:
+    if len(ledger['sources']) != 11 or len(ledger['groups']) != 49:
         errors.append('initial source/group inventory is incomplete')
     for group in ledger['groups']:
         for path in group.get('represented_by', []):
@@ -78,7 +81,9 @@ def check():
         'container-status': ['status.py'], 'deployment-receipt': ['receipt.py'],
         'issue-session': ['issue_brief.py'], 'ux-workspace': ['check.py', 'sync.py', 'feedback.py'],
         'fixture-evidence': ['evidence.py'], 'lexical-search': ['search.py'],
-        'origin-drift': ['check.py'],
+        'origin-drift': ['check.py'], 'decision-records': ['decisions.py'], 'finding-records': ['findings.py'],
+        'design-register': ['register.py'], 'design-compare': ['compare.py'], 'floor-guard': ['floor_guard.py'],
+        'session-guards': ['workflow_guard.py', 'context_guard.py'],
     }
     # A relocated copy contains no source-project access and does not use a warehouse path.
     with tempfile.TemporaryDirectory(prefix='toolkit-relocation-') as temporary:

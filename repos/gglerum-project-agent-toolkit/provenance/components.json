@@ -1526,10 +1526,434 @@
       }
     ],
     "adaptations": [
-      "Adapt source-collection validation: static syntax, links, component provenance and relocated CLI entrypoints; no project scaffold imposed."
+      "Adapt source-collection validation: static syntax, links, component provenance and relocated CLI entrypoints; no project scaffold imposed.",
+      "Extended for the eleventh source: eleven sources and the current group count, relocated probes for the new tools, and an origin-record check for agent files."
     ],
     "destination_hashes": {
-      "scripts/check.py": "168c87a2943a1e5abce30afad29ac00979aadfc9e1d5e54e5bbd41ab40e76f77"
+      "scripts/check.py": "7edd1e8c9c4f45b0ee87da0e00025778ddba59985ebac23c59c810646cbab686"
+    }
+  },
+  "tools/decision-records": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/decision.py",
+        "sha256": "6233833dcfc05aaf832124b0f58a0023a3823409944a14df9050917bd6372619"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/decision.sh",
+        "sha256": "b5a919632225641a23b8ffe0c0cdb98fe4d7d3edad66212e4de0ce993cf6a5b4"
+      }
+    ],
+    "adaptations": [
+      "Parameterize id prefix, record and overview paths, tracker repository, reviewer login, comment marker and reference paths in a JSON configuration; remove all product, repository and language specific text.",
+      "Rename statuses and messages to English (decided, proposed, open, superseded); keep supersede/archive, never-reused ids, reference checking and generated-overview staleness checks.",
+      "Make mirror and strays optional (enabled only when a tracker repository is configured); keep the link-only section so decision text is never copied; allow a fake gh command for fixtures.",
+      "Add the configuration example, README and regression tests; no tracker call runs unless the consumer invokes mirror or strays."
+    ],
+    "destination_hashes": {
+      "tools/decision-records/README.md": "187c36a8dfdeba129f713a9f6f5cdb14277584e24901aa879fbeeeed4968d825",
+      "tools/decision-records/decisions.config.example.json": "a5ebb2c69748b16492c1ce4c0e8e4a2e00a069580082d701212c7cc9c7700f58",
+      "tools/decision-records/decisions.py": "f25590cc223a2dc4ed404f8617c9db35271861285656530c8e33a618bae3db32"
+    }
+  },
+  "tools/finding-records": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/finding.py",
+        "sha256": "07d5e4076234d2fdbe4e392ccc0e90e67e40faf7cb830cc619ba905e4ac93bbc"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/finding.sh",
+        "sha256": "0d7ee57544fc9870dea1ead05d4a0117fa5ad29148aff8d0df4be89be12d604e"
+      }
+    ],
+    "adaptations": [
+      "Parameterize directories, index files, finding id pattern, feedback prefix and the optional decisions link in a JSON configuration; rename user-test items to feedback items.",
+      "Translate generated headings, table columns and messages to English; keep severity/status vocabularies, group tables, the one-line finding rule and stale-overview checks.",
+      "Drop the repository-specific issue and test-report coupling; add README, configuration example and regression tests."
+    ],
+    "destination_hashes": {
+      "tools/finding-records/README.md": "cebf66b5df6ed7a7435da38a75aa1985b8c7836ab09d3139d4408b3548db3b77",
+      "tools/finding-records/findings.config.example.json": "b903fee36c7f03d7edf0e09e58ebf15fce8cdf7ca231ea933832a26e64b96425",
+      "tools/finding-records/findings.py": "871f0fdd3ccd2d0e1521d8581b00a6903e775cdfaa812f5fa676bcda54834925"
+    }
+  },
+  "tools/design-register": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/design/register.py",
+        "sha256": "07cb15bd2d4bc6281f0182655934d465798dc04bf9c2e085c93579a2c95e0cb9"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/design.sh",
+        "sha256": "272aae9b5d32ec6a0c39c0d7b29615a8401f7e9df7b9296262c9c9655dfd9a04"
+      }
+    ],
+    "adaptations": [
+      "Parameterize artifact, register, overview and decision directories, skipped files and the visible-code pattern in a JSON configuration; make decision-id validation optional.",
+      "Rename statuses and fields to English and neutral (proposed, approved, superseded, existing; design_ref; implementation); remove the legacy screens-file import and product-specific code patterns.",
+      "Keep frame ids, replaced_by/removed_because, find with an explicit NOT FOUND statement, for/show and generated-overview checks; add README, example configuration and regression tests."
+    ],
+    "destination_hashes": {
+      "tools/design-register/README.md": "ef0fd130c6b1ac6c621fe15571187c86f94626e4dab4257d611ccea492e84d1e",
+      "tools/design-register/register.config.example.json": "39142086aa32093ccb61c7ddeba364100c940e46c84b8cc976c0b3c98e3a1f66",
+      "tools/design-register/register.py": "a6ad50e0d349aab83bf84bb87bcb3af5e5aa65afc1dbbaf57bf1ef3f0370ab5b"
+    }
+  },
+  "tools/design-compare": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/design/design.py",
+        "sha256": "3344e51364801f1d62c81a5afe79c67b771e316ed1e859def6a3833549711df7"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/design.sh",
+        "sha256": "272aae9b5d32ec6a0c39c0d7b29615a8401f7e9df7b9296262c9c9655dfd9a04"
+      }
+    ],
+    "adaptations": [
+      "Replace project paths, viewport, container image, test account, application start and login steps with a JSON configuration, a command prefix for poppler and a session cookie file written by the consumer.",
+      "Rename the external design tool references to a neutral design export, rename targets to auth:/anon:, rename the screens-file key to design_page and make the baseline kinds free text.",
+      "Keep PDF text/box extraction, in-iframe measurement, matching with tolerances, side-by-side and difference image, baseline check and redirect warnings; remove the application proxy rewrites tied to one framework.",
+      "Add README, example configuration and screens file; cover the pure matching and baseline logic with tests. Browser and PDF paths need a real environment."
+    ],
+    "destination_hashes": {
+      "tools/design-compare/README.md": "6d577ba32083c0b824a06d81778e271917f0d1e5adb05fcf606103f828fbbeae",
+      "tools/design-compare/compare.config.example.json": "3abdbed927e88db755b7c55738100ee114a5dfd1d9f1cbff7c6b6c4b8d568216",
+      "tools/design-compare/compare.py": "0660bea4c0614021c5f525b723b3f8854073c3ceb00d6a0135d21056329bf5cd",
+      "tools/design-compare/screens.example.json": "3ec788033d6fe8091f4216f398dadcdd6cff92ff836662ca758c1d313fcf0515"
+    }
+  },
+  "tools/floor-guard": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/floor-guard.py",
+        "sha256": "8a3b75db2363d380389a11d73c06e5cd7793253682da2142e99fa66ca92e06b0"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "CONSTRAINTS.md",
+        "sha256": "c1fd35bda6153c9f897b45881cf51b6ed6ba71ddf513e6297195921da62e5665"
+      }
+    ],
+    "adaptations": [
+      "Move extensions, ignored paths, suppression, stub, skip and assertion patterns, test-file pattern, baseline extensions, exception-row pattern, allowed named suppressions and default bases into a JSON configuration with multi-language defaults.",
+      "Translate the threshold vocabulary and the constraints template to English and remove project rules, tool names and measured numbers; keep exit-code 2 for could-not-run and the print-only-the-token rule.",
+      "Add README, example configuration and regression tests with disposable Git repositories."
+    ],
+    "destination_hashes": {
+      "tools/floor-guard/CONSTRAINTS.example.md": "453da10386fa72008a7c9c9bccfb253c3e7968faa32bb4692ffbdfe8f2b976d5",
+      "tools/floor-guard/README.md": "dc6b48e7351fd9a26efd326a11ef73fb8acdde1c418c15c6e9869579782a6e51",
+      "tools/floor-guard/floor_guard.config.example.json": "31b5b0e6e75d59e8cbf307e368ecaa568c8fe96e34420092b66432e5609a1c04",
+      "tools/floor-guard/floor_guard.py": "6bb098f223a86806b97b0de4cd83bade967778dcf0e7fd049dea954d732a6cc0"
+    }
+  },
+  "tools/session-guards": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".claude/hooks/guard.py",
+        "sha256": "3cfebedf6d3000efa03278d2cfdfb06a7d612a33c8fe503ed7896046d899637f"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".claude/hooks/context-guard.sh",
+        "sha256": "baa643fe1769f5d2bade924fd916c7a587ce577609f3d37bff7ee3a183780237"
+      }
+    ],
+    "adaptations": [
+      "Remove dotenv protection (covered by the hooks bundle) and project state-file prefixes; make rules switchable and state-file prefixes configurable by environment.",
+      "Convert the shell-wrapped context guard into a Python script with configurable thresholds; translate messages to English and neutral wording.",
+      "Add README with example hook entries and regression tests; no hook is activated."
+    ],
+    "destination_hashes": {
+      "tools/session-guards/README.md": "a3aa43594131c9e7afb7f6e50bc9896e5ace8d58a542e0924c8995e52a951fa1",
+      "tools/session-guards/context_guard.py": "779e1aaf62f9c4d02fbf2d3b8039a614e95e3c6a63649903734efd3a6dd2707f",
+      "tools/session-guards/workflow_guard.py": "274d41226eee5a869c14d2986fe5821f21a3622e55344eed8b45be239a1a2549"
+    }
+  },
+  "tools/roadmap-board": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/board.sh",
+        "sha256": "548055a7732eed0277c0199a3cc03a74e70f7e23b7ee61a62c133c793f113829"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/issue-brief.sh",
+        "sha256": "efb4e03c3756d1c587f7a74e7770490cae55f41e3a7d57fc7a8542e015522836"
+      }
+    ],
+    "adaptations": [
+      "Replace repository, owner, project number, labels, wait line, statuses, epic prefix, code regex, skill and preflight command with a sourced configuration file.",
+      "Translate all text to English; replace hard-coded design-issue lists with a configured gate list and the board source field with a configured field; replace hard-coded decision, finding and design commands with configured commands.",
+      "Replace GraphQL and jq literals that embedded the repository with parameters; add README, configuration example and tests with a fake gh."
+    ],
+    "destination_hashes": {
+      "tools/roadmap-board/README.md": "f0e0c1be5bed3fb5ea2cc6412d63cc95776f16fbdf31061333676aec89579bf3",
+      "tools/roadmap-board/board.sh": "bab33891dc3f6500ea2d7b4eb7ca56343526652daba72bfba7c00c836f6acf35",
+      "tools/roadmap-board/preflight.sh": "34555bdb8cc394de0d05616aa218abea4d577b92929eecbd3ba11582cb0b9f70",
+      "tools/roadmap-board/roadmap.conf.example": "d359290343971f458c263ffb8f009b9f1d1fa65fee71f43c413974b4e4cd1463"
+    }
+  },
+  "tools/session-closeout": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/session-end.sh",
+        "sha256": "56fe19a31606c17f96f584e0b707eb411120970b48bb7f2b27f2cea8da98a39a"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/pr-status.sh",
+        "sha256": "c1420b57f120a090b5ccdc2f9b2e127833cf0d5585a87152b453bfe9fa3a1d95"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/log-step.sh",
+        "sha256": "a15b6b3d64df16a132a4970c991e3f40df8581b3fea65393c6d7559810075063"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/status.sh",
+        "sha256": "2e461449c47d4f91d84bc7fb6c206e943ca69078ad82bab4bd1ca37f135043e2"
+      }
+    ],
+    "adaptations": [
+      "Replace the fixed record checks, doc paths, board commands and report sections with configured lists in a sourced file; take the repository from the checkout.",
+      "Translate output to English, drop test-report and quality-tool sections tied to one stack, and generalize the log file path and step heading.",
+      "Add README, configuration example and tests with disposable Git repositories."
+    ],
+    "destination_hashes": {
+      "tools/session-closeout/README.md": "6c621d704733cf739e88853112b4454d5e4fe02fe06a22056f3bba85189a340f",
+      "tools/session-closeout/closeout.conf.example": "c637a53359b7d5f9dbba8d7fbddc716ec872c161b26b7f60d1f2eb47766d3edd",
+      "tools/session-closeout/log_step.sh": "ff55a8500eddc18c8c91b0651b375c669848f8b46d3df474c17831fd7b59a8ff",
+      "tools/session-closeout/pr_status.sh": "c87943413b541cea79a9e8461a55e32f33d9548f24b952137f43128967280631",
+      "tools/session-closeout/project_status.sh": "299fe04d46c3aa3dd21bb36d1fab4e29b80ff05463d3cff5319f7feccc25b739",
+      "tools/session-closeout/session_end.sh": "8fbf94c26409ff108de71151bbf101f9ef592605b5f333ec18ab5e279736b59f"
+    }
+  },
+  "tools/throwaway-container": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/devc.sh",
+        "sha256": "38591e9e3d05aa663dde60472c01c72c83a3630a3be758dec08f270b3e99cc16"
+      }
+    ],
+    "adaptations": [
+      "Replace the fixed image name with CONTAINER_IMAGE, make shared directories, runtime and extra arguments configurable, and add a dry-run mode.",
+      "Translate the documentation to English; keep host-user execution, git identity forwarding, safe.directory and worktree mounts."
+    ],
+    "destination_hashes": {
+      "tools/throwaway-container/README.md": "1ab41bea45a3bebc4d58f3e0b0b3258b42f21371f1e213fe15d6ce06accd64cf",
+      "tools/throwaway-container/run_in_container.sh": "0573b94b166bf0d05d061de8317982f09523324e31fe5bbdf51e08b145e1a909"
+    }
+  },
+  "tools/local-sonar": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "utils/sonar-local.sh",
+        "sha256": "033d57e584998c9ce6f9bd4ff067ffe09593f60728558417074b4b0174a80da4"
+      }
+    ],
+    "adaptations": [
+      "Replace project key, name, sources, tests, exclusions, port and image tags with environment variables; derive container and network names from the project key.",
+      "Generate the admin password with a private umask, keep the loopback-only binding and document that images are downloaded and containers started."
+    ],
+    "destination_hashes": {
+      "tools/local-sonar/README.md": "480dae9ebc4659824e6c436095365635b88577ecdda46ff274cdc0f4aa0960a4",
+      "tools/local-sonar/sonar_local.sh": "920ecd40f004c314961bfa9eb96bb21d7e9453df1d047bf6d9bda1238e4b8b22"
+    }
+  },
+  "tools/pr-conventions": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".github/workflows/no-closing-keywords.yml",
+        "sha256": "d596ac01e490edf8acc785d35bdf4a78c66d0d7f2703e7b27b0eb48145cb012f"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".github/pull_request_template.md",
+        "sha256": "dfc0b4b35afa06b0d0de0593e3cb62e593eab3de56ca78538a71f5ece93e84a6"
+      }
+    ],
+    "adaptations": [
+      "Translate the workflow comments, error message and template to English and remove project-specific checklist items and role names; keep the pattern, permissions and plain-shell approach.",
+      "Test the pattern against sample texts; the workflow is not enabled by copying."
+    ],
+    "destination_hashes": {
+      "tools/pr-conventions/README.md": "07f231baeb42b3595e11461259ffd5c8784b94ccd91e8f65b699c4ee0caa5dfb",
+      "tools/pr-conventions/no-closing-keywords.yml": "a2fa36d845de92a970cc925d025f03b57bd9dcb46ae1edbfcfb8227c59ddbbd3",
+      "tools/pr-conventions/pull_request_template.md": "b29637f5533c6c939be5c3739b7528e8bdfd3d0881282e50eb92aff1671e9be7"
+    }
+  },
+  "tools/security-scan-config": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".gitleaks.toml",
+        "sha256": "88c907dbb5ef1287b0d6e0330f24a4d6ab2e140c4f9769949fd847580263ac27"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".trivyignore",
+        "sha256": "02292336ac12328956a57d563671cdade65575b6992e98d87da4a22f0a0532b7"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "trivy.yaml",
+        "sha256": "d77d2c7441be2acd464e2525cfac54c8dca1be0217a0a26adccff1d810a9515f"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "zap.yaml",
+        "sha256": "fcf5317d734b6c48c2b7e7c07c99a8f3842a1d05370c4c8920b3a27a7469b04c"
+      }
+    ],
+    "adaptations": [
+      "Remove project-specific allowlist entries, directories, finding references and credentials examples; keep generic lock-file, vendored-directory, example-environment and test-password allowlists.",
+      "Rename to example files with explanatory comments and a README stating that no scanner is installed or run by copying."
+    ],
+    "destination_hashes": {
+      "tools/security-scan-config/README.md": "90d8bbd5c06865e5f1477aac7b54c79376b4b38408e9ee340af9f19ae8feefeb",
+      "tools/security-scan-config/gitleaks.example.toml": "0da1b51e955c4a119d50731746d1a7ff6308ea31eb768728ab07cec3150b0f46",
+      "tools/security-scan-config/trivy.example.yaml": "9c8f0d2c8629eaa352e71b17aa7d8041a22faaf6d47594b48fabcc18b123a484",
+      "tools/security-scan-config/trivyignore.example": "8d401fc0cb49f3645ddbf9e6bb836b6ff76dfe51ce5ae1f674729d4d82a7de5c",
+      "tools/security-scan-config/zap.example.yaml": "f9cefe69b4f02a73c3ee1a28f9bb0af7ac5c1fec8c4ef2152fc8b685c002f8b5"
+    }
+  },
+  "skills/record-keeping": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".claude/skills/work-issue/SKILL.md",
+        "sha256": "a75daa371b6633e711285729e4caf0fa8bdf350f7a55069d3555da28224adbc5"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": "docs/decisions/_intro.md",
+        "sha256": "09c6a0d892b6d94a33ddfc13441e6adc1419994bdb82c6a448eb2e11c60e9ee8"
+      }
+    ],
+    "adaptations": [
+      "Extract the single-source rule, supersession discipline, lookup-before-claiming rule and record-in-the-same-session rule from the project workflow skill; remove roadmap, repository and language specifics.",
+      "Rewrite as a standalone skill linking the record tools."
+    ],
+    "destination_hashes": {
+      "skills/record-keeping/SKILL.md": "defb77ddce5d1fb9dbf07f78c4f1888979c9e40c43fae2ed021a82736422125d"
+    }
+  },
+  "skills/roadmap-session": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".claude/skills/work-issue/SKILL.md",
+        "sha256": "a75daa371b6633e711285729e4caf0fa8bdf350f7a55069d3555da28224adbc5"
+      }
+    ],
+    "adaptations": [
+      "Rewrite the project workflow skill as a generic one-issue session: remove repository, board, language, stack and role specifics; replace hard-coded commands with the toolkit tools and consumer equivalents.",
+      "Keep the preflight-in-one-call, blocker, decision-issue, test-first, output-comparison, quality-gate, handoff and never-list structure; make publishing steps conditional on the consumer policy."
+    ],
+    "destination_hashes": {
+      "skills/roadmap-session/SKILL.md": "83a53c42e7377126d1d646eab74865480f1ba06f205560b5d24722f0a3a46a13"
+    }
+  },
+  "skills/design-conformance": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".claude/skills/work-issue/SKILL.md",
+        "sha256": "a75daa371b6633e711285729e4caf0fa8bdf350f7a55069d3555da28224adbc5"
+      },
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".claude/agents/design-reviewer.md",
+        "sha256": "e00cec0083eb61f3717712b5918c2fc0da917e95ad3030050f671ece0eb8fd7a"
+      }
+    ],
+    "adaptations": [
+      "Extract the screen and non-screen output comparison steps and the independent-reviewer rule from the project workflow skill and reviewer agent; remove product, tool and design-vendor names.",
+      "Rewrite as a standalone skill linking the compare, register and reviewer components."
+    ],
+    "destination_hashes": {
+      "skills/design-conformance/SKILL.md": "6ce65cedcb55a12fa57e1db1b3f1f421964fc9af7859731c12aed512346e9bde"
+    }
+  },
+  "agents/design-reviewer.md": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".claude/agents/design-reviewer.md",
+        "sha256": "e00cec0083eb61f3717712b5918c2fc0da917e95ad3030050f671ece0eb8fd7a"
+      }
+    ],
+    "adaptations": [
+      "Replace project commands, screen tables and role names with the toolkit compare tool and configuration-neutral wording; keep the leaf-worker, read-only, verifier-is-not-the-builder and PASS/ISSUES/BLOCKED_BY_SETUP rules."
+    ],
+    "destination_hashes": {
+      "agents/design-reviewer.md": "e212480613848ff418de8702bd4418c7de18504dc7bed64fdef4a04a16073087"
+    }
+  },
+  "agents/doubt-reviewer.md": {
+    "origins": [
+      {
+        "project": "source-project-k",
+        "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+        "path": ".claude/agents/doubt-reviewer.md",
+        "sha256": "5791d7432107b603742dcaef998bd9d20fe6f35901c953e14072246169e30dbe"
+      }
+    ],
+    "adaptations": [
+      "Remove project stack and language references and role names; keep the adversarial, read-only, evidence-or-suspected report format. The prompt derives from an MIT-licensed third-party skill; its licence is kept as agents/LICENSE-addyosmani."
+    ],
+    "destination_hashes": {
+      "agents/doubt-reviewer.md": "69829a152b29eed60e94522ce808324a60016901ff5115b5db770ef53fcec7e9"
     }
   }
 }

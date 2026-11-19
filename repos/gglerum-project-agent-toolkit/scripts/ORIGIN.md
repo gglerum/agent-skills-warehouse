@@ -9,5 +9,6 @@ The owner authorized copying useful material from the selected projects. This re
 ## Adaptations
 
 - Adapt source-collection validation: static syntax, links, component provenance and relocated CLI entrypoints; no project scaffold imposed.
+- Extended for the eleventh source: eleven sources and the current group count, relocated probes for the new tools, and an origin-record check for agent files.
 
 Keep this origin record and included licence files with the copied component. Exact source-file hashes distinguish working-copy material from a revision-only claim.

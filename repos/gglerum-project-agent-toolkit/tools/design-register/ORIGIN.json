@@ -1,0 +1,26 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/design/register.py",
+      "sha256": "07cb15bd2d4bc6281f0182655934d465798dc04bf9c2e085c93579a2c95e0cb9"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/design.sh",
+      "sha256": "272aae9b5d32ec6a0c39c0d7b29615a8401f7e9df7b9296262c9c9655dfd9a04"
+    }
+  ],
+  "adaptations": [
+    "Parameterize artifact, register, overview and decision directories, skipped files and the visible-code pattern in a JSON configuration; make decision-id validation optional.",
+    "Rename statuses and fields to English and neutral (proposed, approved, superseded, existing; design_ref; implementation); remove the legacy screens-file import and product-specific code patterns.",
+    "Keep frame ids, replaced_by/removed_because, find with an explicit NOT FOUND statement, for/show and generated-overview checks; add README, example configuration and regression tests."
+  ],
+  "destination_hashes": {
+    "tools/design-register/README.md": "ef0fd130c6b1ac6c621fe15571187c86f94626e4dab4257d611ccea492e84d1e",
+    "tools/design-register/register.config.example.json": "39142086aa32093ccb61c7ddeba364100c940e46c84b8cc976c0b3c98e3a1f66",
+    "tools/design-register/register.py": "a6ad50e0d349aab83bf84bb87bcb3af5e5aa65afc1dbbaf57bf1ef3f0370ab5b"
+  }
+}

@@ -8,9 +8,10 @@
     }
   ],
   "adaptations": [
-    "Adapt source-collection validation: static syntax, links, component provenance and relocated CLI entrypoints; no project scaffold imposed."
+    "Adapt source-collection validation: static syntax, links, component provenance and relocated CLI entrypoints; no project scaffold imposed.",
+    "Extended for the eleventh source: eleven sources and the current group count, relocated probes for the new tools, and an origin-record check for agent files."
   ],
   "destination_hashes": {
-    "scripts/check.py": "5c60bdb92bb3a00f45915d4855c14adbefa15dc77e6aa8a4bb27232e7585ef34"
+    "scripts/check.py": "7edd1e8c9c4f45b0ee87da0e00025778ddba59985ebac23c59c810646cbab686"
   }
 }

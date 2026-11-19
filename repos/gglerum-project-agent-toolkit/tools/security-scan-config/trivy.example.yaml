@@ -1,0 +1,21 @@
+# Example Trivy configuration: dependency vulnerabilities, secrets and misconfiguration in one SARIF report.
+scan:
+  scanners:
+    - vuln
+    - secret
+    - misconfig
+  # Must sit under `scan:`; at the top level Trivy ignores it without a warning
+  skip-dirs:
+    - node_modules
+    - vendor
+    - .git
+    - tests
+    - docs
+    - reports
+
+format: sarif
+output: reports/trivy.sarif
+
+pkg:
+  types:
+    - library

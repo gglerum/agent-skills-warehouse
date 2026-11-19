@@ -224,7 +224,8 @@
         "cursor-bundle-thermos",
         "cursor-bundle-agent-compatibility",
         "project-toolkit-skill-evidence-review",
-        "project-toolkit-tool-service-readers"
+        "project-toolkit-tool-service-readers",
+        "project-toolkit-agent-doubt-reviewer"
       ],
       "choice": "Choose lightweight checks or deeper multi-agent review according to project needs and available tools."
     },
@@ -250,7 +251,8 @@
         "cursor-cursor-team-kit-workflow-from-chats",
         "project-toolkit-skill-agent-writing",
         "project-toolkit-skill-session-review",
-        "project-toolkit-tool-session-analysis"
+        "project-toolkit-tool-session-analysis",
+        "project-toolkit-tool-session-guards"
       ],
       "choice": "Choose persistent project knowledge versus a session handoff; inspect transcript and output-location assumptions."
     },
@@ -357,6 +359,52 @@
         "ponytail-instruction-rule"
       ],
       "choice": "Always-on YAGNI policy with a deferred-shortcut ledger. It competes with the simplify entries (addy-code-simplification, cursor-pstack-no-comments) and with project test or architecture policies; choose one policy and avoid stacking them."
+    },
+    {
+      "task": "Record decisions, findings, feedback and design artifacts",
+      "assets": [
+        "project-toolkit-tool-decision-records",
+        "project-toolkit-tool-finding-records",
+        "project-toolkit-tool-design-register",
+        "project-toolkit-skill-record-keeping",
+        "addy-documentation-and-adrs"
+      ],
+      "choice": "Use file-per-record tools when a generated overview and a failing check should prevent stale copies. The decision tool's tracker commands write to a live tracker; use ADR guidance when no tooling is wanted."
+    },
+    {
+      "task": "Hold the quality floor against silent lowering",
+      "assets": [
+        "project-toolkit-tool-floor-guard",
+        "addy-constraint-driven-development",
+        "project-toolkit-tool-pr-conventions",
+        "project-toolkit-tool-security-scan-config",
+        "project-toolkit-tool-local-sonar"
+      ],
+      "choice": "The floor guard is a runnable, language-neutral check of the constraints contract; combine it with CI conventions and scanners the project can run. A scan that did not run is not a clean result."
+    },
+    {
+      "task": "Run a roadmap session and close it out",
+      "assets": [
+        "project-toolkit-skill-roadmap-session",
+        "project-toolkit-tool-roadmap-board",
+        "project-toolkit-tool-session-closeout",
+        "project-toolkit-tool-throwaway-container",
+        "project-toolkit-tool-session-guards",
+        "project-toolkit-skill-issue-session",
+        "project-toolkit-skill-session-finish"
+      ],
+      "choice": "Choose the full roadmap session when work is driven by a GitHub Project; use the lighter issue-session and session-finish skills otherwise. Tracker writes and hook installation need the consumer's authorization."
+    },
+    {
+      "task": "Compare screens with a design export",
+      "assets": [
+        "project-toolkit-tool-design-compare",
+        "project-toolkit-skill-design-conformance",
+        "project-toolkit-agent-design-reviewer",
+        "project-toolkit-tool-design-register",
+        "project-toolkit-tool-ux-workspace"
+      ],
+      "choice": "Needs Chrome and poppler; report a setup failure as blocked, not as a pass. The reviewer is always a different spawn from the builder."
     }
   ],
   "assets": [
@@ -7460,6 +7508,7 @@
         "repos/gglerum-project-agent-toolkit/tests",
         "repos/gglerum-project-agent-toolkit/tools",
         "repos/gglerum-project-agent-toolkit/skills",
+        "repos/gglerum-project-agent-toolkit/agents",
         "repos/gglerum-project-agent-toolkit/references",
         "repos/gglerum-project-agent-toolkit/provenance",
         "repos/gglerum-project-agent-toolkit/inventory.json",
@@ -7774,6 +7823,311 @@
         "repos/dietrichgebert-ponytail/tests"
       ],
       "alternatives": []
+    },
+    {
+      "id": "project-toolkit-tool-decision-records",
+      "name": "decision-records",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/decision-records/README.md",
+      "kind": "tool bundle",
+      "group": "Context, learning and handoff",
+      "description": "One file per decision with a generated overview, supersession archive, reference checks and optional tracker links; the record is the single source of truth.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/decision-records"
+      ],
+      "notes": "Read this bundle's README before use. mirror and strays call an authenticated gh against the configured tracker; run them only when authorized. Source-project paths are not required.",
+      "related": [
+        "repos/gglerum-project-agent-toolkit/tools/session-closeout"
+      ]
+    },
+    {
+      "id": "project-toolkit-tool-finding-records",
+      "name": "finding-records",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/finding-records/README.md",
+      "kind": "tool bundle",
+      "group": "Context, learning and handoff",
+      "description": "Review findings and user-feedback items as one file per item with grouped generated overviews and a failing check on drift.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/finding-records"
+      ],
+      "notes": "Read this bundle's README before use. Review the origin and any optional runtime before executing; source-project paths are not required.",
+      "related": [
+        "repos/gglerum-project-agent-toolkit/tools/session-closeout"
+      ]
+    },
+    {
+      "id": "project-toolkit-tool-design-register",
+      "name": "design-register",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/design-register/README.md",
+      "kind": "tool bundle",
+      "group": "Context, learning and handoff",
+      "description": "Register of wireframes and prototypes with frame ids, issue and decision links, a find command that states what it searched, and a check that fails on drift.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/design-register"
+      ],
+      "notes": "Read this bundle's README before use. Review the origin and any optional runtime before executing; source-project paths are not required.",
+      "related": [
+        "repos/gglerum-project-agent-toolkit/tools/decision-records"
+      ]
+    },
+    {
+      "id": "project-toolkit-tool-design-compare",
+      "name": "design-compare",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/design-compare/README.md",
+      "kind": "tool bundle",
+      "group": "Test and verify",
+      "description": "Compare built screens with pages of a design PDF: browser measurement, text and box matching with tolerances, side-by-side and difference images, and a regression baseline.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/design-compare"
+      ],
+      "notes": "Read this bundle's README before use. Needs Chrome/Chromium and poppler; it starts a loopback server on the configured root. Browser and PDF paths are not covered by the fixture tests."
+    },
+    {
+      "id": "project-toolkit-tool-floor-guard",
+      "name": "floor-guard",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/floor-guard/README.md",
+      "kind": "tool bundle",
+      "group": "Review and security",
+      "description": "Diff-scoped guard that fails a change that lowers the quality bar: new suppressions, skipped or deleted tests, lost assertions, unfinished work, growing baselines and weakened constraints.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/floor-guard"
+      ],
+      "notes": "Read this bundle's README before use. Review the origin and any optional runtime before executing; source-project paths are not required."
+    },
+    {
+      "id": "project-toolkit-tool-session-guards",
+      "name": "session-guards",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/session-guards/README.md",
+      "kind": "tool bundle",
+      "group": "Context, learning and handoff",
+      "description": "Optional hook scripts that block redundant cd and bare sleep, block repeated inline file rewrites, nudge away from file dumps, and warn when session context passes a split point.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/session-guards"
+      ],
+      "notes": "Read this bundle's README before use. No hook is activated by copying; check the runtime's hook semantics before installing.",
+      "related": [
+        "repos/gglerum-project-agent-toolkit/tools/hooks"
+      ]
+    },
+    {
+      "id": "project-toolkit-tool-roadmap-board",
+      "name": "roadmap-board",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/roadmap-board/README.md",
+      "kind": "tool bundle",
+      "group": "Ship and maintain",
+      "description": "Board helper for a GitHub Project: next unblocked issue, one-call preflight, waiting-on marking, handoff files and session prompts.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/roadmap-board"
+      ],
+      "notes": "Read this bundle's README before use. Most commands call gh against a live project; status and waitingon write to the tracker and need authorization.",
+      "related": [
+        "repos/gglerum-project-agent-toolkit/tools/decision-records",
+        "repos/gglerum-project-agent-toolkit/tools/finding-records",
+        "repos/gglerum-project-agent-toolkit/tools/design-register"
+      ]
+    },
+    {
+      "id": "project-toolkit-tool-session-closeout",
+      "name": "session-closeout",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/session-closeout/README.md",
+      "kind": "tool bundle",
+      "group": "Ship and maintain",
+      "description": "One-call session-end check of records, working tree, upstream and touched docs; pull request status with failed-check log tails; status from tools; numbered process-log steps.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/session-closeout"
+      ],
+      "notes": "Read this bundle's README before use. Configured commands run through bash -c; configure only trusted commands.",
+      "related": [
+        "repos/gglerum-project-agent-toolkit/tools/decision-records",
+        "repos/gglerum-project-agent-toolkit/tools/finding-records",
+        "repos/gglerum-project-agent-toolkit/tools/design-register",
+        "repos/gglerum-project-agent-toolkit/tools/roadmap-board"
+      ]
+    },
+    {
+      "id": "project-toolkit-tool-throwaway-container",
+      "name": "throwaway-container",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/throwaway-container/README.md",
+      "kind": "tool bundle",
+      "group": "Ship and maintain",
+      "description": "Run one command in a disposable container as the host user with the host git identity, including worktree mounts and a dry-run mode.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/throwaway-container"
+      ],
+      "notes": "Read this bundle's README before use. It mounts the working directory read-write; the project supplies the image."
+    },
+    {
+      "id": "project-toolkit-tool-local-sonar",
+      "name": "local-sonar",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/local-sonar/README.md",
+      "kind": "tool bundle",
+      "group": "Review and security",
+      "description": "Scan a project with a disposable loopback SonarQube server and print open issues and security hotspots.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/local-sonar"
+      ],
+      "notes": "Read this bundle's README before use. It pulls images, starts containers and uploads source to a local server; run it only when authorized."
+    },
+    {
+      "id": "project-toolkit-tool-pr-conventions",
+      "name": "pr-conventions",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/pr-conventions/README.md",
+      "kind": "tool bundle",
+      "group": "Ship and maintain",
+      "description": "CI check that fails a pull request that closes issues by keyword, plus a pull request template with evidence and not-verified sections.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/pr-conventions"
+      ],
+      "notes": "Copying does not enable CI; adding the workflow is a separate, authorized change."
+    },
+    {
+      "id": "project-toolkit-tool-security-scan-config",
+      "name": "security-scan-config",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/tools/security-scan-config/README.md",
+      "kind": "tool bundle",
+      "group": "Review and security",
+      "description": "Starting configuration for gitleaks, Trivy and OWASP ZAP with narrow allowlists and an accepted-findings convention.",
+      "profile": "project-toolkit-tool",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/tools/security-scan-config"
+      ],
+      "notes": "Files only; no scanner is installed or run. Check options against the installed tool versions."
+    },
+    {
+      "id": "project-toolkit-skill-record-keeping",
+      "name": "record-keeping",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/skills/record-keeping/SKILL.md",
+      "kind": "skill",
+      "group": "Context, learning and handoff",
+      "description": "Record decisions, findings, feedback and design artifacts as one file per item with generated overviews and failing checks, and look them up before claiming anything.",
+      "profile": "project-toolkit-skill",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/skills/record-keeping",
+        "repos/gglerum-project-agent-toolkit/tools/decision-records",
+        "repos/gglerum-project-agent-toolkit/tools/finding-records",
+        "repos/gglerum-project-agent-toolkit/tools/design-register",
+        "repos/gglerum-project-agent-toolkit/tools/session-closeout",
+        "repos/gglerum-project-agent-toolkit/tools/roadmap-board"
+      ],
+      "notes": "Adapted workflow; linked helpers/references are included in this copy bundle. Source project permissions and fixed thresholds do not transfer.",
+      "alternatives": [
+        "addy-documentation-and-adrs"
+      ]
+    },
+    {
+      "id": "project-toolkit-skill-roadmap-session",
+      "name": "roadmap-session",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/skills/roadmap-session/SKILL.md",
+      "kind": "skill",
+      "group": "Ship and maintain",
+      "description": "Run one roadmap session end to end: single preflight call, test-first work, quality gate, records, pull request conventions and a written handoff.",
+      "profile": "project-toolkit-skill",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/skills/roadmap-session",
+        "repos/gglerum-project-agent-toolkit/skills/record-keeping",
+        "repos/gglerum-project-agent-toolkit/skills/design-conformance",
+        "repos/gglerum-project-agent-toolkit/skills/bounded-debugging",
+        "repos/gglerum-project-agent-toolkit/skills/dependency-change",
+        "repos/gglerum-project-agent-toolkit/tools/roadmap-board",
+        "repos/gglerum-project-agent-toolkit/tools/session-closeout",
+        "repos/gglerum-project-agent-toolkit/tools/worktrees",
+        "repos/gglerum-project-agent-toolkit/tools/throwaway-container",
+        "repos/gglerum-project-agent-toolkit/tools/floor-guard",
+        "repos/gglerum-project-agent-toolkit/tools/pr-conventions",
+        "repos/gglerum-project-agent-toolkit/tools/decision-records",
+        "repos/gglerum-project-agent-toolkit/tools/finding-records",
+        "repos/gglerum-project-agent-toolkit/tools/design-register",
+        "repos/gglerum-project-agent-toolkit/tools/design-compare",
+        "repos/gglerum-project-agent-toolkit/agents/design-reviewer.md",
+        "repos/gglerum-project-agent-toolkit/agents/design-reviewer.ORIGIN.md",
+        "repos/gglerum-project-agent-toolkit/agents/design-reviewer.ORIGIN.json"
+      ],
+      "notes": "Adapted workflow; linked helpers/references are included in this copy bundle. Source project permissions and fixed thresholds do not transfer.",
+      "alternatives": [
+        "project-toolkit-skill-issue-session",
+        "project-toolkit-skill-session-finish"
+      ]
+    },
+    {
+      "id": "project-toolkit-skill-design-conformance",
+      "name": "design-conformance",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/skills/design-conformance/SKILL.md",
+      "kind": "skill",
+      "group": "Test and verify",
+      "description": "Keep built screens conforming to a design export: compare, hold a baseline, register artifacts and have a different reviewer judge the result.",
+      "profile": "project-toolkit-skill",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/skills/design-conformance",
+        "repos/gglerum-project-agent-toolkit/tools/design-compare",
+        "repos/gglerum-project-agent-toolkit/tools/design-register",
+        "repos/gglerum-project-agent-toolkit/tools/decision-records",
+        "repos/gglerum-project-agent-toolkit/agents/design-reviewer.md",
+        "repos/gglerum-project-agent-toolkit/agents/design-reviewer.ORIGIN.md",
+        "repos/gglerum-project-agent-toolkit/agents/design-reviewer.ORIGIN.json"
+      ],
+      "notes": "Adapted workflow; linked helpers/references are included in this copy bundle. Source project permissions and fixed thresholds do not transfer.",
+      "alternatives": [
+        "project-toolkit-skill-ux-validation"
+      ]
+    },
+    {
+      "id": "project-toolkit-agent-design-reviewer",
+      "name": "design-reviewer",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/agents/design-reviewer.md",
+      "kind": "agent persona",
+      "group": "Review and security",
+      "description": "Read-only reviewer that checks one screen against a design export with the compare tool; never the builder of that screen; reports PASS, ISSUES or BLOCKED_BY_SETUP with evidence.",
+      "profile": "project-toolkit-reference",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/agents/design-reviewer.md",
+        "repos/gglerum-project-agent-toolkit/agents/design-reviewer.ORIGIN.md",
+        "repos/gglerum-project-agent-toolkit/agents/design-reviewer.ORIGIN.json",
+        "repos/gglerum-project-agent-toolkit/tools/design-compare"
+      ],
+      "notes": "Subagent definition: adapt tools and model to the runtime. Needs the design-compare tool and its configuration."
+    },
+    {
+      "id": "project-toolkit-agent-doubt-reviewer",
+      "name": "doubt-reviewer",
+      "source": "project-toolkit",
+      "path": "repos/gglerum-project-agent-toolkit/agents/doubt-reviewer.md",
+      "kind": "agent persona",
+      "group": "Review and security",
+      "description": "Read-only adversarial reviewer that gets an artifact and its contract and reports only what is wrong, marking each issue proven or suspected.",
+      "profile": "project-toolkit-reference",
+      "copy": [
+        "repos/gglerum-project-agent-toolkit/agents/doubt-reviewer.md",
+        "repos/gglerum-project-agent-toolkit/agents/doubt-reviewer.ORIGIN.md",
+        "repos/gglerum-project-agent-toolkit/agents/doubt-reviewer.ORIGIN.json",
+        "repos/gglerum-project-agent-toolkit/agents/LICENSE-addyosmani"
+      ],
+      "notes": "Subagent definition: adapt tools and model to the runtime. Prompt derived from an MIT-licensed skill; keep LICENSE-addyosmani."
     }
   ],
   "exclusions": [
@@ -8081,8 +8435,8 @@
       },
       "project-toolkit": {
         "revision": "warehouse-owned",
-        "tree_sha256": "c2726d75cc13b51e2828888cf986c00d71aa47f7943f2388d3f1ed438c3214ee",
-        "files": 233
+        "tree_sha256": "d7181a54129bc172551223b74a1b63f54064dddbb40a1d4b4bfaeb20957d6646",
+        "files": 319
       },
       "ponytail": {
         "revision": "96608e078b2d5ea607c5c3b8b5a54d1c1fba6846",
@@ -8437,55 +8791,55 @@
       "cursor-tooling-cursor-plugin": "c51100b2e710084d88dd7d6fe8bdd69f3de0654701b4ff1f07e27b55bd5e092d",
       "cursor-benny": "1060189ae45f94c9cb521e37d53701c94bcff84c08f731e7f12fcc18993cc18d",
       "addy-tooling-agents-plugin": "25ae826d4d265e60acd72a60f6b58548063618af80d0a260c73c671969f43790",
-      "project-toolkit-tool-code-navigation": "dc5869b7cfa99577719867ea8d7f0402e9284e8d0478ce22cb1b6e0588e03239",
-      "project-toolkit-tool-container-status": "dfc0f1db680ec115d26bad042f582d628e1256349e98f8a6b01471329dd1a030",
-      "project-toolkit-tool-conversation-index": "023d16ef284b91ad65480fd5bb8730c658c840bb43ac60d9d9df0019173c07bf",
-      "project-toolkit-tool-deployment-receipt": "a1ce77e44c5f34d26f1e9f0bce48009c0bc022b8e14b81d467a84a88a22b7fde",
-      "project-toolkit-tool-exact-patch": "34a568f621c7569071037b0451f8b2722e7ccfc0867d1d446e38198beb672386",
-      "project-toolkit-tool-fixture-evidence": "29410fdca52d60b691abe64c837beead1f012fbfa2ff497ab5423370d341fba9",
-      "project-toolkit-tool-git-checks": "dc55fda7b4b7fece2db8afb79eed47585a991ace5daa924b2adfdbbcd06acffc",
-      "project-toolkit-tool-hooks": "06b76ad192ada68caa2d6a77e845f16d4e74a7796b27126b319d216218670285",
-      "project-toolkit-tool-issue-session": "c6bf9f2aea53c5be656fc8453ad0d09324f16a2897d4b954d6049036c7b1d9a0",
-      "project-toolkit-tool-laravel-tests": "68ccafc089c497e4684414ff3bdbb8c96fbb375126d61e3c50f3749ec6c6a5c2",
-      "project-toolkit-tool-lexical-search": "5a5b2d05954d79728a38568dc8a1db6fb41ca4396c45955171237b640e81f857",
-      "project-toolkit-tool-origin-drift": "32bd817eb99dc21bbb30443985b822288c6127e1a535450de2aab73ad8a067bc",
-      "project-toolkit-tool-php-quality-config": "89bf6d7f4a9809ac5333a0dbb37faa55dee1eedacd491c55e7c2fe856a4a8b06",
-      "project-toolkit-tool-project-checks": "c2930ad25339ba1e61a184128e2e3c04496c3084310efdc7523e0c09571b2670",
-      "project-toolkit-tool-project-state": "3d0d015009c0dc79f25faacad63616b5f2156b9d7db7aad5c81c99e31938c7cd",
-      "project-toolkit-tool-reference-library": "e8d292eff04459d049eeff3b6e974cfaff5075fe38dd64f4504218df8ad06836",
-      "project-toolkit-tool-report-converters": "ce9a07e00d5417c29441c0334261b6e51cdf8b35ec19f74ea67909c71dbc78df",
-      "project-toolkit-tool-service-readers": "3dc3651e8dccf53a5fc7c86326aa67f6c74920a515f82de78ec23416c3ffa93e",
-      "project-toolkit-tool-session-analysis": "57d7c5ca74e5e6324747eb1ecba231512e8957e1dfbb6cfb9e616c687f49ea8a",
-      "project-toolkit-tool-test-reports": "f32c615228a36e80d270be4598f14ed7bcb4c5a1284f10415bc02ab042598ed1",
-      "project-toolkit-tool-ux-workspace": "35741a0ed28790a839aea35898133ce96b1d9098d83741d26dc8c9c6157abec6",
-      "project-toolkit-tool-worktrees": "e79c1c6b66019013bab75accfd7e3787acf0adb0272adca409f55d06f5498f38",
-      "project-toolkit-skill-agent-writing": "885e4bd791bfa3748a1c13148ca052bc2a360c1d2c7b5cdf68dad951fd796031",
-      "project-toolkit-skill-bounded-debugging": "28f38c2e438b9435d15d88646695e37fb8eb5fff47a730f1115702660b67a8a0",
-      "project-toolkit-skill-clarify-explanation": "31cb3085ab2a6b08645ccf9e980b6d05908b48d7f67da565a5fa2929d482576e",
-      "project-toolkit-skill-decision-map": "ab03d4f196ad7be38636392d305dfffff9090d1b73c10d604efe97591176277a",
-      "project-toolkit-skill-decision-questionnaire": "0426937d0c12ef34e9c93cffbeffa8114340d31f750a8ec3f3933d5b5120d5a6",
-      "project-toolkit-skill-dependency-change": "dd3ce3c8c1307dbda7d4f70b0a6ff78f8e9dc04eebb7d2832c76348d2ce1580f",
-      "project-toolkit-skill-dependency-upgrade": "b913e9156c6feec3bc27cfbcaa01442b2c1a2cd42b94e509b6a27f0cc8f398b1",
-      "project-toolkit-skill-evidence-review": "f08aa5104d3ebd6f59b505a6502e7062f0e5af4fc8191e9e0bdc277a069bec61",
-      "project-toolkit-skill-fixture-evidence": "10a2bbabaf2a87e34907ea686e493a3a2c6be06cb217d20bbac6b84982c9ac86",
-      "project-toolkit-skill-issue-session": "ea8c7813ad76653e069ec6103490fbc8b051f0fc6320ef1c3d7a5dbed5ee7188",
-      "project-toolkit-skill-project-conductor": "6a968feac449c6e54067f7be80a3ee14388cb6199d13a545a7f1a75ed496aa20",
-      "project-toolkit-skill-recoverable-sessions": "b00746595dba7e77d0e673ecbaf1460782c9f558e99eb24efdb19dbb746a5d0f",
-      "project-toolkit-skill-session-finish": "49bb28ee53a0d6bf6000586924f13cfc2cc044018257010d17f40bdb1c7dafcb",
-      "project-toolkit-skill-session-review": "58b8c0a7d73647d1e17ddfdc186fd8828b54fe87ffe96bf46c13980f14f4381e",
-      "project-toolkit-skill-session-start": "b1077f35090e93fb612367d4b1626c1c7feabbf295b5c5d80107f6caeac364bf",
-      "project-toolkit-skill-spec-traceability": "d51599d9e4a8e6d050bb6d21ae9cceacbaa101cfa98f668bd19e750768e4bc71",
-      "project-toolkit-skill-ux-validation": "8d792f7a6c625de395761755a911e6617117fb590edcff962ce974f0de19a10f",
-      "project-toolkit-reference-authority-and-handoff": "ce8ee698b09df6dc53c4eb25f670edef6ef7f128c67e90662990179621ef0c10",
-      "project-toolkit-reference-benchmark-method": "666dddf48b8136f1d0eebcb22d3450dcc18b5e54df7de6e0f5405d8e4998c21e",
-      "project-toolkit-reference-ci-operations": "e584abe37f6972919361c345493fe97755af1adf3fe75ec281d6b816971e0af5",
-      "project-toolkit-reference-deployment-evidence": "32a1765ed380a98de0953658db49bf3e0c5ab2a8fa9d08d436c35efaffc81c11",
-      "project-toolkit-reference-php-quality-adoption": "5606903f08e23509b0a070dfcc505eb13aefc4c35d1105d319c1be3940295600",
-      "project-toolkit-reference-plugin-hook-rollout": "a322d9ad1b6c2ef5f98a434740cf07829cb1f0e9a5c15f9cec42346dce2307cc",
-      "project-toolkit-reference-proof-discipline": "b97a216b23c12f5761801dcf2624424ba4b3fd4298c095eede5a8764c5aed43e",
-      "project-toolkit-reference-worktree-adapters": "4221e0dc6e80da6d3ccefd4282d59a751fb2c60c7bfb8835938cc83ae36f64c4",
-      "project-toolkit-guide-overview": "b4fec16f554ddf857098ba108c3429269aba21bc29a128027f941af5ad1422de",
-      "project-toolkit-maintenance-validation": "c50c0c60c8e9f0ec248bf636a788eea7e518167b56ff6a2bffb4ffc2de13770e",
+      "project-toolkit-tool-code-navigation": "dacbe87a39329bd988fd77dc007d6db791cecbc90342258676c59238fce567b2",
+      "project-toolkit-tool-container-status": "85643bb7534b5bb313a91b67f77b133d658e2927f2f56f2e3125737e7c0b54f5",
+      "project-toolkit-tool-conversation-index": "343e3bee2d17b2ebf0f816a0b84ca29d4a6a796d4c8cce5129e3ee2c894806fb",
+      "project-toolkit-tool-deployment-receipt": "0b86e61f6a7a1dd52858b0fd6027a927e5b589c31c13c1091b8eace5899375a6",
+      "project-toolkit-tool-exact-patch": "ee2061fe834200886d05fe91c38f96f8379e7b9ee94313318b84c421a90bfaaa",
+      "project-toolkit-tool-fixture-evidence": "d66e129890e4588ae197a35c2f0f9e3072be86189365d9cc7bc2bf8f029e4ba9",
+      "project-toolkit-tool-git-checks": "ffe0988642130a0c87ea932db28a6caf5f85a8dd5ffc5df3d2faa6f29ef58926",
+      "project-toolkit-tool-hooks": "5fb403003cf9619c4c53bb09fddfc10c460750bc13f377e3b134ae5ab78345e2",
+      "project-toolkit-tool-issue-session": "cd5a34b5cd086664e6b47a95d808261a08f6594c126c06aae914e3069a8b3485",
+      "project-toolkit-tool-laravel-tests": "50d09ada0ff5e4b5685cac9c75a1a4207dbc00cab48429b12a82bed37f43a359",
+      "project-toolkit-tool-lexical-search": "d74b547071d439e8c5c608653e5281103f0cadb642113906214dad35c2a706ff",
+      "project-toolkit-tool-origin-drift": "88663ff8e22ec1d7fc8b61abca714ff29c2edb62c8eb61cbd658b8bb576c4790",
+      "project-toolkit-tool-php-quality-config": "12793da4a282aaa49d87ac55f214856c6c747a085e435c17d8da8877060a17cc",
+      "project-toolkit-tool-project-checks": "bf46781490d97f936e72cc1b7c1fbc83e3f177056ed965b3f3fbb4ab98f49c6d",
+      "project-toolkit-tool-project-state": "525f06a4b756e937d2bfe3087a4912dcd2405cb29c9292cbfa2f166f8c0fd7fc",
+      "project-toolkit-tool-reference-library": "3abb622f47158215eaab7487a714c49c4d7cf73ef81b47c362841c1c78d44671",
+      "project-toolkit-tool-report-converters": "4d358bb8181ab5fb0758cf0f58af0fff23e038805295a365932bbba58981e67d",
+      "project-toolkit-tool-service-readers": "b40cb118393d89468c2f6827604e23d926393c720121c2afcebaa61de8369fd5",
+      "project-toolkit-tool-session-analysis": "6006b0b536dd1ac475325974ae2b5bd4e54c8a5889794715861c8b573c94cc40",
+      "project-toolkit-tool-test-reports": "cac624d7cf46883b464d76f7b87d5dbe5f1da9cbe167f5029616e541a39e26f4",
+      "project-toolkit-tool-ux-workspace": "d32a49df0ffa68d5002468ce8abf537c40a7e617f6c0d5e3a200ef9a149ee03b",
+      "project-toolkit-tool-worktrees": "70565d2e42176590d9c0ab6091e4dcbe57ff10af647770a4b5f2209023b252df",
+      "project-toolkit-skill-agent-writing": "c9e20d56fc61ec510f2f16bab07fb5e3756e1a8e0c26c6d5a85f7ec5b6f0f03d",
+      "project-toolkit-skill-bounded-debugging": "eacbcec2010e5fc6c4296964350e7aa5b9c47c36790179692eb1b84b61034d43",
+      "project-toolkit-skill-clarify-explanation": "5840f01142f69502b15b26cf6e485409ce174f3ccb775d1ea723378cd4024c54",
+      "project-toolkit-skill-decision-map": "1a8b673e0d7dc45da7f1f6ea9d160f426b41ee8096856be5a7c31a9ff8875b14",
+      "project-toolkit-skill-decision-questionnaire": "5e0d084b8059faafd7f2da188c0e9017f63f3af984e79a81876a4fc4dff6111c",
+      "project-toolkit-skill-dependency-change": "285bff168fb82d3700a6f402b5664dff6bc48a16f7dd295813628814df2ea34b",
+      "project-toolkit-skill-dependency-upgrade": "a5147867ffe3ea7090a73286233ca1caedf0717ee2602963fac93c771c69739d",
+      "project-toolkit-skill-evidence-review": "c601c67bfe21c687dddb8d44be8ab20bde17b29906343d19b99e723a772bf395",
+      "project-toolkit-skill-fixture-evidence": "1d09a4057153d2252a0b8fe130c174492e55683399bb6ce8939e886ea6b3db2b",
+      "project-toolkit-skill-issue-session": "7fef411d2eec16d71996db5d5617919eb3209a33b9ad7b0680939626419f2c7f",
+      "project-toolkit-skill-project-conductor": "b31a21f0ebf7b86ea835411e9951b8baf528ab6315f55cde28ecc308ad0df884",
+      "project-toolkit-skill-recoverable-sessions": "bb9d28f3456d2e075f9a10cbc939cf4257420b687b3538b9f3c9f12ac480d692",
+      "project-toolkit-skill-session-finish": "e0aaf70b71aefa084bf7a6288411da1590f732f2e50f9de9a68e9ef62ea28600",
+      "project-toolkit-skill-session-review": "a70c317f3b02a8e2773dc7fb45ddf6b52d8767d91144603f97e87c6dc5578377",
+      "project-toolkit-skill-session-start": "8aad11a9eb9216c03a3d2473fc630ef2e11b0e527b190ba2e23ebf71f972a33b",
+      "project-toolkit-skill-spec-traceability": "a044e6a2ba233ee49433cf667473f791e7e52e81a11b204b2a56c851ef1d2dc5",
+      "project-toolkit-skill-ux-validation": "ccc2b8102430cc6236730787e02b8abb306ecae8a51e231c909ccb1e768c6a3b",
+      "project-toolkit-reference-authority-and-handoff": "9c5020b434e12e3e06e81c8d6aa6e208d297ebc775ea34193b77c317b48cf7b1",
+      "project-toolkit-reference-benchmark-method": "54b477bf0a63de2d20b21bed7bbd09976ef10a5fcb134711d7a894aa64fda6bc",
+      "project-toolkit-reference-ci-operations": "6d45e7e9381f76681309c834110fcb4d0118aab8757041f2d11a818c2da62c69",
+      "project-toolkit-reference-deployment-evidence": "482d4b1bba375fedf1c60b4f5e3e51e7ca22b1fef00e33c338ac6e4e2e5a6555",
+      "project-toolkit-reference-php-quality-adoption": "1dbf35a588d55698db2af973ff857edc6ce76ded4af5238ac479fb81640e511a",
+      "project-toolkit-reference-plugin-hook-rollout": "47a52b74e264138e5601c6a19ea669f88d7ee35b5191c152d1b0de988dbe3f1f",
+      "project-toolkit-reference-proof-discipline": "223db7d1aed65777d804bdb80b40fef8d8b651d7875b5a569753d3be7cec85ed",
+      "project-toolkit-reference-worktree-adapters": "1b5cac3e120939884c792dd1b396d2487a064124dc918c96b549c21b7d640e55",
+      "project-toolkit-guide-overview": "9e99e08112b83d0d57ed77a2d44d5455e9d9ad19b94cbac522c98ba759430e3b",
+      "project-toolkit-maintenance-validation": "b6d683134e6b2bd48160691e84695fd1b8bc15a85daaaee86ee8b5750d153a70",
       "warehouse-cut-the-fluff": "c246fbcc9f324dc820713a1a40d8c38b2af07a7a839a75917c6d327ec1834ab1",
       "ponytail-ponytail": "9d1335105fdccc2a79ee1772dcc5c5aa808b476c5863bdb33c144ab13dab5ad7",
       "ponytail-review": "08e846a7cfa6a4c8a7b8599af4ae2d14d938355dba96bca41c6c6937e82c3688",
@@ -8501,7 +8855,24 @@
       "ponytail-hooks-other-hosts": "ca830d4f6c2eb0104600b9294af47dd8fe914e2623757021d9b9befb76f1836c",
       "ponytail-host-plugin-manifests": "235bf7fc46c6c4c998c3f9136f8a90c002ddf9b263ed843c7d57995707e25ae5",
       "ponytail-agent-portability": "c5209bfdf18e7977ea97b0a40f50d7cc404d2f84edb86db2043eed29f3def8bb",
-      "ponytail-source-scripts": "0bc3c52666ee69a93b1b61ceb651506425d278e4b452540183afe45dea038912"
+      "ponytail-source-scripts": "0bc3c52666ee69a93b1b61ceb651506425d278e4b452540183afe45dea038912",
+      "project-toolkit-tool-decision-records": "428b5589d1520474920bbc11d1ef00102ffaaa8d297e14d92f3804724d800156",
+      "project-toolkit-tool-finding-records": "ba6339aa82ea473940a93a9cfa6ea1f24754a8cb9209389166c151b370e4fc23",
+      "project-toolkit-tool-design-register": "00cc12eddde3d81ff14aba46c50e2494707411cfc5476c4442a830e89db440d0",
+      "project-toolkit-tool-design-compare": "acd49a4b680d73de8c584cfdad66c3cf6b4d43c2d140531ade9b65d2c5668227",
+      "project-toolkit-tool-floor-guard": "ed5f80b167fdd24a746dfbdc5ea67d952c10fe9a022cb0943460490490642237",
+      "project-toolkit-tool-session-guards": "97670d2a89068671b978fa5c0a98dea1f99069ce85589101f1f77732aa657fc6",
+      "project-toolkit-tool-roadmap-board": "5c24284acb6ff902cbc640a9542f8f7f9780b9e12aea0de9c3b6627fcb073dff",
+      "project-toolkit-tool-session-closeout": "b44d5e5278201d01665cb66a52dd880f9c9e8ecd7ab96995daddebbbccf425ad",
+      "project-toolkit-tool-throwaway-container": "ef092b34398a262f1452dba70bc30cdd51ae94c3a6e33aa512e34b1cd0384453",
+      "project-toolkit-tool-local-sonar": "0de64d9d21c20c461d9fb007fdbc086a938d8241aae19597a9e68f29454b6856",
+      "project-toolkit-tool-pr-conventions": "3f37bd443f0029e3f75f4a78adfb5369a16cd8807cc8e338123ca2f5d32dc456",
+      "project-toolkit-tool-security-scan-config": "5aae2c663bbcbe98a6ca786e33495064310d4179236191813a0e1830842ae18f",
+      "project-toolkit-skill-record-keeping": "e464b9ffdd23e9b6e2812e30cc1ddf3b83470d4be38a8edc439d0d49f96645e0",
+      "project-toolkit-skill-roadmap-session": "9a9c9d543e58464b1196ee2771d5243c7d2720b7ebd17f99ac957029c7dc6b08",
+      "project-toolkit-skill-design-conformance": "aceaa8973247553360d1d0e5348bdc6f8faf7b74ed4e1058482f0c0e5e59bfd3",
+      "project-toolkit-agent-design-reviewer": "1578122858399afcc767c092d63036c0ccab58a6f8d5c2ab6665cc7f39028660",
+      "project-toolkit-agent-doubt-reviewer": "c3a609130cc8d714df25b99eb64cdfb850259d2f3cbe18922a46da36c0bd96b4"
     },
     "maturity": {
       "repos/addyosmani-agent-skills/.claude-plugin/plugin.json": "9ff624e8bb1ae531d67234e9bd756cbe033f52940efb5a0fd7f3cea5a05601ce",

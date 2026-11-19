@@ -1,0 +1,16 @@
+{
+  "design_pdf": "design/design-export.pdf",
+  "screens_file": "design/screens.json",
+  "baseline_file": "design/baseline.json",
+  "out_dir": "reports/design",
+  "serve_root": ".",
+  "serve_port": 8001,
+  "viewport": [393, 852],
+  "position_tolerance": 6,
+  "size_tolerance": 8,
+  "app_url": null,
+  "session_file": null,
+  "poppler_prefix": [],
+  "path_rewrites": [],
+  "settle_ms": 1800
+}

@@ -1,0 +1,33 @@
+name: no-closing-keywords
+
+# A merge is not a review and does not finish an issue. GitHub closes an issue when a pull request (title, body) or one of its
+# commit messages contains Closes/Fixes/Resolves and the issue number, so this check fails such a pull request. Use "Refs #<n>".
+# The issue is closed by hand, after the review, by the person who reviews.
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+# Only read access. No third-party action: plain shell.
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: A pull request must not close issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          pattern='\b(close[sd]?|fix(e[sd])?|resolve[sd]?)\b[: ]+([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)?#[0-9]+'
+          commits=$(gh api "repos/$REPO/pulls/$PR_NUMBER/commits" --paginate --jq '.[].commit.message')
+          if printf '%s\n%s\n%s\n' "$PR_TITLE" "$PR_BODY" "$commits" | grep -Eiq "$pattern"; then
+            echo "::error::This pull request (title, description or a commit message) uses a closing keyword (Closes, Fixes or Resolves with an issue number). A merge does not mean reviewed or finished: write 'Refs #<n>' instead and close the issue by hand after the review."
+            exit 1
+          fi

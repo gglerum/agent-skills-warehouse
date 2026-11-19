@@ -1,0 +1,41 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/session-end.sh",
+      "sha256": "56fe19a31606c17f96f584e0b707eb411120970b48bb7f2b27f2cea8da98a39a"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/pr-status.sh",
+      "sha256": "c1420b57f120a090b5ccdc2f9b2e127833cf0d5585a87152b453bfe9fa3a1d95"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/log-step.sh",
+      "sha256": "a15b6b3d64df16a132a4970c991e3f40df8581b3fea65393c6d7559810075063"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/status.sh",
+      "sha256": "2e461449c47d4f91d84bc7fb6c206e943ca69078ad82bab4bd1ca37f135043e2"
+    }
+  ],
+  "adaptations": [
+    "Replace the fixed record checks, doc paths, board commands and report sections with configured lists in a sourced file; take the repository from the checkout.",
+    "Translate output to English, drop test-report and quality-tool sections tied to one stack, and generalize the log file path and step heading.",
+    "Add README, configuration example and tests with disposable Git repositories."
+  ],
+  "destination_hashes": {
+    "tools/session-closeout/README.md": "6c621d704733cf739e88853112b4454d5e4fe02fe06a22056f3bba85189a340f",
+    "tools/session-closeout/closeout.conf.example": "c637a53359b7d5f9dbba8d7fbddc716ec872c161b26b7f60d1f2eb47766d3edd",
+    "tools/session-closeout/log_step.sh": "ff55a8500eddc18c8c91b0651b375c669848f8b46d3df474c17831fd7b59a8ff",
+    "tools/session-closeout/pr_status.sh": "c87943413b541cea79a9e8461a55e32f33d9548f24b952137f43128967280631",
+    "tools/session-closeout/project_status.sh": "299fe04d46c3aa3dd21bb36d1fab4e29b80ff05463d3cff5319f7feccc25b739",
+    "tools/session-closeout/session_end.sh": "8fbf94c26409ff108de71151bbf101f9ef592605b5f333ec18ab5e279736b59f"
+  }
+}

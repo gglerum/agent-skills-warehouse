@@ -1,0 +1,27 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/decision.py",
+      "sha256": "6233833dcfc05aaf832124b0f58a0023a3823409944a14df9050917bd6372619"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/decision.sh",
+      "sha256": "b5a919632225641a23b8ffe0c0cdb98fe4d7d3edad66212e4de0ce993cf6a5b4"
+    }
+  ],
+  "adaptations": [
+    "Parameterize id prefix, record and overview paths, tracker repository, reviewer login, comment marker and reference paths in a JSON configuration; remove all product, repository and language specific text.",
+    "Rename statuses and messages to English (decided, proposed, open, superseded); keep supersede/archive, never-reused ids, reference checking and generated-overview staleness checks.",
+    "Make mirror and strays optional (enabled only when a tracker repository is configured); keep the link-only section so decision text is never copied; allow a fake gh command for fixtures.",
+    "Add the configuration example, README and regression tests; no tracker call runs unless the consumer invokes mirror or strays."
+  ],
+  "destination_hashes": {
+    "tools/decision-records/README.md": "187c36a8dfdeba129f713a9f6f5cdb14277584e24901aa879fbeeeed4968d825",
+    "tools/decision-records/decisions.config.example.json": "a5ebb2c69748b16492c1ce4c0e8e4a2e00a069580082d701212c7cc9c7700f58",
+    "tools/decision-records/decisions.py": "f25590cc223a2dc4ed404f8617c9db35271861285656530c8e33a618bae3db32"
+  }
+}

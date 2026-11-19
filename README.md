@@ -16,7 +16,7 @@ same procedure, so there is one authoritative set of instructions.
 | `repos/addyosmani-agent-skills/` | [Addy Osmani](https://github.com/addyosmani/agent-skills) | Engineering lifecycle skills, quality checklists, personas, commands, and skill evaluations. |
 | `repos/mattpocock-skills/` | [Matt Pocock](https://github.com/mattpocock/skills) | Composable requirements, domain modeling, architecture, implementation, debugging, and handoff workflows. |
 | `repos/cursor-plugins/` | [Cursor](https://github.com/cursor/plugins) | pstack, specialist workflows, verification harnesses, hooks, rules, and service integrations. |
-| `repos/gglerum-project-agent-toolkit/` | [Project agent toolkit](repos/gglerum-project-agent-toolkit/README.md) | Reusable report/service readers, context tools, worktree and workflow checks, PHP/Laravel skills, evidence helpers, templates and operational lessons from ten selected projects. |
+| `repos/gglerum-project-agent-toolkit/` | [Project agent toolkit](repos/gglerum-project-agent-toolkit/README.md) | Reusable report/service readers, context tools, worktree and workflow checks, PHP/Laravel skills, evidence helpers, templates and operational lessons from eleven selected projects. |
 | `repos/dietrichgebert-ponytail/` | [Ponytail](https://github.com/DietrichGebert/ponytail) | Lazy-senior-developer skills (minimal change, review, audit, shortcut ledger), always-on rule copies, and host hooks and manifests for 25+ agents. |
 
 Source checkouts live under `repos/`, with owner-qualified folder names to make
@@ -32,7 +32,7 @@ run `scripts/fetch-repos.sh` to clone them at the commits pinned in `repos.lock`
 review).
 
 The fourth source is a local independent repository of reusable adaptations from
-ten owner-selected projects. Its [inventory](repos/gglerum-project-agent-toolkit/inventory.json)
+eleven owner-selected projects. Its [inventory](repos/gglerum-project-agent-toolkit/inventory.json)
 records group-level dispositions; [provenance](repos/gglerum-project-agent-toolkit/provenance/README.md)
 retains origins, revisions, hashes and meaningful adaptations. Updates are manual
 and reviewed; original projects and consumer copies do not change automatically.

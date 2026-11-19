@@ -1,0 +1,6 @@
+[
+  {"name": "login", "design_page": 4, "url": "anon:/login", "kind": "app"},
+  {"name": "dashboard", "design_page": 7, "url": "auth:/dashboard", "kind": "app"},
+  {"name": "checkout_flow", "design_page": 12, "url": "/design/prototypes/checkout_flow.html", "kind": "wireframe"},
+  {"name": "admin_report", "design_page": null, "url": "auth:/admin/report", "kind": "app", "note": "no design exists"}
+]

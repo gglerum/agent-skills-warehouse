@@ -1,0 +1,17 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": ".claude/skills/work-issue/SKILL.md",
+      "sha256": "a75daa371b6633e711285729e4caf0fa8bdf350f7a55069d3555da28224adbc5"
+    }
+  ],
+  "adaptations": [
+    "Rewrite the project workflow skill as a generic one-issue session: remove repository, board, language, stack and role specifics; replace hard-coded commands with the toolkit tools and consumer equivalents.",
+    "Keep the preflight-in-one-call, blocker, decision-issue, test-first, output-comparison, quality-gate, handoff and never-list structure; make publishing steps conditional on the consumer policy."
+  ],
+  "destination_hashes": {
+    "skills/roadmap-session/SKILL.md": "83a53c42e7377126d1d646eab74865480f1ba06f205560b5d24722f0a3a46a13"
+  }
+}

@@ -1,0 +1,28 @@
+# Sourced (as bash) by session_end.sh and project_status.sh. Copy to closeout.conf next to the scripts, or set CLOSEOUT_CONF.
+
+# "label|command" entries; each runs through `bash -c` from the repository root and must exit 0.
+CLOSEOUT_CHECKS=(
+    "decisions (records, references, generated overview)|python3 tools/decisions.py --config decisions.config.json check"
+    "findings (records, generated overviews)|python3 tools/findings.py --config findings.config.json check"
+    "design register (records, frames, generated overview)|python3 tools/register.py --config register.config.json check"
+)
+# Checks that need the network; skipped with --offline.
+CLOSEOUT_ONLINE_CHECKS=(
+    "decision strays (tracker answers not recorded yet)|python3 tools/decisions.py --config decisions.config.json strays"
+)
+# "path prefix|what" entries: shown as yes/no depending on whether the branch changed that path against CLOSEOUT_BASE.
+CLOSEOUT_DOC_PATHS=(
+    "docs/process-log.md|process log step"
+    "docs/decisions/|decision records"
+    "docs/findings/|findings"
+    "design/register/|design register"
+)
+CLOSEOUT_BASE="origin/main"
+
+# project_status.sh
+STATUS_BASE="origin/main"
+STATUS_HANDOFF_DIR="docs/handoffs"
+STATUS_BOARD_CMD="bash tools/board.sh"
+STATUS_SECTIONS=(
+    "Findings|python3 tools/findings.py --config findings.config.json counts"
+)

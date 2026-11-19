@@ -1,0 +1,20 @@
+# Sourced by board.sh and preflight.sh. Copy to roadmap.conf (next to the scripts) or point ROADMAP_CONF at it.
+BOARD_REPO="owner/repository"          # issues live here; always passed to gh with -R
+BOARD_OWNER="owner"                    # login that owns the GitHub Project (v2)
+BOARD_PROJECT=1                        # project number
+BOARD_READY_STATUSES="Ready Backlog"   # statuses `next` may offer
+BOARD_WAIT_LABEL="waiting-on"
+BOARD_DEFAULT_WAIT_ASSIGNEE="owner"    # who `waitingon` assigns by default
+BOARD_EPIC_PREFIX="EPIC"               # issues with sub-issues or this title prefix are not offered
+BOARD_HANDOFF_DIR="docs/handoffs"
+BOARD_SESSION_SKILL="roadmap-session"
+BOARD_PREFLIGHT_CMD="tools/preflight.sh"
+# Title code of a card, e.g. "[AB-12] Title": named groups `code` and `t` (jq regular expression)
+BOARD_CODE_REGEX='^\[(?<code>[A-Z]+-[0-9]+)\] ?(?<t>.*)$'
+
+# preflight.sh
+PREFLIGHT_GATE_ISSUES=""               # issue numbers of design/decision issues: a story naming one without being blocked by it gets a warning
+PREFLIGHT_DECISIONS_CMD="python3 tools/decisions.py --config decisions.config.json"
+PREFLIGHT_FINDINGS_CMD="python3 tools/findings.py --config findings.config.json"
+PREFLIGHT_DESIGN_CMD="python3 tools/register.py --config register.config.json"
+PREFLIGHT_SOURCE_FIELD="source"        # board field holding finding ids (jq key of the item)

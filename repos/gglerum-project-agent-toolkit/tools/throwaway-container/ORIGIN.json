@@ -1,0 +1,18 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/devc.sh",
+      "sha256": "38591e9e3d05aa663dde60472c01c72c83a3630a3be758dec08f270b3e99cc16"
+    }
+  ],
+  "adaptations": [
+    "Replace the fixed image name with CONTAINER_IMAGE, make shared directories, runtime and extra arguments configurable, and add a dry-run mode.",
+    "Translate the documentation to English; keep host-user execution, git identity forwarding, safe.directory and worktree mounts."
+  ],
+  "destination_hashes": {
+    "tools/throwaway-container/README.md": "1ab41bea45a3bebc4d58f3e0b0b3258b42f21371f1e213fe15d6ce06accd64cf",
+    "tools/throwaway-container/run_in_container.sh": "0573b94b166bf0d05d061de8317982f09523324e31fe5bbdf51e08b145e1a909"
+  }
+}

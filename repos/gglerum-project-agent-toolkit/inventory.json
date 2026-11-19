@@ -2,9 +2,10 @@
   "schema": 1,
   "review_date": "2026-11-11",
   "owner_decisions": {
-    "scope": "All useful eligible material across all ten selected projects; reusable versions; copy permission granted.",
+    "scope": "All useful eligible material across all eleven selected projects; reusable versions; copy permission granted.",
     "plan": "Approved comprehensive fourth-source plan; local creation/initial commit/registration authorized.",
-    "updates": "Manual reviewed imports; no automatic sync or publication."
+    "updates": "Manual reviewed imports; no automatic sync or publication.",
+    "additional_source": "An eleventh project was added on 2026-11-19 on the owner's explicit instruction: take over every identified reusable item, untraceable to the source project, in English and decoupled from it. Only labelled provenance is recorded."
   },
   "sources": {
     "source-project-a": {
@@ -36,6 +37,9 @@
     },
     "source-project-j": {
       "snapshot_revision": "0ae769b57f5020f1ef3820f9464625f356618882"
+    },
+    "source-project-k": {
+      "snapshot_revision": "d4202160a3132986ea40627dde1afc3b53221df4"
     }
   },
   "groups": [
@@ -302,13 +306,164 @@
         "tools/origin-drift"
       ],
       "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P23",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/decision-records"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P24",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/finding-records"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P25",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/design-register"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P26",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/design-compare"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P27",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/floor-guard"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P28",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/session-guards"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P29",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/roadmap-board"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P30",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/session-closeout"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P31",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/throwaway-container"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P32",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/local-sonar"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P33",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/pr-conventions"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "P34",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/security-scan-config"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "W09",
+      "disposition": "retained",
+      "represented_by": [
+        "skills/record-keeping"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "W10",
+      "disposition": "retained",
+      "represented_by": [
+        "skills/roadmap-session"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "W11",
+      "disposition": "retained",
+      "represented_by": [
+        "skills/design-conformance"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "A01",
+      "disposition": "retained",
+      "represented_by": [
+        "agents/design-reviewer.md"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "A02",
+      "disposition": "retained",
+      "represented_by": [
+        "agents/doubt-reviewer.md"
+      ],
+      "note": "Reusable subset retained from the eleventh source; project-specific text, names, language and paths removed or parameterized."
+    },
+    {
+      "id": "X01",
+      "disposition": "alternative",
+      "represented_by": [
+        "skills/session-review",
+        "tools/session-analysis"
+      ],
+      "note": "Eleventh source: a transcript-review skill is covered by the session-review skill and session-analysis tools; adaptations of third-party skills (verification, correction, blast radius, doubt-driven development, frontend engineering, security checklist) are covered by their canonical sources in the warehouse and are not duplicated here."
+    },
+    {
+      "id": "X02",
+      "disposition": "excluded",
+      "note": "Eleventh source: product code, design documents and exports, issue and decision content, personal or test data, framework-specific quality-tool runners, hook installers and project permission settings are not reusable and are withheld."
     }
   ],
   "limitations": [
     "Static candidate and dependency review is not a behavioral agent evaluation.",
     "Service tests use offline fixtures; no authenticated integrations or downloads ran.",
     "ShellCheck unavailable; bash syntax and executable fixture tests used.",
-    "Source-specific product code and incomplete integrations remain withheld with reasons."
+    "Source-specific product code and incomplete integrations remain withheld with reasons.",
+    "The eleventh source's tools are covered by fixture tests; browser, PDF, container, SonarQube and live tracker paths were not run against live systems."
   ],
   "candidate_summary": {
     "total": 828,
@@ -319,6 +474,6 @@
       "excluded": 151,
       "alternative": 93
     },
-    "note": "File-level candidate records covered private source projects and are not published; group-level dispositions below remain."
+    "note": "File-level candidate records covered private source projects and are not published; group-level dispositions below remain. The eleventh source is recorded at group level only (P23-P34, W09-W11, A01-A02, X01-X02); its file-level counts are not included in the totals."
   }
 }

@@ -1,0 +1,26 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": ".claude/hooks/guard.py",
+      "sha256": "3cfebedf6d3000efa03278d2cfdfb06a7d612a33c8fe503ed7896046d899637f"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": ".claude/hooks/context-guard.sh",
+      "sha256": "baa643fe1769f5d2bade924fd916c7a587ce577609f3d37bff7ee3a183780237"
+    }
+  ],
+  "adaptations": [
+    "Remove dotenv protection (covered by the hooks bundle) and project state-file prefixes; make rules switchable and state-file prefixes configurable by environment.",
+    "Convert the shell-wrapped context guard into a Python script with configurable thresholds; translate messages to English and neutral wording.",
+    "Add README with example hook entries and regression tests; no hook is activated."
+  ],
+  "destination_hashes": {
+    "tools/session-guards/README.md": "a3aa43594131c9e7afb7f6e50bc9896e5ace8d58a542e0924c8995e52a951fa1",
+    "tools/session-guards/context_guard.py": "779e1aaf62f9c4d02fbf2d3b8039a614e95e3c6a63649903734efd3a6dd2707f",
+    "tools/session-guards/workflow_guard.py": "274d41226eee5a869c14d2986fe5821f21a3622e55344eed8b45be239a1a2549"
+  }
+}

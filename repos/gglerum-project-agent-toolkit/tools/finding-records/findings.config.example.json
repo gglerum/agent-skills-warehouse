@@ -1,0 +1,10 @@
+{
+  "findings_dir": "docs/findings",
+  "feedback_dir": "docs/feedback",
+  "findings_index": "docs/findings.md",
+  "feedback_index": "docs/feedback.md",
+  "feedback_prefix": "FB",
+  "finding_id_pattern": "^[A-Z][0-9]+[a-z]?$",
+  "decisions_link": null,
+  "command": "python3 tools/findings.py --config findings.config.json"
+}

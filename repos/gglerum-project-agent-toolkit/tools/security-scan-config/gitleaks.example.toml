@@ -1,0 +1,22 @@
+# Example gitleaks configuration: the default ruleset plus narrow allowlists for content that only looks like a secret.
+# Review every allowlist entry against the real project; an allowlist is a decision to stop looking at something.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Content hashes in dependency lock files"
+paths = ['''composer\.lock''', '''package-lock\.json''', '''yarn\.lock''', '''poetry\.lock''']
+regexes = ['''"content-hash": "[a-f0-9]+"''', '''"reference": "[a-f0-9]{40}"''', '''"integrity": "sha512-[a-zA-Z0-9+/=]+"''']
+
+[[allowlists]]
+description = "Third-party and generated directories (scan your own code, not vendored code)"
+paths = ['''vendor/.*''', '''node_modules/.*''', '''dist/.*''', '''build/.*''']
+
+[[allowlists]]
+description = "Placeholder values in a committed example environment file"
+paths = ['''\.env\.example''']
+
+[[allowlists]]
+description = "Made-up passwords in test data (password fields in test files only)"
+paths = ['''^tests?/.*''']
+regexes = ['''['"]password(_confirmation)?['"]\s*(=>|:)\s*['"][^'"]+['"]''']

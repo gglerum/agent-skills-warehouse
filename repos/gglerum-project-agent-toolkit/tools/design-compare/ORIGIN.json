@@ -1,0 +1,28 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/design/design.py",
+      "sha256": "3344e51364801f1d62c81a5afe79c67b771e316ed1e859def6a3833549711df7"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/design.sh",
+      "sha256": "272aae9b5d32ec6a0c39c0d7b29615a8401f7e9df7b9296262c9c9655dfd9a04"
+    }
+  ],
+  "adaptations": [
+    "Replace project paths, viewport, container image, test account, application start and login steps with a JSON configuration, a command prefix for poppler and a session cookie file written by the consumer.",
+    "Rename the external design tool references to a neutral design export, rename targets to auth:/anon:, rename the screens-file key to design_page and make the baseline kinds free text.",
+    "Keep PDF text/box extraction, in-iframe measurement, matching with tolerances, side-by-side and difference image, baseline check and redirect warnings; remove the application proxy rewrites tied to one framework.",
+    "Add README, example configuration and screens file; cover the pure matching and baseline logic with tests. Browser and PDF paths need a real environment."
+  ],
+  "destination_hashes": {
+    "tools/design-compare/README.md": "6d577ba32083c0b824a06d81778e271917f0d1e5adb05fcf606103f828fbbeae",
+    "tools/design-compare/compare.config.example.json": "3abdbed927e88db755b7c55738100ee114a5dfd1d9f1cbff7c6b6c4b8d568216",
+    "tools/design-compare/compare.py": "0660bea4c0614021c5f525b723b3f8854073c3ceb00d6a0135d21056329bf5cd",
+    "tools/design-compare/screens.example.json": "3ec788033d6fe8091f4216f398dadcdd6cff92ff836662ca758c1d313fcf0515"
+  }
+}

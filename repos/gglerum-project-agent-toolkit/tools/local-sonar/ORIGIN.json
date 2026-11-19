@@ -1,0 +1,18 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/sonar-local.sh",
+      "sha256": "033d57e584998c9ce6f9bd4ff067ffe09593f60728558417074b4b0174a80da4"
+    }
+  ],
+  "adaptations": [
+    "Replace project key, name, sources, tests, exclusions, port and image tags with environment variables; derive container and network names from the project key.",
+    "Generate the admin password with a private umask, keep the loopback-only binding and document that images are downloaded and containers started."
+  ],
+  "destination_hashes": {
+    "tools/local-sonar/README.md": "480dae9ebc4659824e6c436095365635b88577ecdda46ff274cdc0f4aa0960a4",
+    "tools/local-sonar/sonar_local.sh": "920ecd40f004c314961bfa9eb96bb21d7e9453df1d047bf6d9bda1238e4b8b22"
+  }
+}

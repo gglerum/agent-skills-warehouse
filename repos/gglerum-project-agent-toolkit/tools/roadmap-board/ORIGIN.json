@@ -1,0 +1,27 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/board.sh",
+      "sha256": "548055a7732eed0277c0199a3cc03a74e70f7e23b7ee61a62c133c793f113829"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/issue-brief.sh",
+      "sha256": "efb4e03c3756d1c587f7a74e7770490cae55f41e3a7d57fc7a8542e015522836"
+    }
+  ],
+  "adaptations": [
+    "Replace repository, owner, project number, labels, wait line, statuses, epic prefix, code regex, skill and preflight command with a sourced configuration file.",
+    "Translate all text to English; replace hard-coded design-issue lists with a configured gate list and the board source field with a configured field; replace hard-coded decision, finding and design commands with configured commands.",
+    "Replace GraphQL and jq literals that embedded the repository with parameters; add README, configuration example and tests with a fake gh."
+  ],
+  "destination_hashes": {
+    "tools/roadmap-board/README.md": "f0e0c1be5bed3fb5ea2cc6412d63cc95776f16fbdf31061333676aec89579bf3",
+    "tools/roadmap-board/board.sh": "bab33891dc3f6500ea2d7b4eb7ca56343526652daba72bfba7c00c836f6acf35",
+    "tools/roadmap-board/preflight.sh": "34555bdb8cc394de0d05616aa218abea4d577b92929eecbd3ba11582cb0b9f70",
+    "tools/roadmap-board/roadmap.conf.example": "d359290343971f458c263ffb8f009b9f1d1fa65fee71f43c413974b4e4cd1463"
+  }
+}

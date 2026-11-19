@@ -1,0 +1,39 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": ".gitleaks.toml",
+      "sha256": "88c907dbb5ef1287b0d6e0330f24a4d6ab2e140c4f9769949fd847580263ac27"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": ".trivyignore",
+      "sha256": "02292336ac12328956a57d563671cdade65575b6992e98d87da4a22f0a0532b7"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "trivy.yaml",
+      "sha256": "d77d2c7441be2acd464e2525cfac54c8dca1be0217a0a26adccff1d810a9515f"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "zap.yaml",
+      "sha256": "fcf5317d734b6c48c2b7e7c07c99a8f3842a1d05370c4c8920b3a27a7469b04c"
+    }
+  ],
+  "adaptations": [
+    "Remove project-specific allowlist entries, directories, finding references and credentials examples; keep generic lock-file, vendored-directory, example-environment and test-password allowlists.",
+    "Rename to example files with explanatory comments and a README stating that no scanner is installed or run by copying."
+  ],
+  "destination_hashes": {
+    "tools/security-scan-config/README.md": "90d8bbd5c06865e5f1477aac7b54c79376b4b38408e9ee340af9f19ae8feefeb",
+    "tools/security-scan-config/gitleaks.example.toml": "0da1b51e955c4a119d50731746d1a7ff6308ea31eb768728ab07cec3150b0f46",
+    "tools/security-scan-config/trivy.example.yaml": "9c8f0d2c8629eaa352e71b17aa7d8041a22faaf6d47594b48fabcc18b123a484",
+    "tools/security-scan-config/trivyignore.example": "8d401fc0cb49f3645ddbf9e6bb836b6ff76dfe51ce5ae1f674729d4d82a7de5c",
+    "tools/security-scan-config/zap.example.yaml": "f9cefe69b4f02a73c3ee1a28f9bb0af7ac5c1fec8c4ef2152fc8b685c002f8b5"
+  }
+}

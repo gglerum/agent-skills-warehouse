@@ -1,0 +1,25 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": ".github/workflows/no-closing-keywords.yml",
+      "sha256": "d596ac01e490edf8acc785d35bdf4a78c66d0d7f2703e7b27b0eb48145cb012f"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": ".github/pull_request_template.md",
+      "sha256": "dfc0b4b35afa06b0d0de0593e3cb62e593eab3de56ca78538a71f5ece93e84a6"
+    }
+  ],
+  "adaptations": [
+    "Translate the workflow comments, error message and template to English and remove project-specific checklist items and role names; keep the pattern, permissions and plain-shell approach.",
+    "Test the pattern against sample texts; the workflow is not enabled by copying."
+  ],
+  "destination_hashes": {
+    "tools/pr-conventions/README.md": "07f231baeb42b3595e11461259ffd5c8784b94ccd91e8f65b699c4ee0caa5dfb",
+    "tools/pr-conventions/no-closing-keywords.yml": "a2fa36d845de92a970cc925d025f03b57bd9dcb46ae1edbfcfb8227c59ddbbd3",
+    "tools/pr-conventions/pull_request_template.md": "b29637f5533c6c939be5c3739b7528e8bdfd3d0881282e50eb92aff1671e9be7"
+  }
+}

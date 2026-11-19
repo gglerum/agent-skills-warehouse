@@ -84,7 +84,7 @@ command updates warehouse review fingerprints and renders the catalog after
 the human or agent maintainer has reviewed the changes.
 
 The fourth source, `repos/gglerum-project-agent-toolkit/`, contains reviewed
-reusable adaptations from ten owner-selected projects. Its inventory records
+reusable adaptations from eleven owner-selected projects. Its inventory records
 retained items, alternatives and exclusions; provenance records the source
 revisions, file hashes and adaptations. Updates are manual and reviewed. Adding
 or updating this source does not authorize harvesting unrelated projects.

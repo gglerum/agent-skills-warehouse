@@ -1,0 +1,16 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": ".claude/agents/doubt-reviewer.md",
+      "sha256": "5791d7432107b603742dcaef998bd9d20fe6f35901c953e14072246169e30dbe"
+    }
+  ],
+  "adaptations": [
+    "Remove project stack and language references and role names; keep the adversarial, read-only, evidence-or-suspected report format. The prompt derives from an MIT-licensed third-party skill; its licence is kept as agents/LICENSE-addyosmani."
+  ],
+  "destination_hashes": {
+    "agents/doubt-reviewer.md": "69829a152b29eed60e94522ce808324a60016901ff5115b5db770ef53fcec7e9"
+  }
+}

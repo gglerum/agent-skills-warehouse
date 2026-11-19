@@ -1,0 +1,10 @@
+{
+  "artifacts_dir": "design/prototypes",
+  "register_dir": "design/register",
+  "index_file": "docs/design-register.md",
+  "decisions_dir": "docs/decisions",
+  "decisions_glob": "*.md",
+  "skip_files": ["index.html"],
+  "visible_code_pattern": "\\b(?:DEC|ISSUE)-?\\d+\\b",
+  "command": "python3 tools/register.py --config register.config.json"
+}

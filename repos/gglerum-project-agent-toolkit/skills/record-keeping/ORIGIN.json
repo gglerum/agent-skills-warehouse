@@ -1,0 +1,23 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": ".claude/skills/work-issue/SKILL.md",
+      "sha256": "a75daa371b6633e711285729e4caf0fa8bdf350f7a55069d3555da28224adbc5"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "docs/decisions/_intro.md",
+      "sha256": "09c6a0d892b6d94a33ddfc13441e6adc1419994bdb82c6a448eb2e11c60e9ee8"
+    }
+  ],
+  "adaptations": [
+    "Extract the single-source rule, supersession discipline, lookup-before-claiming rule and record-in-the-same-session rule from the project workflow skill; remove roadmap, repository and language specifics.",
+    "Rewrite as a standalone skill linking the record tools."
+  ],
+  "destination_hashes": {
+    "skills/record-keeping/SKILL.md": "defb77ddce5d1fb9dbf07f78c4f1888979c9e40c43fae2ed021a82736422125d"
+  }
+}

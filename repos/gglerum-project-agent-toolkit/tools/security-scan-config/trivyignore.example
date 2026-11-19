@@ -1,0 +1,3 @@
+# Accepted Trivy findings, each with the reason and where the decision is recorded (a finding record, not a chat message).
+# A dev container is not a service that gets health-checked:
+# DS-0026

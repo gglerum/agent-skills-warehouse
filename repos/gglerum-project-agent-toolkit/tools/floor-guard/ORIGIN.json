@@ -1,0 +1,27 @@
+{
+  "origins": [
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "utils/floor-guard.py",
+      "sha256": "8a3b75db2363d380389a11d73c06e5cd7793253682da2142e99fa66ca92e06b0"
+    },
+    {
+      "project": "source-project-k",
+      "revision": "d4202160a3132986ea40627dde1afc3b53221df4",
+      "path": "CONSTRAINTS.md",
+      "sha256": "c1fd35bda6153c9f897b45881cf51b6ed6ba71ddf513e6297195921da62e5665"
+    }
+  ],
+  "adaptations": [
+    "Move extensions, ignored paths, suppression, stub, skip and assertion patterns, test-file pattern, baseline extensions, exception-row pattern, allowed named suppressions and default bases into a JSON configuration with multi-language defaults.",
+    "Translate the threshold vocabulary and the constraints template to English and remove project rules, tool names and measured numbers; keep exit-code 2 for could-not-run and the print-only-the-token rule.",
+    "Add README, example configuration and regression tests with disposable Git repositories."
+  ],
+  "destination_hashes": {
+    "tools/floor-guard/CONSTRAINTS.example.md": "453da10386fa72008a7c9c9bccfb253c3e7968faa32bb4692ffbdfe8f2b976d5",
+    "tools/floor-guard/README.md": "dc6b48e7351fd9a26efd326a11ef73fb8acdde1c418c15c6e9869579782a6e51",
+    "tools/floor-guard/floor_guard.config.example.json": "31b5b0e6e75d59e8cbf307e368ecaa568c8fe96e34420092b66432e5609a1c04",
+    "tools/floor-guard/floor_guard.py": "6bb098f223a86806b97b0de4cd83bade967778dcf0e7fd049dea954d732a6cc0"
+  }
+}

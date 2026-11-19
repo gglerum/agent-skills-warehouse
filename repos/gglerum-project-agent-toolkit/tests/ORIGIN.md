@@ -22,5 +22,6 @@ The owner authorized copying useful material from the selected projects. This re
 - Retain pagination/deadline/atomic-output tests; configure fixture ownership and mock the no-redirect transport.
 - Retain privacy guard regression scenarios with relocated fixture path.
 - Retain exact-patch failure and mode invariants in unittest cases; no pytest dependency.
+- New regression tests (record tools, design compare, floor and session guards, roadmap board, closeout, container and pull request conventions) were written for the eleventh source's tools; no source test files were copied.
 
 Keep this origin record and included licence files with the copied component. Exact source-file hashes distinguish working-copy material from a revision-only claim.

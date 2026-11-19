@@ -1,0 +1,9 @@
+# Example OWASP ZAP automation context. The target comes from the ZAP_TARGET environment variable; the wrapper that runs
+# ZAP should start the application and set it. Without an authenticated session ZAP only sees the pages that need no login.
+env:
+  contexts:
+    - name: "Default Context"
+      urls:
+        - "${ZAP_TARGET}"
+      includePaths:
+        - "${ZAP_TARGET}.*"

@@ -1,0 +1,13 @@
+{
+  "records_dir": "docs/decisions",
+  "index_file": "docs/decisions.md",
+  "id_prefix": "DEC",
+  "id_digits": 3,
+  "tracker_repo": null,
+  "reviewer_login": null,
+  "decision_marker": "**Decision",
+  "section_title": "Decisions",
+  "reference_paths": ["docs", "README.md"],
+  "history_files": ["docs/process-log.md"],
+  "command": "python3 tools/decisions.py --config decisions.config.json"
+}

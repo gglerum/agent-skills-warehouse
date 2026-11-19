@@ -66,7 +66,8 @@
     "Retain pure approval/evaluation/API cases; replace project-specific applicability/transport tests with configurable-adapter cases.",
     "Retain pagination/deadline/atomic-output tests; configure fixture ownership and mock the no-redirect transport.",
     "Retain privacy guard regression scenarios with relocated fixture path.",
-    "Retain exact-patch failure and mode invariants in unittest cases; no pytest dependency."
+    "Retain exact-patch failure and mode invariants in unittest cases; no pytest dependency.",
+    "New regression tests were written for the eleventh source's tools; no source test files were copied."
   ],
   "destination_hashes": {
     "tests/test_asana.py": "60a3f72551ec7e1b8c40e51fdd6e4d1c6d722ea3857b10bfa426e9ad54308a4a",
