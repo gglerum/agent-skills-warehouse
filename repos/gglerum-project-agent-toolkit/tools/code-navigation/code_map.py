@@ -1,0 +1,149 @@
+#!/usr/bin/env python3
+"""Generate a configured code map: file, symbol, line range, purpose.
+
+Usage: python3 -I code_map.py [--check]
+Descriptions come from a preceding // or /// or # comment; hand-edited
+descriptions in the existing map are kept (keyed by file + symbol).
+"""
+import argparse
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+OUT = Path("CODE_MAP.md")
+SOURCES = []
+CS_TYPE = re.compile(r"^\s*(?:(?:public|internal|private|protected|static|sealed|partial|abstract)\s+)*(class|struct|enum|record(?: struct)?|interface)\s+(\w+)")
+CS_MEMBER = re.compile(r"^\s{4}(?:(?:public|internal|private|protected|static|async|override|extern)\s+)+[\w<>\[\],.? ()]+?\s(\w+)\s*\(")
+PY_DEF = re.compile(r"^(\s*)(?:async\s+)?(class|def)\s+(\w+)")
+
+
+def comment_before(lines, i, marks):
+    j = i - 1
+    parts = []
+    while j >= 0 and lines[j].strip().startswith(marks):
+        parts.insert(0, lines[j].strip().lstrip("/#! ").strip())
+        j -= 1
+    text = re.sub(r"</?summary>", "", " ".join(parts)).strip().lstrip("- ").strip()
+    return text[:110]
+
+
+def cs_end(lines, i):
+    depth, started = 0, False
+    for j in range(i, len(lines)):
+        for ch in re.sub(r'"(?:\\.|[^"\\])*"|//.*', "", lines[j]):
+            if ch == "{":
+                depth += 1
+                started = True
+            elif ch == "}":
+                depth -= 1
+        if started and depth <= 0:
+            return j + 1
+        if not started and lines[j].rstrip().endswith((";", ")")) and "=>" in lines[j]:
+            return j + 1
+    return i + 1
+
+
+def py_end(lines, i, indent):
+    end = i
+    for j in range(i + 1, len(lines)):
+        s = lines[j]
+        if s.strip() and len(s) - len(s.lstrip()) <= indent:
+            break
+        if s.strip():
+            end = j
+    return end + 1
+
+
+def fix_ends(lines, rows):
+    """C# end = line before the next symbol start (or EOF), trailing blank/comment lines trimmed."""
+    out = []
+    for k, (sym, a, b, d) in enumerate(rows):
+        if isinstance(b, tuple):
+            nxt = [r[1] for r in rows[k + 1:] if r[2] is not None and isinstance(r[2], tuple) and r[2][1] <= b[1]]
+            e = (nxt[0] - 1) if nxt else len(lines)
+            while e > a and (not lines[e - 1].strip() or lines[e - 1].strip().startswith("//")):
+                e -= 1
+            b = e
+        elif b is None:
+            limit = rows[k + 1][1] - 1 if k + 1 < len(rows) else len(lines)
+            b = limit
+            while b > a and (not lines[b - 1].strip() or lines[b - 1].strip().startswith("//") or lines[b - 1].strip() == "}" and b == limit and k + 1 == len(rows)):
+                b -= 1
+            if k + 1 == len(rows):
+                b = cs_end(lines, a - 1)
+        out.append((sym, a, b, d))
+    return out
+
+
+def scan(path):
+    lines = path.read_text(encoding="utf-8-sig").splitlines()
+    rows = []
+    for i, ln in enumerate(lines):
+        if path.suffix == ".cs":
+            m = CS_TYPE.match(ln)
+            if m:
+                rows.append((m.group(2), i + 1, i + 1 if ln.rstrip().endswith(";") else ("T", len(ln) - len(ln.lstrip())), comment_before(lines, i, ("//", "///"))))
+                continue
+            m = CS_MEMBER.match(ln)
+            if m and m.group(1) not in ("readonly", "new") and not ln.rstrip().endswith(";") and "=" not in ln.split("(")[0].replace("=>", ""):
+                rows.append(("  " + m.group(1), i + 1, None, comment_before(lines, i, ("//", "///"))))
+        else:
+            m = PY_DEF.match(ln)
+            if m and len(m.group(1)) <= 4:
+                name = ("  " if m.group(1) else "") + m.group(3)
+                rows.append((name, i + 1, py_end(lines, i, len(m.group(1))), comment_before(lines, i, ("#",))))
+    if path.suffix == ".cs":
+        rows = fix_ends(lines, rows)
+    return len(lines), rows
+
+
+def old_descriptions():
+    d = {}
+    if OUT.exists():
+        cur = None
+        for ln in OUT.read_text(encoding="utf-8").splitlines():
+            if ln.startswith("## "):
+                cur = ln[3:].split(" (")[0].strip()
+            elif ln.startswith("| `") and cur:
+                cells = [c.strip() for c in ln.strip("|").split("|")]
+                if len(cells) == 3 and cells[2]:
+                    d[(cur, cells[0].strip("`"))] = cells[2]
+    return d
+
+
+def main():
+    global ROOT, OUT, SOURCES
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("sources", nargs="+", help="directories to scan recursively for Python and C#")
+    ap.add_argument("--root", default=".")
+    ap.add_argument("--output", default="CODE_MAP.md")
+    ap.add_argument("--check", action="store_true")
+    args = ap.parse_args()
+    ROOT = Path(args.root).resolve()
+    OUT = Path(args.output).resolve()
+    SOURCES = [(d, pat) for d in args.sources for pat in ("**/*.py", "**/*.cs")]
+    old = old_descriptions()
+    out = ["# Code map", "",
+           "Generated by `python3 -I code_map.py`; descriptions you edit by hand are kept on regeneration. "
+           "Line ranges are as of generation; open only the range you need.", ""]
+    for d, pat in SOURCES:
+        for p in sorted((ROOT / d).glob(pat), key=lambda p: -p.stat().st_size):
+            rel = str(p.relative_to(ROOT))
+            n, rows = scan(p)
+            if not rows:
+                continue
+            out += [f"## {rel} ({n} lines)", "", "| symbol | lines | purpose |", "|---|---|---|"]
+            for sym, a, b, desc in rows:
+                key = sym.strip()
+                out.append(f"| `{sym}` | {a}-{b} | {old.get((rel, sym), desc)} |")
+            out.append("")
+    text = "\n".join(out) + "\n"
+    if "--check" in sys.argv:
+        sys.exit(0 if OUT.exists() and OUT.read_text(encoding="utf-8") == text else 1)
+    OUT.write_text(text, encoding="utf-8")
+    print(f"wrote {OUT}: {len(text.splitlines())} lines")
+
+
+if __name__ == "__main__":
+    main()

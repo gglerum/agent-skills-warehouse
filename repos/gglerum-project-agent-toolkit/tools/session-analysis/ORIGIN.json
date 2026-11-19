@@ -1,0 +1,24 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "scripts/session_cost.py",
+      "sha256": "41fac9d45bd89f73c26ea3c9354e2795344b055838a72ccd4fe2fce8c9d5b403"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "scripts/review_due.py",
+      "sha256": "b8211e2edf7889fdb641f5d1099e33fc7f6f0bc969d58f846c4db26df68d0c9a"
+    }
+  ],
+  "adaptations": [
+    "Replace project defaults with explicit transcript/project scope; no private transcripts included."
+  ],
+  "destination_hashes": {
+    "tools/session-analysis/review_due.py": "3d9c5a8b8577887224f5b0c9288accc581cf73cddd6e3abad80d9c0bb3259e08",
+    "tools/session-analysis/README.md": "9dfd7ac2d21bfc3f813647a6e4190f92a423465fa83da08c18e137f917335a9a",
+    "tools/session-analysis/session_cost.py": "44d78a8b5d3b5ba5fce21763b4ccd0c4147f03ad11285ed5325fc1c5d8f07f75"
+  }
+}

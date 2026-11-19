@@ -1,0 +1,16 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+      "path": ".claude/skills/ux-lab/SKILL.md",
+      "sha256": "0594041af3f200c08ac10d28119a4ff67ce102f25b3053870503ade986922ee1"
+    }
+  ],
+  "adaptations": [
+    "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+  ],
+  "destination_hashes": {
+    "skills/ux-validation/SKILL.md": "c2629978c4fd0b808d9cb73340aad6c4ee74ce963cd9291a062f853cbc75366d"
+  }
+}

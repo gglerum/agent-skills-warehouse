@@ -1,0 +1,14 @@
+{
+  "required": [
+    "README.md"
+  ],
+  "link_files": [
+    "README.md"
+  ],
+  "hash_globs": [
+    "AGENTS.md"
+  ],
+  "hashes": {},
+  "forbid": [],
+  "id_sets": []
+}

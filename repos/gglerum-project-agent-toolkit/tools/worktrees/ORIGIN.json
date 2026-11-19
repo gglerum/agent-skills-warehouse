@@ -1,0 +1,24 @@
+{
+  "origins": [
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "scripts/new_session.sh",
+      "sha256": "40f5d3eee2d9b1780b95b7ce74a2d9858e61a2fe4f605a19ef0c199a5176d920"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "scripts/closeout.py",
+      "sha256": "ed6a8b76269eb410cfa1930cbaa7773afb1b9a9b017f3130a57840785b0974e0"
+    }
+  ],
+  "adaptations": [
+    "Remove automatic global memory/settings copying; configurable local adapters; retain journals, locks, identity and cleanup checks.",
+    "Represent optional merge/closeout as a checklist; avoid automatic manifest refresh, branch assumptions and transcript access during worktree removal."
+  ],
+  "destination_hashes": {
+    "tools/worktrees/README.md": "81b3c5feb53ef25fffed13d62bb7a0d292c9d0725eb44b342cdfb5e1a6876c8d",
+    "tools/worktrees/new_session.sh": "cec421572c2379185f2a800bc6c356f15af364dac8a260c30d84a4d6cba7d1b9"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "origins": [
+    {
+      "project": "source-project-e",
+      "revision": "5dbf9a912028f0690ffb1815461a7fb3512c4dd4",
+      "path": "docker/status_check/app.py",
+      "sha256": "c1d9a5bf246bad15f3ce466bacce6655c43a366f07f2c6614a592f6621c88898"
+    },
+    {
+      "project": "source-project-e",
+      "revision": "5dbf9a912028f0690ffb1815461a7fb3512c4dd4",
+      "path": "docker/status_check/Dockerfile",
+      "sha256": "398a37fb4c4a0b7182bbe2b7d78d6991a9183c540dce918d24936edcd2d68fb3"
+    }
+  ],
+  "adaptations": [
+    "Expose pure status evaluation and bounded read-only Docker CLI snapshot; no web server or daemon socket mount bundled."
+  ],
+  "destination_hashes": {
+    "tools/container-status/README.md": "02a4690b39314fed03824cd5e08503784ffa298201181cef8d1372ef295a0a4d",
+    "tools/container-status/status.py": "c265ed0837f2443fa602f46b37f0133e65709337408f36a0e5920736bdb86292"
+  }
+}

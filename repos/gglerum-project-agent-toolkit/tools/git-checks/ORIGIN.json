@@ -1,0 +1,69 @@
+{
+  "origins": [
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "utils/workflow/check_staging.py",
+      "sha256": "75d77df29bd7325e6f3ea2a87e61fba1a17d6e8c761e46192ff9188e742e13a5"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "utils/workflow/select_changes.py",
+      "sha256": "07c7233cea72a67b107a346ccbf119336e149274498792240ec3434328edceb1"
+    },
+    {
+      "project": "source-project-i",
+      "revision": "8b8553730fcc49d7caf59c8ab656f34432b80db5",
+      "path": ".claude/skills/start/status.py",
+      "sha256": "8b983a47ef6f38db23ac87c8cca6efc79e1ca22d84edddd98a4765183bfd1266"
+    },
+    {
+      "project": "source-project-b",
+      "revision": "e1cd32e01e24e87c279dab916f0e450057ea9dc5",
+      "path": "template/utils/hooks/pre-commit",
+      "sha256": "4974d5b007805725725c1258b6a27dd837dc9f0c3425d7a4e1de60e80c407c5c"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "utils/workflow/check_helpers.py",
+      "sha256": "23db68dd8d06ecb432fd0a5d4b9b9a3a4f5a1f2ea6fbde7319c59eb55f160fee"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "utils/run_tool_on_diff.sh",
+      "sha256": "17fab50b96cf7b770d89a21ac0ac976518861a9291c7135222605754d180db2f"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "utils/hooks/checks.sh",
+      "sha256": "71c91457b15e29ccb4c2cc7703de460820793f30e8721c1b48f9edfc0eda6dde"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "utils/hooks/pre-commit",
+      "sha256": "4974d5b007805725725c1258b6a27dd837dc9f0c3425d7a4e1de60e80c407c5c"
+    }
+  ],
+  "adaptations": [
+    "Keep index/worktree identity protection; usable before any formatter.",
+    "Make selection rules configurable and fetching explicit; preserve deletion-aware NUL-delimited parsing.",
+    "Retain compact repository state concept; separate it from service calls and project migration/backlog parsers.",
+    "Replace shell pipeline/exit-file logging with direct subprocess exit propagation and explicit configured checks; do not activate hooks.",
+    "Validate nonempty configured check list and clean index inputs before running commands; no implicit source test suite paths.",
+    "Inspect supporting implementation/dependencies; retain general mechanism or lesson and deliberately omit product-specific execution/configuration."
+  ],
+  "destination_hashes": {
+    "tools/git-checks/README.md": "13841dcd4719555ba3364b06c7d961c4ade13a84c2d48933c8106e3758cee321",
+    "tools/git-checks/select_changes.py": "7f0da72cd022f463f925964eb4ac31eb24492812b0aaf902642451885e834a14",
+    "tools/git-checks/rules.example.json": "a4d23d78e661abbbc09ca1c686de6a301b2615b1da586768c694e6235f252395",
+    "tools/git-checks/status.py": "4c3a75e373e58491101a12e3e0e0f998128615113e493b82cf45d3bae541b25e",
+    "tools/git-checks/checks.py": "ffc5a9f1f63f5d99509cbb8e4ad3f52b1d8502abcce35621a047dcb70cce7aed",
+    "tools/git-checks/check_staging.py": "75d77df29bd7325e6f3ea2a87e61fba1a17d6e8c761e46192ff9188e742e13a5",
+    "tools/git-checks/checks.example.json": "76ad3ff1503a7c45d827a6981976fe2edfacaa3b33739b82ee6b8fc6939d8d5a"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+      "path": ".claude/skills/spec-traceability/SKILL.md",
+      "sha256": "3cedaa9244d2209858c02e07cc8d16bcbb58e40a2f493c1e9423ad9206acc74a"
+    }
+  ],
+  "adaptations": [
+    "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+  ],
+  "destination_hashes": {
+    "skills/spec-traceability/SKILL.md": "3d4d0b7f8b667d627fea31dd3c8a6efe5f21e139acd700ac26bcae24e778003c"
+  }
+}

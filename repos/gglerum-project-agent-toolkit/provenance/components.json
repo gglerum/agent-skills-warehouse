@@ -1,0 +1,1535 @@
+{
+  "tools/test-reports": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/failed_tests.py",
+        "sha256": "06be251f87a53fa8859e11d85d55896595974bd6f5d752b0c921bdd7b6643c71"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/coverage_for_files.py",
+        "sha256": "04a6e4cd2a9f68c3fa12cfd70d16f996c81b0a59de8ab17f066afef654a57144"
+      }
+    ],
+    "adaptations": [
+      "Retain current missing/malformed-report checks; document configurable rerun and language handling."
+    ],
+    "destination_hashes": {
+      "tools/test-reports/README.md": "721fb5c267d4993b8a5d99ed6496302b4d9fc32ffe8cdc5668b3563e8fc33c01",
+      "tools/test-reports/failed_tests.py": "aa1e339d260a02ba7dcb3112ed3e7de080f45ddb3c6ebbafd1fbb6eae26a80d9",
+      "tools/test-reports/coverage_for_files.py": "b6c31cdce7db01c0d0360f0e6fae566828a11da9e2bc2162e7f2705559f63351"
+    }
+  },
+  "tools/exact-patch": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/patch.py",
+        "sha256": "8a62730bd4843d6196459d4c34a72599f276c19f8e35271cff1cf006ff0f1ebf"
+      }
+    ],
+    "adaptations": [
+      "Keep exact-match prevalidation and per-file atomic writes; document that writes across files are not transactional."
+    ],
+    "destination_hashes": {
+      "tools/exact-patch/patch.py": "8a62730bd4843d6196459d4c34a72599f276c19f8e35271cff1cf006ff0f1ebf",
+      "tools/exact-patch/README.md": "081ef0e16887ba6172e079fa9ea10c0423bc58b9887321422faeafe8b48dcd49"
+    }
+  },
+  "tools/code-navigation": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/sect.py",
+        "sha256": "1fc772238c688180d63094874ac12245b9d3a277b78209a91b0588c7ae81896a"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/code_map.py",
+        "sha256": "3d2221dc9008efc65afc804021ed597b326735a2beb423adaf0dd4f309fb5e23"
+      }
+    ],
+    "adaptations": [
+      "Retain section/symbol logic; replace project globs and code-map destination with CLI configuration."
+    ],
+    "destination_hashes": {
+      "tools/code-navigation/README.md": "af74c34366c7a0636a320ffa156951ef1f0ef6d0656ebdb54dc164319c248981",
+      "tools/code-navigation/sect.py": "1fc772238c688180d63094874ac12245b9d3a277b78209a91b0588c7ae81896a",
+      "tools/code-navigation/code_map.py": "bd13d9d2ad8cabd846c15a25b2ab42159a8bd0f47c2ff9f0de6ff29cbda2e03e"
+    }
+  },
+  "tools/session-analysis": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/session_cost.py",
+        "sha256": "41fac9d45bd89f73c26ea3c9354e2795344b055838a72ccd4fe2fce8c9d5b403"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/review_due.py",
+        "sha256": "b8211e2edf7889fdb641f5d1099e33fc7f6f0bc969d58f846c4db26df68d0c9a"
+      }
+    ],
+    "adaptations": [
+      "Replace project defaults with explicit transcript/project scope; no private transcripts included."
+    ],
+    "destination_hashes": {
+      "tools/session-analysis/review_due.py": "3d9c5a8b8577887224f5b0c9288accc581cf73cddd6e3abad80d9c0bb3259e08",
+      "tools/session-analysis/README.md": "9dfd7ac2d21bfc3f813647a6e4190f92a423465fa83da08c18e137f917335a9a",
+      "tools/session-analysis/session_cost.py": "44d78a8b5d3b5ba5fce21763b4ccd0c4147f03ad11285ed5325fc1c5d8f07f75"
+    }
+  },
+  "tools/report-converters": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/composer_audit_to_sarif.py",
+        "sha256": "986e26e51e21f046a02996562a947be22a991bda600e97947a5ef62d3f16f8d0"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/security_to_sarif.py",
+        "sha256": "022b7464ef4577a1a42f3dbe4ffafd43b4e788cf443cacde508e231307b555f3"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/merge_sarif.py",
+        "sha256": "4a598ebf434bd68f40492b4d27c04f497f4d35c152133b1a750e01e698ebb8b5"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/convert_reports.py",
+        "sha256": "6af3ccf814bfdf165e27a5e8c411bb107c895157b409022fe5b286a83d725feb"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "utils/eslint_json_to_sarif.py",
+        "sha256": "e757d6812c9bd896bb0753d16958bdc2c08fbed6d91175141816070cce0e4cdc"
+      }
+    ],
+    "adaptations": [
+      "Reject missing/malformed input and schema errors before writing output; remove empty Composer stub.",
+      "Require a valid ESLint report; never convert missing input to clean results."
+    ],
+    "destination_hashes": {
+      "tools/report-converters/convert_reports.py": "2e93fa043b97953a8b3991e1bf89c27fec50824926dcfaebe9639fd311c6ee28",
+      "tools/report-converters/README.md": "274cd5c583bf52f1b12ed7be74605d56915c425cc2daeaa9b2ea9aef647bf0e3",
+      "tools/report-converters/eslint_json_to_sarif.py": "1d5b1b4dc47ece481caa1c15b8d2a01e63e23f9e4723148963ead19cb9acc6b2",
+      "tools/report-converters/security_to_sarif.py": "b38e09d96895f63fd085357f1ecb71a60ae256e50260396198da45856685e955",
+      "tools/report-converters/merge_sarif.py": "286af3cef669b7173738989bcf7286590f59eeb0d88e28adf51f4bfa849a772a",
+      "tools/report-converters/composer_audit_to_sarif.py": "11e0694ecf692eb5fa40615d8d0bdca21c4c6d4f8bb06e4eb71c6f483347e686",
+      "tools/report-converters/report_io.py": "1b21c2fe55cffda369ee7aed1fde2a53c30ee1c63690bfa6626978473a4e17d3"
+    }
+  },
+  "tools/service-readers": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/ci_status.py",
+        "sha256": "addab679924e1db55d36ec03bd816e2b39c538aff4363c03d9d9bea08a69e3e2"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/toolchain_config.py",
+        "sha256": "7e761e93528568860d704eed7c11e6acab757272bc519f671f518dedd694b9b8"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/tools/asana.py",
+        "sha256": "f3a333db5913cc80282d2fc6052fbfbc903ef4a7080033863fc6c6bbba4e78e3"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/tools/pr_review.py",
+        "sha256": "dfc54cf4fa8fcebac28226f0c2b9b0016f8ae54af1756f5d761759f5e6d31956"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/sonar_status.py",
+        "sha256": "bf47cd3972f052bbc9b8ad1354a5decea850ab7afc48e21b67a0ec94ba8af17b"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/dojo_findings.py",
+        "sha256": "88f61926695a4814089aa786ab57281b8688a6014637a9afb05b1795e361f0c3"
+      }
+    ],
+    "adaptations": [
+      "Configure repository, trusted Jenkins origin and context; optional Cloudflare; explicit sibling import for isolated Python.",
+      "Replace project ownership, repository, branch and CI policy with explicit configuration; retain bounded/readiness semantics.",
+      "Reimplement bounded transport and pagination without organization defaults or arbitrary response-body diagnostics."
+    ],
+    "destination_hashes": {
+      "tools/service-readers/sonar_status.py": "30db69e1c8ee2263e2bc60d068a2b9221394810273f393eebadaafb58f72714e",
+      "tools/service-readers/toolchain_config.py": "6dda92704635a7c301ebf76ea321e791b481801501313e9810637b72e7e64a08",
+      "tools/service-readers/asana.py": "622331d53d58ea43f070108018184402136c8c99d129383faf098f0c8fde4c69",
+      "tools/service-readers/workflow.example.conf": "2a0c7f54003b28038aee54e3521ab08b0d3646455515e60a78121913b924d373",
+      "tools/service-readers/dojo_findings.py": "c67fb603b9a9ff535cca7087b46961e5660005925e31c2aeec6a242f080db670",
+      "tools/service-readers/README.md": "8592bed712cbd76ea9f4c6992422ee49bf2f21c88bf02e57c23bc781853b0db6",
+      "tools/service-readers/ci_status.py": "ddaa66a2317a5a6af16d6358c9a203ab0909749f40f70287542a4bc32e79cf51",
+      "tools/service-readers/pr_review.py": "01b5838fe4186cda37b53503241894738122c895f862153395f84b363a41d818",
+      "tools/service-readers/http_reader.py": "8021e75ab60e54b196667e4f8d3039c86abcff22f56589391c89989e4a5f79b0"
+    }
+  },
+  "tools/git-checks": {
+    "origins": [
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "utils/workflow/check_staging.py",
+        "sha256": "75d77df29bd7325e6f3ea2a87e61fba1a17d6e8c761e46192ff9188e742e13a5"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "utils/workflow/select_changes.py",
+        "sha256": "07c7233cea72a67b107a346ccbf119336e149274498792240ec3434328edceb1"
+      },
+      {
+        "project": "source-project-i",
+        "revision": "8b8553730fcc49d7caf59c8ab656f34432b80db5",
+        "path": ".claude/skills/start/status.py",
+        "sha256": "8b983a47ef6f38db23ac87c8cca6efc79e1ca22d84edddd98a4765183bfd1266"
+      },
+      {
+        "project": "source-project-b",
+        "revision": "e1cd32e01e24e87c279dab916f0e450057ea9dc5",
+        "path": "template/utils/hooks/pre-commit",
+        "sha256": "4974d5b007805725725c1258b6a27dd837dc9f0c3425d7a4e1de60e80c407c5c"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "utils/workflow/check_helpers.py",
+        "sha256": "23db68dd8d06ecb432fd0a5d4b9b9a3a4f5a1f2ea6fbde7319c59eb55f160fee"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "utils/run_tool_on_diff.sh",
+        "sha256": "17fab50b96cf7b770d89a21ac0ac976518861a9291c7135222605754d180db2f"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "utils/hooks/checks.sh",
+        "sha256": "71c91457b15e29ccb4c2cc7703de460820793f30e8721c1b48f9edfc0eda6dde"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "utils/hooks/pre-commit",
+        "sha256": "4974d5b007805725725c1258b6a27dd837dc9f0c3425d7a4e1de60e80c407c5c"
+      }
+    ],
+    "adaptations": [
+      "Keep index/worktree identity protection; usable before any formatter.",
+      "Make selection rules configurable and fetching explicit; preserve deletion-aware NUL-delimited parsing.",
+      "Retain compact repository state concept; separate it from service calls and project migration/backlog parsers.",
+      "Replace shell pipeline/exit-file logging with direct subprocess exit propagation and explicit configured checks; do not activate hooks.",
+      "Validate nonempty configured check list and clean index inputs before running commands; no implicit source test suite paths.",
+      "Inspect supporting implementation/dependencies; retain general mechanism or lesson and deliberately omit product-specific execution/configuration."
+    ],
+    "destination_hashes": {
+      "tools/git-checks/README.md": "13841dcd4719555ba3364b06c7d961c4ade13a84c2d48933c8106e3758cee321",
+      "tools/git-checks/select_changes.py": "7f0da72cd022f463f925964eb4ac31eb24492812b0aaf902642451885e834a14",
+      "tools/git-checks/rules.example.json": "a4d23d78e661abbbc09ca1c686de6a301b2615b1da586768c694e6235f252395",
+      "tools/git-checks/status.py": "4c3a75e373e58491101a12e3e0e0f998128615113e493b82cf45d3bae541b25e",
+      "tools/git-checks/checks.py": "ffc5a9f1f63f5d99509cbb8e4ad3f52b1d8502abcce35621a047dcb70cce7aed",
+      "tools/git-checks/check_staging.py": "75d77df29bd7325e6f3ea2a87e61fba1a17d6e8c761e46192ff9188e742e13a5",
+      "tools/git-checks/checks.example.json": "76ad3ff1503a7c45d827a6981976fe2edfacaa3b33739b82ee6b8fc6939d8d5a"
+    }
+  },
+  "tools/worktrees": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/new_session.sh",
+        "sha256": "40f5d3eee2d9b1780b95b7ce74a2d9858e61a2fe4f605a19ef0c199a5176d920"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "scripts/closeout.py",
+        "sha256": "ed6a8b76269eb410cfa1930cbaa7773afb1b9a9b017f3130a57840785b0974e0"
+      }
+    ],
+    "adaptations": [
+      "Remove automatic global memory/settings copying; configurable local adapters; retain journals, locks, identity and cleanup checks.",
+      "Represent optional merge/closeout as a checklist; avoid automatic manifest refresh, branch assumptions and transcript access during worktree removal."
+    ],
+    "destination_hashes": {
+      "tools/worktrees/README.md": "81b3c5feb53ef25fffed13d62bb7a0d292c9d0725eb44b342cdfb5e1a6876c8d",
+      "tools/worktrees/new_session.sh": "cec421572c2379185f2a800bc6c356f15af364dac8a260c30d84a4d6cba7d1b9"
+    }
+  },
+  "tools/laravel-tests": {
+    "origins": [
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/session-database.py",
+        "sha256": "c1ebd38cf82f04e9dedaad5ce1bff47a9bd487ebba4b686dd007a56ee97281ec"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/hooks/related_tests.sh",
+        "sha256": "9bd2566fcae6b1c8e2a5dfed13293680ad01c8e4fb2a43292465986a20e1aff4"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/laravel/TestDatabaseFingerprint.php",
+        "sha256": "241305354602d546618ff2c702438d68a2c3dfdb6c2e4d349cf4c3a0e7acbdf5"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/laravel/warm-test-databases.sh",
+        "sha256": "ca98d985eccd064fded814685fad9f68a966d14f3aaaa858aa10809e4a97d14b"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/session-setup.sh",
+        "sha256": "5700e6dd290c1cd83b675ea766291d060127e3b1ca58eeb2bf6a6bdb200fbaba"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/session-teardown.sh",
+        "sha256": "624c11b27cd91fc6434a8aae62acd3e1bcf0f19e4d594bf87bb2d81c7b9033d7"
+      },
+      {
+        "project": "source-project-i",
+        "revision": "8b8553730fcc49d7caf59c8ab656f34432b80db5",
+        "path": ".claude/session-setup.sh",
+        "sha256": "21caf2a39d69c12c3b7e62bc2ace9c8c2a9d996ab31ecdade23ed317aadb244a"
+      },
+      {
+        "project": "source-project-i",
+        "revision": "8b8553730fcc49d7caf59c8ab656f34432b80db5",
+        "path": ".claude/session-teardown.sh",
+        "sha256": "9386e7bffd88a9d7a351c339a3272b12ce43d46e27db40b02a6992e17b63807e"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "tests/test_toolchain_config.py",
+        "sha256": "534e632d63d1618265a22b850c8101341f8b154434fc8390560c8cbe1c200067"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "tests/test_related_tests.py",
+        "sha256": "151746c312f98b3640b1928861aa6ee44291c3bd0d4a30d8b53f5665b80a132f"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "tests/test_warm_test_databases.py",
+        "sha256": "ff98e96efdeaec71acff6776d65115d6590c88ca9dc8c5ab72ec58219ca0b029"
+      }
+    ],
+    "adaptations": [
+      "Retain explicit ownership receipts and exact worker matching; document Linux/PHP/Laravel/MySQL adapter prerequisites.",
+      "Keep Laravel-specific behavior as an optional isolated component; no install or database operation during import.",
+      "Optional Laravel adapter; no key regeneration; preserve existing env; require isolated test bootstrap and dependency success.",
+      "Optional Laravel adapter; exact journalled resource cleanup only.",
+      "Compare source-project-i adapter with canonical optional Laravel adapter; keep per-project hooks rather than copying package IDs/database assumptions.",
+      "Compare teardown and retain exact resource ownership; avoid broad worker-prefix removal.",
+      "Inspect supporting implementation/dependencies; retain general mechanism or lesson and deliberately omit product-specific execution/configuration."
+    ],
+    "destination_hashes": {
+      "tools/laravel-tests/related_tests.sh": "be6e6d4b2e2128c118a85c9d1545b543ed109190c4baa86add568c3ef3bc326c",
+      "tools/laravel-tests/README.md": "143eb16344d9448115b6e2e08b446a88b8fbb04012f17cc7bafe3fb75cf10e6b",
+      "tools/laravel-tests/teardown.sh": "5240fba0005d9f7ac9be26fd3a4ea0dfefadccbe5361d1ee5fefd510e21101a6",
+      "tools/laravel-tests/TestDatabaseFingerprint.php": "241305354602d546618ff2c702438d68a2c3dfdb6c2e4d349cf4c3a0e7acbdf5",
+      "tools/laravel-tests/session_database.py": "22eaf956d9641069f5f1776ecae123a6b5d92a15b9bac8441c1db217174954c0",
+      "tools/laravel-tests/setup.sh": "4106f3a3797db71f0eb95bbb1bec9f3db58010c2a16a9b3a03e70bfa3268f36a",
+      "tools/laravel-tests/warm-test-databases.sh": "e5fcb22b9e85aaabd78347b485135928be516428a9ca0ff9a4d8946151c1e68e"
+    }
+  },
+  "tools/hooks": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "plugin/hooks/destructive_guard.py",
+        "sha256": "cf29c6008b8fbdb668b9ebba648ca804dbd4c35e65b26ed5be210357de9d2051"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "plugin/hooks/session_review_pointer.py",
+        "sha256": "d7f3cef26e029b2b878ed0ad2f7628ad8f9fd407003b664a2733bdec6ca10769"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/hooks/guard.py",
+        "sha256": "7ed21f13603b72b7444cc8d7b4fbe13e04c44b78d29f9940d6afa00742a2c536"
+      }
+    ],
+    "adaptations": [
+      "Optional Claude adapter only; no activation; document shell heuristic limitations and configurable review pointer.",
+      "Optional Claude privacy/command guard; no settings installation or whole-project communication policy copied."
+    ],
+    "destination_hashes": {
+      "tools/hooks/README.md": "f3c13ecc9bd7cf8769639860a2caa19941598d17509e7962e447530b6fc059dd",
+      "tools/hooks/session_review_pointer.py": "d7f3cef26e029b2b878ed0ad2f7628ad8f9fd407003b664a2733bdec6ca10769",
+      "tools/hooks/destructive_guard.py": "cf29c6008b8fbdb668b9ebba648ca804dbd4c35e65b26ed5be210357de9d2051",
+      "tools/hooks/dotenv_guard.py": "7ed21f13603b72b7444cc8d7b4fbe13e04c44b78d29f9940d6afa00742a2c536"
+    }
+  },
+  "tools/project-state": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/phase_check.py",
+        "sha256": "a92197ddbb559e806b224b57787d888bef2cdf3338690bda1042d344c0d932a2"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/state.py",
+        "sha256": "28f8965be3dd1a1e5d65b4fb4ba25eef9be355be0e3a06fcbbd7c03a45a1fa7f"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/whats_next.py",
+        "sha256": "219062d833df9b0491daeb41415d53b2dc7adefe128f40fe90d99fa833ed2e1c"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "docs/implementation/PROJECT_STATE.schema.json",
+        "sha256": "85ae0ca1fdd752bc48f67295477512f3f4de97ef44ff8c8b409ad4dfe2b31f1f"
+      }
+    ],
+    "adaptations": [
+      "Generalize state/gate validation and local status to configurable paths; separate optional board writes."
+    ],
+    "destination_hashes": {
+      "tools/project-state/README.md": "31543f2c5a9f8c1b2fee47e4c242c0174d77c86a67313a69f6fd572a6018ba29",
+      "tools/project-state/state.py": "41feba8cefd716b68f0e8a8775fd3609c7c5ffbaaef6ee8df0a2d8aa20295cbd",
+      "tools/project-state/PROJECT_STATE.example.json": "a77a27a37a062ae2a50bee6ee282b5ff9f16ff0288125ed77d15ebc07ff16ae2",
+      "tools/project-state/schema.json": "33d18659fe3af41bc51f2055484bf21702234bb1bfce61e85995ac3111cc4042"
+    }
+  },
+  "tools/project-checks": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/scaffold_manifest.py",
+        "sha256": "c8ef50721e22119b56fce7733aa3d3095560a04082a1d17bfc6bbad80dcaf675"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/spec_check.py",
+        "sha256": "7465846d9dbe39d760ffd4f5db67c9af192caacd97600afb66d19dbbfacf1543"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/scaffold_check.py",
+        "sha256": "aa9f49e4b96f7d7ca58fc0eb1d20b1d50854f2b713f3da47a5fab0bc9c764924"
+      }
+    ],
+    "adaptations": [
+      "Use explicit JSON check manifests instead of product paths; keep file/hash/link/spec ID checks independent of project runtime."
+    ],
+    "destination_hashes": {
+      "tools/project-checks/README.md": "408772668a6a830d5780594a695f3fae3eff78c4b89906339728767999709bef",
+      "tools/project-checks/check.py": "c75e823d16acee5ac754ab5903d85feacedccf845637a3f0afd74629c9221355",
+      "tools/project-checks/checks.example.json": "73b773c731ab5b0a7775c51d57d8ac7941d6365c54053aeb17e130f6a4e43b92"
+    }
+  },
+  "tools/conversation-index": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/split_conversation.py",
+        "sha256": "f3d0a16f027b808855d1051c76d29225c1c348bdab4895791cd6612c217767c2"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "scripts/merge_segments.py",
+        "sha256": "22688b57b3944d932c020464a6c29b8b73b2611bb378b05a2ec15cebb1053957"
+      }
+    ],
+    "adaptations": [
+      "Generalize export input/output and chunk size; preserve byte-exact slices, source hashes and decision quote checks; omit source conversations."
+    ],
+    "destination_hashes": {
+      "tools/conversation-index/README.md": "8ea9c20b2caab752e473166002fff8bf7ab90fac126eaa4b7398cdf4167da3b2",
+      "tools/conversation-index/index.py": "6bfa02656a57146755f967ef7a87ca77e1f0cd848a1e8a655598d1e6fb3cc472"
+    }
+  },
+  "tools/reference-library": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "tools/hig_query.py",
+        "sha256": "7a2849621010495b0f6f47578b5f39652a86d96ea4558653b1fc15c08ca81236"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "tools/hig_download.py",
+        "sha256": "0a7755994639bf06ad62217a7ef74ecd4c7c674164016e949defbd7e05f60712"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+        "path": "tools/nng_download.py",
+        "sha256": "321ea399e6015b861d0ffd79973a0802d4c0a53eb076c21457ae51dab5d7f9ca"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "tools/hig_download.py",
+        "sha256": "0a7755994639bf06ad62217a7ef74ecd4c7c674164016e949defbd7e05f60712"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "tools/nng_download.py",
+        "sha256": "321ea399e6015b861d0ffd79973a0802d4c0a53eb076c21457ae51dab5d7f9ca"
+      }
+    ],
+    "adaptations": [
+      "Generalize offline Markdown lookup and retain a separately selected HIG downloader; do not ship downloaded reference content.",
+      "Retain downloader code only; require explicit destination (and NN/g list); no downloaded reference content or network invocation during review."
+    ],
+    "destination_hashes": {
+      "tools/reference-library/query.py": "2c229d8fc08447dd5565f31865ca42c9f227ae6ba351f229578e91c88fb76b21",
+      "tools/reference-library/nng_download.py": "bbf8372ced2a3d703c84c9bbf6c1e7ee25feaa840466006ee68e333e4dd4a053",
+      "tools/reference-library/README.md": "01087ba730c0c250667cef48f82ddc78383341e0f4a26fbfe83248a30f5e3a76",
+      "tools/reference-library/hig_download.py": "5973db06dc21bc28cac6956e3ea99be899c06ce7ccdf2fe0ebc38e200b449a81"
+    }
+  },
+  "tools/php-quality-config": {
+    "origins": [
+      {
+        "project": "source-project-c",
+        "revision": "022077f08168be0be6dfaaa88fe401c4b092d824",
+        "path": "src/Project.php",
+        "sha256": "2b33dd713d18a8df006e3fac13f8460c9db6dc8614abb4cd287e9cc87283b4d6"
+      },
+      {
+        "project": "source-project-c",
+        "revision": "022077f08168be0be6dfaaa88fe401c4b092d824",
+        "path": "src/Scanner/ProjectScanner.php",
+        "sha256": "3df21ae5a625ff6cb0a2fcdb95638449451f9f808b710e63c2ea0087513d6e1d"
+      },
+      {
+        "project": "source-project-c",
+        "revision": "022077f08168be0be6dfaaa88fe401c4b092d824",
+        "path": "src/Config/ConfigGenerator.php",
+        "sha256": "42a9e9fbf8fb56924b0b2d92ba3fe40bb0447869255d46a4015578df455a845b"
+      },
+      {
+        "project": "source-project-c",
+        "revision": "022077f08168be0be6dfaaa88fe401c4b092d824",
+        "path": "LICENSE",
+        "sha256": "4f8ef8b87e04674977ea7f1aa1a17b3138918059f9d82c85ea4c9a8ea9228018"
+      }
+    ],
+    "adaptations": [
+      "Extract detector/config renderer only; fix list overrides; no installer/plugin/hook or Composer mutation."
+    ],
+    "destination_hashes": {
+      "tools/php-quality-config/README.md": "73a07d752a1be29aece0b2a68818315b4966bb5d55a70b2140d8fc8b67d49738",
+      "tools/php-quality-config/generate.php": "65409084ea59eb35ed88f67b641c5e478d4d2a5890d94470db118e9a5d6b83f5",
+      "tools/php-quality-config/LICENSE": "4f8ef8b87e04674977ea7f1aa1a17b3138918059f9d82c85ea4c9a8ea9228018",
+      "tools/php-quality-config/Project.php": "26f71c1ff0d63c2d57d6edd52309d0f3882eb21a7d01d5810f846066d3141109",
+      "tools/php-quality-config/Scanner/ProjectScanner.php": "3df21ae5a625ff6cb0a2fcdb95638449451f9f808b710e63c2ea0087513d6e1d",
+      "tools/php-quality-config/Config/ConfigGenerator.php": "42a9e9fbf8fb56924b0b2d92ba3fe40bb0447869255d46a4015578df455a845b"
+    }
+  },
+  "tools/container-status": {
+    "origins": [
+      {
+        "project": "source-project-e",
+        "revision": "5dbf9a912028f0690ffb1815461a7fb3512c4dd4",
+        "path": "docker/status_check/app.py",
+        "sha256": "c1d9a5bf246bad15f3ce466bacce6655c43a366f07f2c6614a592f6621c88898"
+      },
+      {
+        "project": "source-project-e",
+        "revision": "5dbf9a912028f0690ffb1815461a7fb3512c4dd4",
+        "path": "docker/status_check/Dockerfile",
+        "sha256": "398a37fb4c4a0b7182bbe2b7d78d6991a9183c540dce918d24936edcd2d68fb3"
+      }
+    ],
+    "adaptations": [
+      "Expose pure status evaluation and bounded read-only Docker CLI snapshot; no web server or daemon socket mount bundled."
+    ],
+    "destination_hashes": {
+      "tools/container-status/README.md": "02a4690b39314fed03824cd5e08503784ffa298201181cef8d1372ef295a0a4d",
+      "tools/container-status/status.py": "c265ed0837f2443fa602f46b37f0133e65709337408f36a0e5920736bdb86292"
+    }
+  },
+  "tools/deployment-receipt": {
+    "origins": [
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "docs/developer-workflow.md",
+        "sha256": "5b512fd43f7ec018ff2ed20976ea84ad9cfd38be98b1908cb6ba58ce6abf969d"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "docs/merge-policy.md",
+        "sha256": "208a5a498abfb39c3349abe4fcbad203a9b2e62a7fc6e4f56a77ccd907e65728"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "utils/workflow/tests/test_deployment_receipt_writer.py",
+        "sha256": "4ae1b9906eca0c90c52fce603d07ddba892bda3cf03991af0b2a9ed3e2896cc0"
+      }
+    ],
+    "adaptations": [
+      "Generalize receipt validation for exact revision, host, timestamp and deployment-specific health; omit dirty app writers."
+    ],
+    "destination_hashes": {
+      "tools/deployment-receipt/README.md": "c56420e84a8d2a6300d72b9f99871dc5c16542928685c07b5b3dceaf1ef9a49c",
+      "tools/deployment-receipt/receipt.py": "3992f5554de2358c4099295975ca0e8fba8fd9ab3fcf94d09d14bd6c47122e81"
+    }
+  },
+  "skills/session-start": {
+    "origins": [
+      {
+        "project": "source-project-b",
+        "revision": "e1cd32e01e24e87c279dab916f0e450057ea9dc5",
+        "path": "template/.claude/skills/start/SKILL.md",
+        "sha256": "a314bb2fa3d4e04e70c03e4901054990d854a201dbd69a4d42f725c32ac0079a"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "destination_hashes": {
+      "skills/session-start/SKILL.md": "5064035cd775e633dc816e641e9bd549fcfe76cdd250311636e474ea4eaef865"
+    }
+  },
+  "skills/session-finish": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "plugin/skills/finish/SKILL.md",
+        "sha256": "fabdfa102729979d433aa2e75ea15eb66d231e0d363f83982d3eeea6209e7d56"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "destination_hashes": {
+      "skills/session-finish/SKILL.md": "68fa5eca1d987e22d0cace25be276858b4c910fba54cc6c6955162e6f5d4ed0f"
+    }
+  },
+  "skills/dependency-change": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "plugin/skills/dependency-change/SKILL.md",
+        "sha256": "be14770e5c906958f5885c04d5d2944c35d37979e91aff342b7ed8568a81bf56"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "destination_hashes": {
+      "skills/dependency-change/SKILL.md": "0107a6d96f633716cbf56a693508a8a9fa99f826a6b64bd59cd5fc6eb571fab3"
+    }
+  },
+  "skills/session-review": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "plugin/skills/wrapup/SKILL.md",
+        "sha256": "b12d2009811d02d944704fd5ef9def77d96b096a6c5d025d08c064dae54a5e21"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "destination_hashes": {
+      "skills/session-review/SKILL.md": "e2c1ce308c3b62487b6f2f2bb62d1f9a41079ab097b38095fdea11869c68d175"
+    }
+  },
+  "skills/spec-traceability": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/spec-traceability/SKILL.md",
+        "sha256": "3cedaa9244d2209858c02e07cc8d16bcbb58e40a2f493c1e9423ad9206acc74a"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "destination_hashes": {
+      "skills/spec-traceability/SKILL.md": "3d4d0b7f8b667d627fea31dd3c8a6efe5f21e139acd700ac26bcae24e778003c"
+    }
+  },
+  "skills/project-conductor": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/project-conductor/SKILL.md",
+        "sha256": "9c98090d4d90e3a0628a6271cafec1631ab59e37aa33d3e53e5de39e62009a2e"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "destination_hashes": {
+      "skills/project-conductor/SKILL.md": "6852e30135a23c7d5dd76ac6c10b8a5c2e97eefd951cdc83b30e2d6c9948deeb"
+    }
+  },
+  "skills/agent-writing": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/writing-for-agents/SKILL.md",
+        "sha256": "6db951096211ef7c0f2f3f19317c863305cd31b9f19c82c3a1edf17bbb89174d"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "upstream": {
+      "source": "mattpocock/skills",
+      "license": "MIT; LICENSE-Matt-Pocock included",
+      "note": "Local adaptation explicitly attributed Matt in source, or matches an existing Matt workflow."
+    },
+    "destination_hashes": {
+      "skills/agent-writing/SKILL.md": "05ec48a6b11b3da8140997aca083fe3ae6f3e45f208be10dcf14b5cf9328e16a",
+      "skills/agent-writing/LICENSE-Matt-Pocock": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+    }
+  },
+  "skills/bounded-debugging": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/diagnosing-bugs/SKILL.md",
+        "sha256": "218a6adac5175d1fe094ab1e6cacc744b35d870e3c3b66ab70f33f702011925f"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/diagnosing-bugs/hitl-loop.template.sh",
+        "sha256": "c62bc5af22700f17c03cd848af8a16ea944b29a18c008212c9a8737ed2c06f2a"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy.",
+      "Retain human observation loop; no secrets or automated synthetic participant."
+    ],
+    "upstream": {
+      "source": "mattpocock/skills",
+      "license": "MIT; LICENSE-Matt-Pocock included",
+      "note": "Local adaptation explicitly attributed Matt in source, or matches an existing Matt workflow."
+    },
+    "destination_hashes": {
+      "skills/bounded-debugging/SKILL.md": "f0f77e58beeaccc14b12ae36afc9bd5a700141031045d9abf2f8b3b7b591d771",
+      "skills/bounded-debugging/hitl-loop.template.sh": "c62bc5af22700f17c03cd848af8a16ea944b29a18c008212c9a8737ed2c06f2a",
+      "skills/bounded-debugging/LICENSE-Matt-Pocock": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+    }
+  },
+  "skills/decision-map": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/wayfinder/SKILL.md",
+        "sha256": "e39efbe187b740634e6a627a1eba3f6658afd747c2ae4db4b59db3138237c59a"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "upstream": {
+      "source": "mattpocock/skills",
+      "license": "MIT; LICENSE-Matt-Pocock included",
+      "note": "Local adaptation explicitly attributed Matt in source, or matches an existing Matt workflow."
+    },
+    "destination_hashes": {
+      "skills/decision-map/SKILL.md": "7bfcdea7bcbe44b35682c6574cc7417d0100ec8da52060db459bb222bb01c4a4",
+      "skills/decision-map/LICENSE-Matt-Pocock": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+    }
+  },
+  "skills/decision-questionnaire": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/to-questionnaire/SKILL.md",
+        "sha256": "dc26f6da746264a8829206d19d333403c5514d69372d04ffde911ef640e72898"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "upstream": {
+      "source": "mattpocock/skills",
+      "license": "MIT; LICENSE-Matt-Pocock included",
+      "note": "Local adaptation explicitly attributed Matt in source, or matches an existing Matt workflow."
+    },
+    "destination_hashes": {
+      "skills/decision-questionnaire/questionnaire.md": "c34fc09a991124883d84d2c1409dded50fc2d10904adc302a8554f6597ed2217",
+      "skills/decision-questionnaire/SKILL.md": "3808f0e74ad608d05efc21207d49a7e58a0d2f2880e0f0d1ee720fab46a1aa54",
+      "skills/decision-questionnaire/LICENSE-Matt-Pocock": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+    }
+  },
+  "skills/clarify-explanation": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/wait-what/SKILL.md",
+        "sha256": "84b22a2c3a5cc51f61f12ef4e02d00f0b49ce352c9d0fd1b162462de5136517d"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "upstream": {
+      "source": "mattpocock/skills",
+      "license": "MIT; LICENSE-Matt-Pocock included",
+      "note": "Local adaptation explicitly attributed Matt in source, or matches an existing Matt workflow."
+    },
+    "destination_hashes": {
+      "skills/clarify-explanation/SKILL.md": "55a7dbebf50099f606d75037b38eae47c9dfbb00271256770d7c4290f18c1358",
+      "skills/clarify-explanation/LICENSE-Matt-Pocock": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+    }
+  },
+  "skills/evidence-review": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/code-review/SKILL.md",
+        "sha256": "dfb6a2204a608068eeba9c8e7d0f344b20194e406ea9d6c1386a51542cc311a3"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "upstream": {
+      "source": "mattpocock/skills",
+      "license": "MIT; LICENSE-Matt-Pocock included",
+      "note": "Local adaptation explicitly attributed Matt in source, or matches an existing Matt workflow."
+    },
+    "destination_hashes": {
+      "skills/evidence-review/SKILL.md": "dc3f9a562751853837b50b072ec882738dce98531d229172a456722baf4f8850",
+      "skills/evidence-review/LICENSE-Matt-Pocock": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+    }
+  },
+  "skills/fixture-evidence": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/hostile-fixtures/SKILL.md",
+        "sha256": "bdb7fa0075b09c1ef9581e111f5c8ebb418170429dc9323e2b783b954e1f5323"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "destination_hashes": {
+      "skills/fixture-evidence/SKILL.md": "3a29a22237c47e3f2deffcaea515b4412a24fa796d26969d310fc7f2510d9ec4"
+    }
+  },
+  "skills/ux-validation": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+        "path": ".claude/skills/ux-lab/SKILL.md",
+        "sha256": "0594041af3f200c08ac10d28119a4ff67ce102f25b3053870503ade986922ee1"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "destination_hashes": {
+      "skills/ux-validation/SKILL.md": "c2629978c4fd0b808d9cb73340aad6c4ee74ce963cd9291a062f853cbc75366d"
+    }
+  },
+  "skills/issue-session": {
+    "origins": [
+      {
+        "project": "source-project-h",
+        "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+        "path": ".claude/skills/work-issue/SKILL.md",
+        "sha256": "705197ed9770a5c144f19d0e0c7b3896c048280a52180762c9352af0e952d2b4"
+      }
+    ],
+    "adaptations": [
+      "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+    ],
+    "destination_hashes": {
+      "skills/issue-session/SKILL.md": "9bc2a8c1f20723d742d4520c1a14e15d7a1c7305145df58eefd390cd4d817b04"
+    }
+  },
+  "tools/lexical-search": {
+    "origins": [
+      {
+        "project": "source-project-a",
+        "revision": "892c2c3d9f6ad6ba4a749c312c3fa6a42cdebd82",
+        "path": "harness/fts.py",
+        "sha256": "4ca5898f3de8ccd72774c8769fc7e912f0fd558c63091ea8890a3e8dfef595ab"
+      },
+      {
+        "project": "source-project-a",
+        "revision": "892c2c3d9f6ad6ba4a749c312c3fa6a42cdebd82",
+        "path": "harness/r1_lexical.py",
+        "sha256": "00cfc9723dc68f7711beb8dc326f159feb52d94924fcc67fc53c3f6e19daf927"
+      }
+    ],
+    "adaptations": [
+      "Extract closed R1 lexical core, remove experiment/corpus dependencies and use stored FTS5 tables for older SQLite compatibility.",
+      "Include only STOP, split_ident and terms; omit corpus discovery, benchmark runners and model integrations."
+    ],
+    "destination_hashes": {
+      "tools/lexical-search/README.md": "8f625829cf3abe939c141f46257f9f95b5ffc28ade6a9acf047c4ab5f63286f6",
+      "tools/lexical-search/fts.py": "b6bd3ef10e3fdbf6f1fcee16a7d32d592ef223113d89afc6d0eaa51afa753a4f",
+      "tools/lexical-search/tokens.py": "f1be6a3477ca9ec8fcf35fcf033fc67a9b2ca1dbb5b6ee76780d20cce7b36842",
+      "tools/lexical-search/search.py": "7b76c144a2dd23db30fb034be984f0eb2b820673d3b741f87d7bbebf8b2d55b4"
+    }
+  },
+  "tools/issue-session": {
+    "origins": [
+      {
+        "project": "source-project-h",
+        "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+        "path": "utils/issue-brief.sh",
+        "sha256": "28d69a908ce38735a589a9d21a5304a12bafc77414ebeea6dfa44ef5f609cc4d"
+      },
+      {
+        "project": "source-project-h",
+        "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+        "path": "utils/board.sh",
+        "sha256": "e03f779bc23d0dfef863d87d74eb7484b91bf4b27868d7aa05587450ca519668"
+      },
+      {
+        "project": "source-project-h",
+        "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+        "path": "utils/devc.sh",
+        "sha256": "0c63da2aee11a000033844e7bdac5d38b65ab74c3e1b5f24d2eb0fcaf341aa44"
+      },
+      {
+        "project": "source-project-h",
+        "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+        "path": "utils/tools.sh",
+        "sha256": "3e95d812d1ec6d0286f09b8c85872f60e7a52861fe53e4d7653c998b580bd300"
+      },
+      {
+        "project": "source-project-h",
+        "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+        "path": "utils/sonar-local.sh",
+        "sha256": "033d57e584998c9ce6f9bd4ff067ffe09593f60728558417074b4b0174a80da4"
+      }
+    ],
+    "adaptations": [
+      "Generalize issue preflight; represent board writes/container/quality orchestration as explicit adapters and documented commands rather than hardcoded project scripts."
+    ],
+    "destination_hashes": {
+      "tools/issue-session/README.md": "f2da9581c29239a0f5df2085b3482f4b389319c297c88cca807aa95aa8f2e22c",
+      "tools/issue-session/issue_brief.py": "f10a6c94602e151da199f4a98006820ea6a0525ac78b00a1ffa890b67bd32b43"
+    }
+  },
+  "tools/ux-workspace": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "docs/implementation/ux01/design/templates/lab-patch.py",
+        "sha256": "6ca8172ea7011792b4341b912c15afb49541a7d60b49591d6c9a782276a28bc7"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "docs/implementation/ux01/design/templates/sync-shared.py",
+        "sha256": "f1ea3aa758f47daaeddfcfd3c1fbd0157bb3456e7e9bb5ce88abf3d0a0439c91"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "docs/implementation/ux01/design/templates/ux-check.py",
+        "sha256": "dbe919a94f002b7ad8549e5c2c97c79243a40d07055a398ce464ad7ffae815db"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "docs/implementation/ux01/design/templates/ux-record.py",
+        "sha256": "534a8254dc3a2557bf7404c2b25063869187456d93b1b31ad22de341f551b71f"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "docs/implementation/ux01/design/templates/lab-check.sh",
+        "sha256": "ab3d0c33d73b39ec98f578b4ad28f1e8cc0956ec11bc2fdd34c4ece00c10add4"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "docs/implementation/ux01/design/templates/lab-audit.js",
+        "sha256": "9816a93b3b0510190826a8d5590bdc182651b4e1ea2c602e8e4505a7e82c4670"
+      }
+    ],
+    "adaptations": [
+      "Select maintained consistency mechanisms separately from in-progress UX content; configure registry and shared markers; use exact-patch for edits and preserve human acceptance boundary."
+    ],
+    "destination_hashes": {
+      "tools/ux-workspace/README.md": "931f1ad4177f00d09e30023229d5ffc27f648e69096cafbcda80e9c1e1ac7315",
+      "tools/ux-workspace/labs.example.json": "da7e5bddc5933db11f1487811ad8e283912650637b01166e8969b994bb0fac1f",
+      "tools/ux-workspace/feedback.py": "4fb90d3d3b5c53b3f74f78b8896a3f831919e4dceb2ade7aefa39c04d5617932",
+      "tools/ux-workspace/check.py": "a55c4a0c0a6b5a5e0aa6e49982dc078ed77dc03251aecc0d23eeb41c5f5b91d7",
+      "tools/ux-workspace/sync.py": "ed4d06f0977dec8cb3564c8c6ef821eebbb29b0c156bbb5049f86f764dcc159b"
+    }
+  },
+  "tools/fixture-evidence": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "fixtures/generators/hpf/runner/evidence.py",
+        "sha256": "dc4853e2b0609326b9fab2e087611438cde92c74997e63cc46e6c24871acb771"
+      },
+      {
+        "project": "source-project-j",
+        "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+        "path": "docs/claude/workflow.md",
+        "sha256": "d22a92eb88c40b14be4d5fc1794e74ce69835cd101a209c96e9b4b001c90f11b"
+      }
+    ],
+    "adaptations": [
+      "Generalize expectation/observation record and fresh-run output; remove HPF schema/product dependencies.",
+      "Preserve positive-control and named-outcome proof discipline as a data validation helper."
+    ],
+    "destination_hashes": {
+      "tools/fixture-evidence/evidence.py": "fc352414e02cc8529a432610def3f3cf5af637460bd7422887f8be4150a1ad81",
+      "tools/fixture-evidence/README.md": "f8a4bcd8ad82f510afc54078fdb67e31e88f996c60a3e3c01d4f75fb72878577"
+    }
+  },
+  "references/proof-discipline": {
+    "origins": [
+      {
+        "project": "source-project-j",
+        "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+        "path": "docs/claude/workflow.md",
+        "sha256": "d22a92eb88c40b14be4d5fc1794e74ce69835cd101a209c96e9b4b001c90f11b"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "fixtures/generators/hpf/runner/evidence.py",
+        "sha256": "dc4853e2b0609326b9fab2e087611438cde92c74997e63cc46e6c24871acb771"
+      },
+      {
+        "project": "source-project-j",
+        "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+        "path": "ci/run_check.sh",
+        "sha256": "8ab84789ce47c5938ff2c03ae25c8879e909217eb05f04e38f245d63a40e2f74"
+      },
+      {
+        "project": "source-project-j",
+        "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+        "path": "ci/pre_commit.sh",
+        "sha256": "6788172fea22637a30274e2ccc6becffeb25d87950eaa2336551cd0d326ab277"
+      },
+      {
+        "project": "source-project-j",
+        "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+        "path": "ci/tool-versions.env",
+        "sha256": "6bb4515886bfd7adeec2e730e90ddc9cfcbf37230d8df8c492e65cd70142375d"
+      },
+      {
+        "project": "source-project-j",
+        "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+        "path": "ci/install_tools.sh",
+        "sha256": "96fd61e8331c709395228a05fe0d12212c75f558e4df8bdbbae4e2d4a6e366eb"
+      },
+      {
+        "project": "source-project-j",
+        "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+        "path": "vm/scripts/lib.sh",
+        "sha256": "feb75bb339ab2e3ebc3144c1d5a8a956082305b7c355e64b0f55afd5c0ccc9b6"
+      },
+      {
+        "project": "source-project-j",
+        "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+        "path": "vm/scripts/smoke-lib.sh",
+        "sha256": "a18abcce6100c35fdc8d8d86d52c50d38b2b3e1015fc7c68b1cbe697e777b4bf"
+      }
+    ],
+    "adaptations": [
+      "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims.",
+      "Inspect supporting implementation/dependencies; retain general mechanism or lesson and deliberately omit product-specific execution/configuration."
+    ],
+    "destination_hashes": {
+      "references/proof-discipline.md": "a611d7fd8891f32274df5c0bdc85e37ed4b28b7579f97f869c8aab5b23f6f230"
+    }
+  },
+  "references/benchmark-method": {
+    "origins": [
+      {
+        "project": "source-project-a",
+        "revision": "892c2c3d9f6ad6ba4a749c312c3fa6a42cdebd82",
+        "path": "docs/BENCHMARK_METHOD.md",
+        "sha256": "6663d82698f1c501658c03308cd2e873ca9b0d93d57640e0adb166c66b65eac7"
+      },
+      {
+        "project": "source-project-a",
+        "revision": "892c2c3d9f6ad6ba4a749c312c3fa6a42cdebd82",
+        "path": "docs/SCORING_AND_ACCEPTANCE.md",
+        "sha256": "efebda19a5d85aa81ada702f7cb39e5d111f0e49012e1030caf0bb61eff07022"
+      },
+      {
+        "project": "source-project-a",
+        "revision": "892c2c3d9f6ad6ba4a749c312c3fa6a42cdebd82",
+        "path": "experiments/EXPERIMENT_TEMPLATE.md",
+        "sha256": "e47f0764df91690a57bf268d6acbfa18e59553bab69c4c2f896a3f7fc356a73c"
+      }
+    ],
+    "adaptations": [
+      "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims."
+    ],
+    "destination_hashes": {
+      "references/benchmark-method.md": "e70cbb5659e043a32af49282b458e27bb43c24eee65dda0d86a198b6b4665185"
+    }
+  },
+  "references/worktree-adapters": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "README.md",
+        "sha256": "623c4458a9f7cd737c145966d5c7a02f375006c1c6b7493c7b0ad7da8bd2296c"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/session-setup.sh",
+        "sha256": "5700e6dd290c1cd83b675ea766291d060127e3b1ca58eeb2bf6a6bdb200fbaba"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/session-teardown.sh",
+        "sha256": "624c11b27cd91fc6434a8aae62acd3e1bcf0f19e4d594bf87bb2d81c7b9033d7"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "scripts/closeout.py",
+        "sha256": "ed6a8b76269eb410cfa1930cbaa7773afb1b9a9b017f3130a57840785b0974e0"
+      }
+    ],
+    "adaptations": [
+      "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims."
+    ],
+    "destination_hashes": {
+      "references/worktree-adapters.md": "4008bffd6f2bbda456335439bfbbfa2ffbd624b4f49917757ad68c8ad8ee969c"
+    }
+  },
+  "references/ci-operations": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "notes/ci-jenkins.md",
+        "sha256": "b26971ac0227cd99649c11c5be5a6e0ed65ad249828907a388af9d664dc3190e"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "notes/ci-pipeline-prs-and-infection.md",
+        "sha256": "bed1e49962d889dcc5af1c0417b0ac5cb7483e3e60b44861a6b1ef84f764d736"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "ci/README.md",
+        "sha256": "95a9f1cf71aa325d2d8e55d6b9d30294843d5f7c4332cd24615d8fec8378ff0d"
+      },
+      {
+        "project": "source-project-e",
+        "revision": "5dbf9a912028f0690ffb1815461a7fb3512c4dd4",
+        "path": "CLAUDE.md",
+        "sha256": "3a2b1f7625e691a08fb92e0f6dcf1d6fdad25330539e88778d0902f1f9661c09"
+      },
+      {
+        "project": "source-project-e",
+        "revision": "5dbf9a912028f0690ffb1815461a7fb3512c4dd4",
+        "path": "scripts/backup.sh",
+        "sha256": "ca3c80c9bc4b200a692557808b1c6ca5d11ec4a28c459d0dc55772eea81816eb"
+      },
+      {
+        "project": "source-project-e",
+        "revision": "5dbf9a912028f0690ffb1815461a7fb3512c4dd4",
+        "path": "scripts/restore.sh",
+        "sha256": "00d1e1f58b5d5b42a9a695934fd7aad0bb883c27bc20eb9c59e3a0fc64e7cf8c"
+      },
+      {
+        "project": "source-project-e",
+        "revision": "5dbf9a912028f0690ffb1815461a7fb3512c4dd4",
+        "path": "docker/agent-entrypoint.sh",
+        "sha256": "a320c00f81d2f79ea6fad6f87cf36530e77f50e8670c3dc24656be659eb3de68"
+      },
+      {
+        "project": "source-project-e",
+        "revision": "5dbf9a912028f0690ffb1815461a7fb3512c4dd4",
+        "path": "docker/sshd-hostkeys.conf",
+        "sha256": "866be4ea6c56ba772f3e1e1e534f038958e30523bfaa9789b8aa8c34ebe40e30"
+      }
+    ],
+    "adaptations": [
+      "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims.",
+      "Inspect supporting implementation/dependencies; retain general mechanism or lesson and deliberately omit product-specific execution/configuration."
+    ],
+    "destination_hashes": {
+      "references/ci-operations.md": "73e0eb79d50a61098807ced82f6d5c95e1e809cd5e2416488607d0a4d1cf0c02"
+    }
+  },
+  "references/plugin-hook-rollout": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "notes/claude-plugin-hooks.md",
+        "sha256": "6fbbb7794c29002760c123dcc4134a354f5db599ef670e43bcb20c8a3ab3315e"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "notes/precommit-hook.md",
+        "sha256": "a1dd339613a40a90a5b7aa7892dd82b0d1ab852fe0189c079997dfef9c364714"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/settings.json",
+        "sha256": "a259a2536bebc410f903db42cf372ec8436d713f8ce532ac6c0b9dcf9b962d15"
+      }
+    ],
+    "adaptations": [
+      "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims."
+    ],
+    "destination_hashes": {
+      "references/plugin-hook-rollout.md": "523c95fb4eb5a652c9a9cb9274c62d0bee8470602834a449f3706cb2c0c5eadc"
+    }
+  },
+  "references/deployment-evidence": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "notes/deployment-receipts.md",
+        "sha256": "8e0c01f567039f172efc47b8799382a21e2feab8b491089c3551c3a0386253e1"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "docs/merge-policy.md",
+        "sha256": "208a5a498abfb39c3349abe4fcbad203a9b2e62a7fc6e4f56a77ccd907e65728"
+      }
+    ],
+    "adaptations": [
+      "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims."
+    ],
+    "destination_hashes": {
+      "references/deployment-evidence.md": "dc99743bbb11e60aa2316fe0e0be71bbb211fafcad2291de389e34772319758d"
+    }
+  },
+  "references/php-quality-adoption": {
+    "origins": [
+      {
+        "project": "source-project-c",
+        "revision": "022077f08168be0be6dfaaa88fe401c4b092d824",
+        "path": "docs/roadmap.md",
+        "sha256": "0e73b48a3f389b5dc876356f2e05211cb5dd027f1fb4224396b0b53a21c220b6"
+      },
+      {
+        "project": "source-project-c",
+        "revision": "022077f08168be0be6dfaaa88fe401c4b092d824",
+        "path": "docs/architecture.md",
+        "sha256": "7002c9d8c748cc4b21fd7795877021c0d622fba94f3ffe2d706ecfa136b6877a"
+      },
+      {
+        "project": "source-project-h",
+        "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+        "path": "utils/hooks/pre-commit",
+        "sha256": "a22bba584903a99a766f13373e0fc786abb208a15ede764de2d59826fc7947ac"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "notes/psalm-7.md",
+        "sha256": "d50d4a576c1e667dd458ff86456b5377ccc61c02d21c15c88abd4605a29f0609"
+      }
+    ],
+    "adaptations": [
+      "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims."
+    ],
+    "destination_hashes": {
+      "references/php-quality-adoption.md": "dcf63659c8c9001adf215129c7d7bd83564033ee032645ffe3fcb2cc4b48aab3"
+    }
+  },
+  "references/authority-and-handoff": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": ".claude/rules/00-authority.md",
+        "sha256": "b9111b2783b2cdc703bf6f92bacc1fd2380ca747892a1b74bf5d43d9c601a603"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+        "path": "docs/implementation/HANDOFF_TEMPLATE.md",
+        "sha256": "c823ac97fe213b5846d8afc1bf62129f1543f3df8e2aa5e2e806cdb0dd3da011"
+      },
+      {
+        "project": "source-project-j",
+        "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+        "path": "docs/claude/workflow.md",
+        "sha256": "d22a92eb88c40b14be4d5fc1794e74ce69835cd101a209c96e9b4b001c90f11b"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+        "path": "scripts/dev",
+        "sha256": "47e99ca775a35f6bf71d53160e0a32b2ee08f73e3056d529199145d0897fc855"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+        "path": "scripts/verify",
+        "sha256": "6b62be10c25850cd9797ee827fbe161ac9f5276e74494f1d2dc1a51fe80fc54e"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+        "path": ".claude/hooks/stop-verify.sh",
+        "sha256": "ef58dbf7fffdd98705232ae44e7108e6191e08913c0ee43978e5cd7ceb45dfb0"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+        "path": ".claude/hooks/nudge-patch.sh",
+        "sha256": "19139e32d1ff82c67d48504e19d5a3fe0539b8dbd9c04342629fda38c39cac97"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+        "path": ".claude/hooks/protect-normative-specs.sh",
+        "sha256": "1c2f27cec641954a210837ee4d2359953b4b6f714aa2976264ac8bc036a8aaf1"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+        "path": ".claude/rules/50-orchestration.md",
+        "sha256": "6626d76964e188c05dfc8e80ecf167fcb6882f00dafc8fc6e5501eed3309381c"
+      }
+    ],
+    "adaptations": [
+      "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims.",
+      "Inspect supporting implementation/dependencies; retain general mechanism or lesson and deliberately omit product-specific execution/configuration."
+    ],
+    "destination_hashes": {
+      "references/authority-and-handoff.md": "fbb4d680f20f303dab03ca11e908d04cb3f7bb8267c201dc2ece41e79e7e59c5"
+    }
+  },
+  "tests": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "tests/test_ci_status.py",
+        "sha256": "88672b6b7beb26e33e7614fbe0435a9ab02de9889ed2c31c46caeeb5ad1c5cea"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "tests/test_report_helpers.py",
+        "sha256": "26018d14d113202cbfda0d8ded72829d7e917de3a18b7487118b0b2b00742ccf"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "tests/test_new_session.py",
+        "sha256": "f4d2c5bd78cc73cc535c8ccd8aa8be560820da33ad8881793e7b0404e4af027a"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "tests/test_test_db_fingerprint.py",
+        "sha256": "b4fb0f35c8e0b3d2b53dfd1862a93c141a67af5c5e1c93fe263af0c5fc2aa0c7"
+      },
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "tests/test_destructive_guard.py",
+        "sha256": "8d9112257d63bfefe0f9188588fd74b56b5280b73c6ba6d4553517f5594908d7"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": "utils/workflow/tests/test_session_database.py",
+        "sha256": "f2a9226e941caeda1278b3769d172081b24ee948608a623fa7181c25bfa7e900"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/tests/test_pr_review.py",
+        "sha256": "313c08654550aa0c7b37ad0d6edb344f769367298b126ec91e1cb1216ca71a30"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/tests/test_asana.py",
+        "sha256": "777fcc8cfbda799aea6ab50da4a16f2a6ad4ca7224d0daa459690a01fc5397a5"
+      },
+      {
+        "project": "source-project-f",
+        "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+        "path": ".claude/tests/test_guard.py",
+        "sha256": "6433cfa4b4d5c3de1a2c088bd4ab05b64de3fc1b240bd33b90d32b27945b7c1b"
+      },
+      {
+        "project": "source-project-g",
+        "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+        "path": "tests/scripts/test_patch.py",
+        "sha256": "3bcc23a6dd6f2b5d6453f63e7de7d326a7cb1ee6c3703bd5e2b82bf418f0b42e"
+      }
+    ],
+    "adaptations": [
+      "Retain observable regression scenarios with relocated paths, synthetic identities and explicit fixture configuration.",
+      "Retain pure approval/evaluation/API cases; replace project-specific applicability/transport tests with configurable-adapter cases.",
+      "Retain pagination/deadline/atomic-output tests; configure fixture ownership and mock the no-redirect transport.",
+      "Retain privacy guard regression scenarios with relocated fixture path.",
+      "Retain exact-patch failure and mode invariants in unittest cases; no pytest dependency."
+    ],
+    "destination_hashes": {
+      "tests/test_asana.py": "60a3f72551ec7e1b8c40e51fdd6e4d1c6d722ea3857b10bfa426e9ad54308a4a",
+      "tests/test_worktrees.py": "ca789287a2f88acf782fb82dc218c2bced56907b5a3030ca7ef617eb0b5b4125",
+      "tests/test_session_database.py": "a38b375071805e78a702fc5e7c1c463a2f48a8a05f9de82d1aa3821bba83b5fd",
+      "tests/test_pr_evaluation.py": "a6af1214d5244ad42a663d4a3fffe012f8b9eb30e16bf999a730ccf4ccf0fcbb",
+      "tests/test_ci_status.py": "025ead5b2728e706a9917074210be79ea95003099cc1787ed69036beab16bfbd",
+      "tests/test_portable_tools.py": "0a2332fec793b88cb0b6675edd79bf914c7778dc6101060f0f90473a37b6b34b",
+      "tests/test_db_fingerprint.py": "a4721ce122aa36fbc065980e6f59f30c47984262363ecd88ff375d2d61ea48aa",
+      "tests/test_report_helpers.py": "c2546aeb57b2cee1cc6f2641a02d0f2cad9d16daaba9d8225dcdb081537c724a",
+      "tests/test_dotenv_guard.py": "ffe7237dea2f50651479a3a19a106b1014cb5eb4abdc339c9a72a797e94adc26",
+      "tests/test_hooks.py": "772449c6a29cf5f427506028f16359e3f7f10ac0499bb6c5455668209ce51b42"
+    }
+  },
+  "skills/recoverable-sessions": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "plugin/skills/new-session/SKILL.md",
+        "sha256": "c8f19ac6a812d035029bcd3acdc5df1daa11bd27816258117104596aab101bf3"
+      }
+    ],
+    "adaptations": [
+      "Standalone session workflow; remove memory sharing and client-specific launch requirements; retain recovery and ownership checks."
+    ],
+    "destination_hashes": {
+      "skills/recoverable-sessions/SKILL.md": "0a559775d2fe700b4494f9bec19e6b97d3b4542071b77cbb4b706f2406cc8ceb"
+    }
+  },
+  "skills/dependency-upgrade": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "plugin/skills/update-deps/SKILL.md",
+        "sha256": "ceab99d6e184068295b2294426cb6bb861f1f9459ff5fb9f753ebf0207e62ab4"
+      }
+    ],
+    "adaptations": [
+      "Adapt routine upgrade sequence without blanket latest-only policy, Laravel assumptions, tracker writes or automatic shipping."
+    ],
+    "destination_hashes": {
+      "skills/dependency-upgrade/SKILL.md": "daf86b67d4cb91a0c661d3153d11513441d57eef5a0becdfbefc7191e2dbde90"
+    }
+  },
+  "tools/origin-drift": {
+    "origins": [
+      {
+        "project": "source-project-d",
+        "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+        "path": "scripts/toolchain_drift.sh",
+        "sha256": "f384c7aa5c972d3d0cd862e1d22eb58a74861931313cc20408b2d1b9ea49b1f3"
+      }
+    ],
+    "adaptations": [
+      "Replace remote subtree freshness check with explicit local file-hash comparison; no network, mutation or implicit personal-directory scan."
+    ],
+    "destination_hashes": {
+      "tools/origin-drift/README.md": "144420679fdc9e495a01b47f5efe639c7ad4aab27b92088c6e3c5d36bd238954",
+      "tools/origin-drift/check.py": "decaf6e0c35b7c43bc315311958a17e672cc35ff8e0171ed6121434730604afe"
+    }
+  },
+  "scripts": {
+    "origins": [
+      {
+        "project": "source-project-g",
+        "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+        "path": "scripts/scaffold_check.py",
+        "sha256": "aa9f49e4b96f7d7ca58fc0eb1d20b1d50854f2b713f3da47a5fab0bc9c764924"
+      }
+    ],
+    "adaptations": [
+      "Adapt source-collection validation: static syntax, links, component provenance and relocated CLI entrypoints; no project scaffold imposed."
+    ],
+    "destination_hashes": {
+      "scripts/check.py": "168c87a2943a1e5abce30afad29ac00979aadfc9e1d5e54e5bbd41ab40e76f77"
+    }
+  }
+}

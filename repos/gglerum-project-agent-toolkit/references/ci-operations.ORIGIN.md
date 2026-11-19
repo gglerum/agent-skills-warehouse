@@ -1,0 +1,21 @@
+# Component origin
+
+The owner authorized copying useful material from the selected projects. This records permission to copy and adapt; applicable third-party licences and notices remain in force. No blanket publication, service-access or source-project permission is imported.
+
+## Sources
+
+- source-project-d, revision `09b0dd7c91311e7a1f97725f13c6116a3853913f`, path `notes/ci-jenkins.md`, SHA-256 `b26971ac0227cd99649c11c5be5a6e0ed65ad249828907a388af9d664dc3190e`.
+- source-project-d, revision `09b0dd7c91311e7a1f97725f13c6116a3853913f`, path `notes/ci-pipeline-prs-and-infection.md`, SHA-256 `bed1e49962d889dcc5af1c0417b0ac5cb7483e3e60b44861a6b1ef84f764d736`.
+- source-project-d, revision `09b0dd7c91311e7a1f97725f13c6116a3853913f`, path `ci/README.md`, SHA-256 `95a9f1cf71aa325d2d8e55d6b9d30294843d5f7c4332cd24615d8fec8378ff0d`.
+- source-project-e, revision `5dbf9a912028f0690ffb1815461a7fb3512c4dd4`, path `CLAUDE.md`, SHA-256 `3a2b1f7625e691a08fb92e0f6dcf1d6fdad25330539e88778d0902f1f9661c09`.
+- source-project-e, revision `5dbf9a912028f0690ffb1815461a7fb3512c4dd4`, path `scripts/backup.sh`, SHA-256 `ca3c80c9bc4b200a692557808b1c6ca5d11ec4a28c459d0dc55772eea81816eb`.
+- source-project-e, revision `5dbf9a912028f0690ffb1815461a7fb3512c4dd4`, path `scripts/restore.sh`, SHA-256 `00d1e1f58b5d5b42a9a695934fd7aad0bb883c27bc20eb9c59e3a0fc64e7cf8c`.
+- source-project-e, revision `5dbf9a912028f0690ffb1815461a7fb3512c4dd4`, path `docker/agent-entrypoint.sh`, SHA-256 `a320c00f81d2f79ea6fad6f87cf36530e77f50e8670c3dc24656be659eb3de68`.
+- source-project-e, revision `5dbf9a912028f0690ffb1815461a7fb3512c4dd4`, path `docker/sshd-hostkeys.conf`, SHA-256 `866be4ea6c56ba772f3e1e1e534f038958e30523bfaa9789b8aa8c34ebe40e30`.
+
+## Adaptations
+
+- Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims.
+- Inspect supporting implementation/dependencies; retain general mechanism or lesson and deliberately omit product-specific execution/configuration.
+
+Keep this origin record and included licence files with the copied component. Exact source-file hashes distinguish working-copy material from a revision-only claim.

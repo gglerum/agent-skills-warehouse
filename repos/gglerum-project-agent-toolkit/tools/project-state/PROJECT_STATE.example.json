@@ -1,0 +1,7 @@
+{
+  "current_phase": "foundations",
+  "gates": [
+    {"id": "checks", "class": "AUTO", "status": "active", "depends_on": []},
+    {"id": "owner-review", "class": "HUMAN", "status": "queued", "depends_on": ["checks"]}
+  ]
+}

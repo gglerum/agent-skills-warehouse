@@ -1,0 +1,83 @@
+{
+  "origins": [
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "tests/test_ci_status.py",
+      "sha256": "88672b6b7beb26e33e7614fbe0435a9ab02de9889ed2c31c46caeeb5ad1c5cea"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "tests/test_report_helpers.py",
+      "sha256": "26018d14d113202cbfda0d8ded72829d7e917de3a18b7487118b0b2b00742ccf"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "tests/test_new_session.py",
+      "sha256": "f4d2c5bd78cc73cc535c8ccd8aa8be560820da33ad8881793e7b0404e4af027a"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "tests/test_test_db_fingerprint.py",
+      "sha256": "b4fb0f35c8e0b3d2b53dfd1862a93c141a67af5c5e1c93fe263af0c5fc2aa0c7"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "tests/test_destructive_guard.py",
+      "sha256": "8d9112257d63bfefe0f9188588fd74b56b5280b73c6ba6d4553517f5594908d7"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "utils/workflow/tests/test_session_database.py",
+      "sha256": "f2a9226e941caeda1278b3769d172081b24ee948608a623fa7181c25bfa7e900"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": ".claude/tests/test_pr_review.py",
+      "sha256": "313c08654550aa0c7b37ad0d6edb344f769367298b126ec91e1cb1216ca71a30"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": ".claude/tests/test_asana.py",
+      "sha256": "777fcc8cfbda799aea6ab50da4a16f2a6ad4ca7224d0daa459690a01fc5397a5"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": ".claude/tests/test_guard.py",
+      "sha256": "6433cfa4b4d5c3de1a2c088bd4ab05b64de3fc1b240bd33b90d32b27945b7c1b"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+      "path": "tests/scripts/test_patch.py",
+      "sha256": "3bcc23a6dd6f2b5d6453f63e7de7d326a7cb1ee6c3703bd5e2b82bf418f0b42e"
+    }
+  ],
+  "adaptations": [
+    "Retain observable regression scenarios with relocated paths, synthetic identities and explicit fixture configuration.",
+    "Retain pure approval/evaluation/API cases; replace project-specific applicability/transport tests with configurable-adapter cases.",
+    "Retain pagination/deadline/atomic-output tests; configure fixture ownership and mock the no-redirect transport.",
+    "Retain privacy guard regression scenarios with relocated fixture path.",
+    "Retain exact-patch failure and mode invariants in unittest cases; no pytest dependency."
+  ],
+  "destination_hashes": {
+    "tests/test_asana.py": "60a3f72551ec7e1b8c40e51fdd6e4d1c6d722ea3857b10bfa426e9ad54308a4a",
+    "tests/test_worktrees.py": "ca789287a2f88acf782fb82dc218c2bced56907b5a3030ca7ef617eb0b5b4125",
+    "tests/test_session_database.py": "a38b375071805e78a702fc5e7c1c463a2f48a8a05f9de82d1aa3821bba83b5fd",
+    "tests/test_pr_evaluation.py": "a6af1214d5244ad42a663d4a3fffe012f8b9eb30e16bf999a730ccf4ccf0fcbb",
+    "tests/test_ci_status.py": "025ead5b2728e706a9917074210be79ea95003099cc1787ed69036beab16bfbd",
+    "tests/test_portable_tools.py": "0a2332fec793b88cb0b6675edd79bf914c7778dc6101060f0f90473a37b6b34b",
+    "tests/test_db_fingerprint.py": "a4721ce122aa36fbc065980e6f59f30c47984262363ecd88ff375d2d61ea48aa",
+    "tests/test_report_helpers.py": "c2546aeb57b2cee1cc6f2641a02d0f2cad9d16daaba9d8225dcdb081537c724a",
+    "tests/test_dotenv_guard.py": "ffe7237dea2f50651479a3a19a106b1014cb5eb4abdc339c9a72a797e94adc26",
+    "tests/test_hooks.py": "772449c6a29cf5f427506028f16359e3f7f10ac0499bb6c5455668209ce51b42"
+  }
+}

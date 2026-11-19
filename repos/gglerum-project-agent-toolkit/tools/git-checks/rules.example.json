@@ -1,0 +1,6 @@
+{
+  "RUN_PYTHON": ["*.py", "pyproject.toml", "requirements*.txt"],
+  "RUN_PHP": ["*.php", "composer.json", "composer.lock"],
+  "RUN_FRONTEND": ["*.js", "*.ts", "*.vue", "package*.json"],
+  "RUN_WORKFLOW": [".agent-toolkit/*", ".claude/*", "utils/*", "Jenkinsfile*"]
+}

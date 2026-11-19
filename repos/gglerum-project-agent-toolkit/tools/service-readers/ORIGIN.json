@@ -1,0 +1,56 @@
+{
+  "origins": [
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "scripts/ci_status.py",
+      "sha256": "addab679924e1db55d36ec03bd816e2b39c538aff4363c03d9d9bea08a69e3e2"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "scripts/toolchain_config.py",
+      "sha256": "7e761e93528568860d704eed7c11e6acab757272bc519f671f518dedd694b9b8"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": ".claude/tools/asana.py",
+      "sha256": "f3a333db5913cc80282d2fc6052fbfbc903ef4a7080033863fc6c6bbba4e78e3"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": ".claude/tools/pr_review.py",
+      "sha256": "dfc54cf4fa8fcebac28226f0c2b9b0016f8ae54af1756f5d761759f5e6d31956"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "scripts/sonar_status.py",
+      "sha256": "bf47cd3972f052bbc9b8ad1354a5decea850ab7afc48e21b67a0ec94ba8af17b"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "scripts/dojo_findings.py",
+      "sha256": "88f61926695a4814089aa786ab57281b8688a6014637a9afb05b1795e361f0c3"
+    }
+  ],
+  "adaptations": [
+    "Configure repository, trusted Jenkins origin and context; optional Cloudflare; explicit sibling import for isolated Python.",
+    "Replace project ownership, repository, branch and CI policy with explicit configuration; retain bounded/readiness semantics.",
+    "Reimplement bounded transport and pagination without organization defaults or arbitrary response-body diagnostics."
+  ],
+  "destination_hashes": {
+    "tools/service-readers/sonar_status.py": "30db69e1c8ee2263e2bc60d068a2b9221394810273f393eebadaafb58f72714e",
+    "tools/service-readers/toolchain_config.py": "56df0c53a657840c062454165a3532d85103b8636f0088f21d7c942c623453dd",
+    "tools/service-readers/asana.py": "622331d53d58ea43f070108018184402136c8c99d129383faf098f0c8fde4c69",
+    "tools/service-readers/workflow.example.conf": "2a0c7f54003b28038aee54e3521ab08b0d3646455515e60a78121913b924d373",
+    "tools/service-readers/dojo_findings.py": "c67fb603b9a9ff535cca7087b46961e5660005925e31c2aeec6a242f080db670",
+    "tools/service-readers/README.md": "8592bed712cbd76ea9f4c6992422ee49bf2f21c88bf02e57c23bc781853b0db6",
+    "tools/service-readers/ci_status.py": "ddaa66a2317a5a6af16d6358c9a203ab0909749f40f70287542a4bc32e79cf51",
+    "tools/service-readers/pr_review.py": "01b5838fe4186cda37b53503241894738122c895f862153395f84b363a41d818",
+    "tools/service-readers/http_reader.py": "8021e75ab60e54b196667e4f8d3039c86abcff22f56589391c89989e4a5f79b0"
+  }
+}

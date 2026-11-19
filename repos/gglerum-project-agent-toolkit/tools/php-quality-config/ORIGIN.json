@@ -1,0 +1,39 @@
+{
+  "origins": [
+    {
+      "project": "source-project-c",
+      "revision": "022077f08168be0be6dfaaa88fe401c4b092d824",
+      "path": "src/Project.php",
+      "sha256": "2b33dd713d18a8df006e3fac13f8460c9db6dc8614abb4cd287e9cc87283b4d6"
+    },
+    {
+      "project": "source-project-c",
+      "revision": "022077f08168be0be6dfaaa88fe401c4b092d824",
+      "path": "src/Scanner/ProjectScanner.php",
+      "sha256": "3df21ae5a625ff6cb0a2fcdb95638449451f9f808b710e63c2ea0087513d6e1d"
+    },
+    {
+      "project": "source-project-c",
+      "revision": "022077f08168be0be6dfaaa88fe401c4b092d824",
+      "path": "src/Config/ConfigGenerator.php",
+      "sha256": "42a9e9fbf8fb56924b0b2d92ba3fe40bb0447869255d46a4015578df455a845b"
+    },
+    {
+      "project": "source-project-c",
+      "revision": "022077f08168be0be6dfaaa88fe401c4b092d824",
+      "path": "LICENSE",
+      "sha256": "4f8ef8b87e04674977ea7f1aa1a17b3138918059f9d82c85ea4c9a8ea9228018"
+    }
+  ],
+  "adaptations": [
+    "Extract detector/config renderer only; fix list overrides; no installer/plugin/hook or Composer mutation."
+  ],
+  "destination_hashes": {
+    "tools/php-quality-config/README.md": "73a07d752a1be29aece0b2a68818315b4966bb5d55a70b2140d8fc8b67d49738",
+    "tools/php-quality-config/generate.php": "65409084ea59eb35ed88f67b641c5e478d4d2a5890d94470db118e9a5d6b83f5",
+    "tools/php-quality-config/LICENSE": "4f8ef8b87e04674977ea7f1aa1a17b3138918059f9d82c85ea4c9a8ea9228018",
+    "tools/php-quality-config/Project.php": "26f71c1ff0d63c2d57d6edd52309d0f3882eb21a7d01d5810f846066d3141109",
+    "tools/php-quality-config/Scanner/ProjectScanner.php": "3df21ae5a625ff6cb0a2fcdb95638449451f9f808b710e63c2ea0087513d6e1d",
+    "tools/php-quality-config/Config/ConfigGenerator.php": "42a9e9fbf8fb56924b0b2d92ba3fe40bb0447869255d46a4015578df455a845b"
+  }
+}

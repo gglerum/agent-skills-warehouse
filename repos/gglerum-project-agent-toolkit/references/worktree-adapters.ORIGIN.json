@@ -1,0 +1,34 @@
+{
+  "origins": [
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "README.md",
+      "sha256": "623c4458a9f7cd737c145966d5c7a02f375006c1c6b7493c7b0ad7da8bd2296c"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": ".claude/session-setup.sh",
+      "sha256": "5700e6dd290c1cd83b675ea766291d060127e3b1ca58eeb2bf6a6bdb200fbaba"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": ".claude/session-teardown.sh",
+      "sha256": "624c11b27cd91fc6434a8aae62acd3e1bcf0f19e4d594bf87bb2d81c7b9033d7"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "scripts/closeout.py",
+      "sha256": "ed6a8b76269eb410cfa1930cbaa7773afb1b9a9b017f3130a57840785b0974e0"
+    }
+  ],
+  "adaptations": [
+    "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims."
+  ],
+  "destination_hashes": {
+    "references/worktree-adapters.md": "4008bffd6f2bbda456335439bfbbfa2ffbd624b4f49917757ad68c8ad8ee969c"
+  }
+}

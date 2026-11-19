@@ -1,0 +1,16 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+      "path": "scripts/scaffold_check.py",
+      "sha256": "aa9f49e4b96f7d7ca58fc0eb1d20b1d50854f2b713f3da47a5fab0bc9c764924"
+    }
+  ],
+  "adaptations": [
+    "Adapt source-collection validation: static syntax, links, component provenance and relocated CLI entrypoints; no project scaffold imposed."
+  ],
+  "destination_hashes": {
+    "scripts/check.py": "5c60bdb92bb3a00f45915d4855c14adbefa15dc77e6aa8a4bb27232e7585ef34"
+  }
+}

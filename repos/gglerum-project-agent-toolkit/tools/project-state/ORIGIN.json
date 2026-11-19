@@ -1,0 +1,37 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "scripts/phase_check.py",
+      "sha256": "a92197ddbb559e806b224b57787d888bef2cdf3338690bda1042d344c0d932a2"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "scripts/state.py",
+      "sha256": "28f8965be3dd1a1e5d65b4fb4ba25eef9be355be0e3a06fcbbd7c03a45a1fa7f"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "scripts/whats_next.py",
+      "sha256": "219062d833df9b0491daeb41415d53b2dc7adefe128f40fe90d99fa833ed2e1c"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "docs/implementation/PROJECT_STATE.schema.json",
+      "sha256": "85ae0ca1fdd752bc48f67295477512f3f4de97ef44ff8c8b409ad4dfe2b31f1f"
+    }
+  ],
+  "adaptations": [
+    "Generalize state/gate validation and local status to configurable paths; separate optional board writes."
+  ],
+  "destination_hashes": {
+    "tools/project-state/README.md": "31543f2c5a9f8c1b2fee47e4c242c0174d77c86a67313a69f6fd572a6018ba29",
+    "tools/project-state/state.py": "41feba8cefd716b68f0e8a8775fd3609c7c5ffbaaef6ee8df0a2d8aa20295cbd",
+    "tools/project-state/PROJECT_STATE.example.json": "a77a27a37a062ae2a50bee6ee282b5ff9f16ff0288125ed77d15ebc07ff16ae2",
+    "tools/project-state/schema.json": "33d18659fe3af41bc51f2055484bf21702234bb1bfce61e85995ac3111cc4042"
+  }
+}

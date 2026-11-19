@@ -1,0 +1,65 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": ".claude/rules/00-authority.md",
+      "sha256": "b9111b2783b2cdc703bf6f92bacc1fd2380ca747892a1b74bf5d43d9c601a603"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "docs/implementation/HANDOFF_TEMPLATE.md",
+      "sha256": "c823ac97fe213b5846d8afc1bf62129f1543f3df8e2aa5e2e806cdb0dd3da011"
+    },
+    {
+      "project": "source-project-j",
+      "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+      "path": "docs/claude/workflow.md",
+      "sha256": "d22a92eb88c40b14be4d5fc1794e74ce69835cd101a209c96e9b4b001c90f11b"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+      "path": "scripts/dev",
+      "sha256": "47e99ca775a35f6bf71d53160e0a32b2ee08f73e3056d529199145d0897fc855"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+      "path": "scripts/verify",
+      "sha256": "6b62be10c25850cd9797ee827fbe161ac9f5276e74494f1d2dc1a51fe80fc54e"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+      "path": ".claude/hooks/stop-verify.sh",
+      "sha256": "ef58dbf7fffdd98705232ae44e7108e6191e08913c0ee43978e5cd7ceb45dfb0"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+      "path": ".claude/hooks/nudge-patch.sh",
+      "sha256": "19139e32d1ff82c67d48504e19d5a3fe0539b8dbd9c04342629fda38c39cac97"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+      "path": ".claude/hooks/protect-normative-specs.sh",
+      "sha256": "1c2f27cec641954a210837ee4d2359953b4b6f714aa2976264ac8bc036a8aaf1"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c56e0ff537c3384e617b9be91683c437299f610f",
+      "path": ".claude/rules/50-orchestration.md",
+      "sha256": "6626d76964e188c05dfc8e80ecf167fcb6882f00dafc8fc6e5501eed3309381c"
+    }
+  ],
+  "adaptations": [
+    "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims.",
+    "Inspect supporting implementation/dependencies; retain general mechanism or lesson and deliberately omit product-specific execution/configuration."
+  ],
+  "destination_hashes": {
+    "references/authority-and-handoff.md": "fbb4d680f20f303dab03ca11e908d04cb3f7bb8267c201dc2ece41e79e7e59c5"
+  }
+}

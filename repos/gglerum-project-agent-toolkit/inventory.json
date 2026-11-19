@@ -1,0 +1,324 @@
+{
+  "schema": 1,
+  "review_date": "2026-11-11",
+  "owner_decisions": {
+    "scope": "All useful eligible material across all ten selected projects; reusable versions; copy permission granted.",
+    "plan": "Approved comprehensive fourth-source plan; local creation/initial commit/registration authorized.",
+    "updates": "Manual reviewed imports; no automatic sync or publication."
+  },
+  "sources": {
+    "source-project-a": {
+      "snapshot_revision": "892c2c3d9f6ad6ba4a749c312c3fa6a42cdebd82"
+    },
+    "source-project-b": {
+      "snapshot_revision": "e1cd32e01e24e87c279dab916f0e450057ea9dc5"
+    },
+    "source-project-c": {
+      "snapshot_revision": "022077f08168be0be6dfaaa88fe401c4b092d824"
+    },
+    "source-project-d": {
+      "snapshot_revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f"
+    },
+    "source-project-e": {
+      "snapshot_revision": "5dbf9a912028f0690ffb1815461a7fb3512c4dd4"
+    },
+    "source-project-f": {
+      "snapshot_revision": "f1286de441446ae9d87b3151d593181ebfd6cc06"
+    },
+    "source-project-g": {
+      "snapshot_revision": "c56e0ff537c3384e617b9be91683c437299f610f"
+    },
+    "source-project-h": {
+      "snapshot_revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283"
+    },
+    "source-project-i": {
+      "snapshot_revision": "8b8553730fcc49d7caf59c8ab656f34432b80db5"
+    },
+    "source-project-j": {
+      "snapshot_revision": "0ae769b57f5020f1ef3820f9464625f356618882"
+    }
+  },
+  "groups": [
+    {
+      "id": "P01",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/test-reports"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P02",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/test-reports"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P03",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/service-readers"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P04",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/service-readers"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P05",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/service-readers"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P06",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/service-readers"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P07",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/git-checks"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P08",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/deployment-receipt",
+        "references/deployment-evidence.md"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P09",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/report-converters"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P10",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/exact-patch"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P11",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/code-navigation"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P12",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/session-analysis",
+        "skills/session-review"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P13",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/conversation-index"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P14",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/project-state",
+        "skills/project-conductor"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P15",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/project-checks"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P16",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/ux-workspace",
+        "skills/ux-validation"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P17",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/reference-library"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P18",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/git-checks",
+        "skills/session-start"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P19",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/container-status"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P20",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/worktrees",
+        "tools/laravel-tests",
+        "skills/recoverable-sessions"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P21",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/laravel-tests"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "P22",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/php-quality-config",
+        "references/php-quality-adoption.md"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "W01",
+      "disposition": "retained",
+      "represented_by": [
+        "skills/session-start"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "W02",
+      "disposition": "retained",
+      "represented_by": [
+        "skills/session-finish",
+        "skills/dependency-change",
+        "skills/dependency-upgrade",
+        "skills/session-review"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "W03",
+      "disposition": "retained",
+      "represented_by": [
+        "tools/project-state",
+        "skills/spec-traceability",
+        "skills/project-conductor"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "W04",
+      "disposition": "retained",
+      "represented_by": [
+        "skills/agent-writing",
+        "skills/bounded-debugging",
+        "skills/decision-map",
+        "skills/decision-questionnaire",
+        "skills/clarify-explanation",
+        "skills/evidence-review",
+        "references/authority-and-handoff.md"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "W05",
+      "disposition": "excluded",
+      "represented_by": [],
+      "note": "Dropped: unmodified copy of an upstream package skill (Laravel Boost / package vendor); install from upstream instead."
+    },
+    {
+      "id": "W06",
+      "disposition": "retained",
+      "represented_by": [
+        "skills/issue-session",
+        "tools/issue-session"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "W07",
+      "disposition": "retained",
+      "represented_by": [
+        "references/proof-discipline.md",
+        "tools/fixture-evidence",
+        "skills/fixture-evidence"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    },
+    {
+      "id": "W08",
+      "disposition": "retained",
+      "represented_by": [
+        "references/ci-operations.md",
+        "references/plugin-hook-rollout.md",
+        "references/deployment-evidence.md",
+        "references/php-quality-adoption.md",
+        "tools/origin-drift"
+      ],
+      "note": "Reusable subset retained; file-level ledger records exclusions and alternatives."
+    }
+  ],
+  "limitations": [
+    "Static candidate and dependency review is not a behavioral agent evaluation.",
+    "Service tests use offline fixtures; no authenticated integrations or downloads ran.",
+    "ShellCheck unavailable; bash syntax and executable fixture tests used.",
+    "Source-specific product code and incomplete integrations remain withheld with reasons."
+  ],
+  "candidate_summary": {
+    "total": 828,
+    "by_disposition": {
+      "withheld": 139,
+      "retained": 131,
+      "represented": 314,
+      "excluded": 151,
+      "alternative": 93
+    },
+    "note": "File-level candidate records covered private source projects and are not published; group-level dispositions below remain."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "scripts/split_conversation.py",
+      "sha256": "f3d0a16f027b808855d1051c76d29225c1c348bdab4895791cd6612c217767c2"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "scripts/merge_segments.py",
+      "sha256": "22688b57b3944d932c020464a6c29b8b73b2611bb378b05a2ec15cebb1053957"
+    }
+  ],
+  "adaptations": [
+    "Generalize export input/output and chunk size; preserve byte-exact slices, source hashes and decision quote checks; omit source conversations."
+  ],
+  "destination_hashes": {
+    "tools/conversation-index/README.md": "8ea9c20b2caab752e473166002fff8bf7ab90fac126eaa4b7398cdf4167da3b2",
+    "tools/conversation-index/index.py": "6bfa02656a57146755f967ef7a87ca77e1f0cd848a1e8a655598d1e6fb3cc472"
+  }
+}

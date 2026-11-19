@@ -1,0 +1,23 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+      "path": ".claude/skills/to-questionnaire/SKILL.md",
+      "sha256": "dc26f6da746264a8829206d19d333403c5514d69372d04ffde911ef640e72898"
+    }
+  ],
+  "adaptations": [
+    "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+  ],
+  "upstream": {
+    "source": "mattpocock/skills",
+    "license": "MIT; LICENSE-Matt-Pocock included",
+    "note": "Local adaptation explicitly attributed Matt in source, or matches an existing Matt workflow."
+  },
+  "destination_hashes": {
+    "skills/decision-questionnaire/questionnaire.md": "c34fc09a991124883d84d2c1409dded50fc2d10904adc302a8554f6597ed2217",
+    "skills/decision-questionnaire/SKILL.md": "3808f0e74ad608d05efc21207d49a7e58a0d2f2880e0f0d1ee720fab46a1aa54",
+    "skills/decision-questionnaire/LICENSE-Matt-Pocock": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
+  }
+}

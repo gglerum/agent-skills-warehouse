@@ -1,0 +1,10 @@
+{
+  "labs": [
+    {
+      "file": "labs/example.html",
+      "acceptance": "labs/example-acceptance.md",
+      "tests": "labs/example.tests.js"
+    }
+  ],
+  "shared": []
+}

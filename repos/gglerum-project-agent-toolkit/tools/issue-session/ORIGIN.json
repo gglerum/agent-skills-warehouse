@@ -1,0 +1,41 @@
+{
+  "origins": [
+    {
+      "project": "source-project-h",
+      "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+      "path": "utils/issue-brief.sh",
+      "sha256": "28d69a908ce38735a589a9d21a5304a12bafc77414ebeea6dfa44ef5f609cc4d"
+    },
+    {
+      "project": "source-project-h",
+      "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+      "path": "utils/board.sh",
+      "sha256": "e03f779bc23d0dfef863d87d74eb7484b91bf4b27868d7aa05587450ca519668"
+    },
+    {
+      "project": "source-project-h",
+      "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+      "path": "utils/devc.sh",
+      "sha256": "0c63da2aee11a000033844e7bdac5d38b65ab74c3e1b5f24d2eb0fcaf341aa44"
+    },
+    {
+      "project": "source-project-h",
+      "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+      "path": "utils/tools.sh",
+      "sha256": "3e95d812d1ec6d0286f09b8c85872f60e7a52861fe53e4d7653c998b580bd300"
+    },
+    {
+      "project": "source-project-h",
+      "revision": "d6e39664ed52d2caf2121f68a5de1885e6a0f283",
+      "path": "utils/sonar-local.sh",
+      "sha256": "033d57e584998c9ce6f9bd4ff067ffe09593f60728558417074b4b0174a80da4"
+    }
+  ],
+  "adaptations": [
+    "Generalize issue preflight; represent board writes/container/quality orchestration as explicit adapters and documented commands rather than hardcoded project scripts."
+  ],
+  "destination_hashes": {
+    "tools/issue-session/README.md": "f2da9581c29239a0f5df2085b3482f4b389319c297c88cca807aa95aa8f2e22c",
+    "tools/issue-session/issue_brief.py": "f10a6c94602e151da199f4a98006820ea6a0525ac78b00a1ffa890b67bd32b43"
+  }
+}

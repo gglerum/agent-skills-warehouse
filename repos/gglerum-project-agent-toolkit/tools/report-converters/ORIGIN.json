@@ -1,0 +1,47 @@
+{
+  "origins": [
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "scripts/composer_audit_to_sarif.py",
+      "sha256": "986e26e51e21f046a02996562a947be22a991bda600e97947a5ef62d3f16f8d0"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "scripts/security_to_sarif.py",
+      "sha256": "022b7464ef4577a1a42f3dbe4ffafd43b4e788cf443cacde508e231307b555f3"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "scripts/merge_sarif.py",
+      "sha256": "4a598ebf434bd68f40492b4d27c04f497f4d35c152133b1a750e01e698ebb8b5"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "scripts/convert_reports.py",
+      "sha256": "6af3ccf814bfdf165e27a5e8c411bb107c895157b409022fe5b286a83d725feb"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "utils/eslint_json_to_sarif.py",
+      "sha256": "e757d6812c9bd896bb0753d16958bdc2c08fbed6d91175141816070cce0e4cdc"
+    }
+  ],
+  "adaptations": [
+    "Reject missing/malformed input and schema errors before writing output; remove empty Composer stub.",
+    "Require a valid ESLint report; never convert missing input to clean results."
+  ],
+  "destination_hashes": {
+    "tools/report-converters/convert_reports.py": "2e93fa043b97953a8b3991e1bf89c27fec50824926dcfaebe9639fd311c6ee28",
+    "tools/report-converters/README.md": "274cd5c583bf52f1b12ed7be74605d56915c425cc2daeaa9b2ea9aef647bf0e3",
+    "tools/report-converters/eslint_json_to_sarif.py": "1d5b1b4dc47ece481caa1c15b8d2a01e63e23f9e4723148963ead19cb9acc6b2",
+    "tools/report-converters/security_to_sarif.py": "b38e09d96895f63fd085357f1ecb71a60ae256e50260396198da45856685e955",
+    "tools/report-converters/merge_sarif.py": "286af3cef669b7173738989bcf7286590f59eeb0d88e28adf51f4bfa849a772a",
+    "tools/report-converters/composer_audit_to_sarif.py": "11e0694ecf692eb5fa40615d8d0bdca21c4c6d4f8bb06e4eb71c6f483347e686",
+    "tools/report-converters/report_io.py": "1b21c2fe55cffda369ee7aed1fde2a53c30ee1c63690bfa6626978473a4e17d3"
+  }
+}

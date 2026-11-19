@@ -1,0 +1,16 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+      "path": ".claude/skills/hostile-fixtures/SKILL.md",
+      "sha256": "bdb7fa0075b09c1ef9581e111f5c8ebb418170429dc9323e2b783b954e1f5323"
+    }
+  ],
+  "adaptations": [
+    "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+  ],
+  "destination_hashes": {
+    "skills/fixture-evidence/SKILL.md": "9cd34a30b9304705b910138886f16e20ac030dfbb0113e2b978b488cb441743d"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "tools/hig_query.py",
+      "sha256": "7a2849621010495b0f6f47578b5f39652a86d96ea4558653b1fc15c08ca81236"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "tools/hig_download.py",
+      "sha256": "0a7755994639bf06ad62217a7ef74ecd4c7c674164016e949defbd7e05f60712"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "tools/nng_download.py",
+      "sha256": "321ea399e6015b861d0ffd79973a0802d4c0a53eb076c21457ae51dab5d7f9ca"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "tools/hig_download.py",
+      "sha256": "0a7755994639bf06ad62217a7ef74ecd4c7c674164016e949defbd7e05f60712"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "tools/nng_download.py",
+      "sha256": "321ea399e6015b861d0ffd79973a0802d4c0a53eb076c21457ae51dab5d7f9ca"
+    }
+  ],
+  "adaptations": [
+    "Generalize offline Markdown lookup and retain a separately selected HIG downloader; do not ship downloaded reference content.",
+    "Retain downloader code only; require explicit destination (and NN/g list); no downloaded reference content or network invocation during review."
+  ],
+  "destination_hashes": {
+    "tools/reference-library/query.py": "2c229d8fc08447dd5565f31865ca42c9f227ae6ba351f229578e91c88fb76b21",
+    "tools/reference-library/nng_download.py": "bbf8372ced2a3d703c84c9bbf6c1e7ee25feaa840466006ee68e333e4dd4a053",
+    "tools/reference-library/README.md": "01087ba730c0c250667cef48f82ddc78383341e0f4a26fbfe83248a30f5e3a76",
+    "tools/reference-library/hig_download.py": "5973db06dc21bc28cac6956e3ea99be899c06ce7ccdf2fe0ebc38e200b449a81"
+  }
+}

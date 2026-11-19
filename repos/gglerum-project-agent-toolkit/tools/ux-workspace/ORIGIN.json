@@ -1,0 +1,50 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "docs/implementation/ux01/design/templates/lab-patch.py",
+      "sha256": "6ca8172ea7011792b4341b912c15afb49541a7d60b49591d6c9a782276a28bc7"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "docs/implementation/ux01/design/templates/sync-shared.py",
+      "sha256": "f1ea3aa758f47daaeddfcfd3c1fbd0157bb3456e7e9bb5ce88abf3d0a0439c91"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "docs/implementation/ux01/design/templates/ux-check.py",
+      "sha256": "dbe919a94f002b7ad8549e5c2c97c79243a40d07055a398ce464ad7ffae815db"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "docs/implementation/ux01/design/templates/ux-record.py",
+      "sha256": "534a8254dc3a2557bf7404c2b25063869187456d93b1b31ad22de341f551b71f"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "docs/implementation/ux01/design/templates/lab-check.sh",
+      "sha256": "ab3d0c33d73b39ec98f578b4ad28f1e8cc0956ec11bc2fdd34c4ece00c10add4"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "docs/implementation/ux01/design/templates/lab-audit.js",
+      "sha256": "9816a93b3b0510190826a8d5590bdc182651b4e1ea2c602e8e4505a7e82c4670"
+    }
+  ],
+  "adaptations": [
+    "Select maintained consistency mechanisms separately from in-progress UX content; configure registry and shared markers; use exact-patch for edits and preserve human acceptance boundary."
+  ],
+  "destination_hashes": {
+    "tools/ux-workspace/README.md": "931f1ad4177f00d09e30023229d5ffc27f648e69096cafbcda80e9c1e1ac7315",
+    "tools/ux-workspace/labs.example.json": "da7e5bddc5933db11f1487811ad8e283912650637b01166e8969b994bb0fac1f",
+    "tools/ux-workspace/feedback.py": "4fb90d3d3b5c53b3f74f78b8896a3f831919e4dceb2ade7aefa39c04d5617932",
+    "tools/ux-workspace/check.py": "a55c4a0c0a6b5a5e0aa6e49982dc078ed77dc03251aecc0d23eeb41c5f5b91d7",
+    "tools/ux-workspace/sync.py": "ed4d06f0977dec8cb3564c8c6ef821eebbb29b0c156bbb5049f86f764dcc159b"
+  }
+}

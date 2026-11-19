@@ -1,0 +1,7 @@
+# Third-party source checkouts. Not committed; fetched by scripts/fetch-repos.sh.
+# Format: <directory under repos/> <clone url> <pinned commit>
+# The pinned commit is the revision the warehouse review was recorded against.
+addyosmani-agent-skills https://github.com/addyosmani/agent-skills.git 301b02b12bff98e4688e6984af6556802322bbde
+cursor-plugins https://github.com/cursor/plugins.git 5866df557357d005b3c0c9d3da0d9e739b4bdde3
+dietrichgebert-ponytail https://github.com/DietrichGebert/ponytail.git 96608e078b2d5ea607c5c3b8b5a54d1c1fba6846
+mattpocock-skills https://github.com/mattpocock/skills.git 4ae2317ddb22b046e26455e4f9c9b3aaaf62212d

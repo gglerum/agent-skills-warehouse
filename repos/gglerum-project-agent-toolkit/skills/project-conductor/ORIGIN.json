@@ -1,0 +1,16 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "fa49183a5791a5a35f2450fd14e75ef4b26ea166",
+      "path": ".claude/skills/project-conductor/SKILL.md",
+      "sha256": "9c98090d4d90e3a0628a6271cafec1631ab59e37aa33d3e53e5de39e62009a2e"
+    }
+  ],
+  "adaptations": [
+    "Rewrite as a standalone reusable workflow, replacing product paths, permissions, tool assumptions and fixed model policy."
+  ],
+  "destination_hashes": {
+    "skills/project-conductor/SKILL.md": "6852e30135a23c7d5dd76ac6c10b8a5c2e97eefd951cdc83b30e2d6c9948deeb"
+  }
+}

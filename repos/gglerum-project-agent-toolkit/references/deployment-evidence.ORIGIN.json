@@ -1,0 +1,22 @@
+{
+  "origins": [
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "notes/deployment-receipts.md",
+      "sha256": "8e0c01f567039f172efc47b8799382a21e2feab8b491089c3551c3a0386253e1"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "docs/merge-policy.md",
+      "sha256": "208a5a498abfb39c3349abe4fcbad203a9b2e62a7fc6e4f56a77ccd907e65728"
+    }
+  ],
+  "adaptations": [
+    "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims."
+  ],
+  "destination_hashes": {
+    "references/deployment-evidence.md": "dc99743bbb11e60aa2316fe0e0be71bbb211fafcad2291de389e34772319758d"
+  }
+}

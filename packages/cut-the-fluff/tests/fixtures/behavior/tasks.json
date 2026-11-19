@@ -1,0 +1,33 @@
+[
+  {
+    "id": "local-checks",
+    "category": "normal",
+    "prompt": "Which exact local check command should I run?",
+    "required": [
+      "python3 -B -m unittest discover -s checks -p \"check_*.py\""
+    ]
+  },
+  {
+    "id": "ledger-validation",
+    "category": "routed_reference",
+    "prompt": "A ledger CSV repeats one account and currency pair. What should happen before saving?",
+    "required": [
+      "reject duplicate account/currency",
+      "validate complete input before writes",
+      "preserve original"
+    ]
+  },
+  {
+    "id": "release-recovery",
+    "category": "rare_essential",
+    "prompt": "A release failed. Describe recovery and its approval boundary.",
+    "required": [
+      "stop rollout",
+      "last signed receipt",
+      "approval of exact target before restore",
+      "local health checks",
+      "preserve evidence",
+      "retain signature checks"
+    ]
+  }
+]

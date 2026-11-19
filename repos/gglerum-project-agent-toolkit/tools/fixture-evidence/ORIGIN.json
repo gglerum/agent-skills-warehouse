@@ -1,0 +1,24 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "07c83758af4cbed844709585078b0b7dd0389ca2",
+      "path": "fixtures/generators/hpf/runner/evidence.py",
+      "sha256": "dc4853e2b0609326b9fab2e087611438cde92c74997e63cc46e6c24871acb771"
+    },
+    {
+      "project": "source-project-j",
+      "revision": "0ae769b57f5020f1ef3820f9464625f356618882",
+      "path": "docs/claude/workflow.md",
+      "sha256": "d22a92eb88c40b14be4d5fc1794e74ce69835cd101a209c96e9b4b001c90f11b"
+    }
+  ],
+  "adaptations": [
+    "Generalize expectation/observation record and fresh-run output; remove HPF schema/product dependencies.",
+    "Preserve positive-control and named-outcome proof discipline as a data validation helper."
+  ],
+  "destination_hashes": {
+    "tools/fixture-evidence/evidence.py": "fc352414e02cc8529a432610def3f3cf5af637460bd7422887f8be4150a1ad81",
+    "tools/fixture-evidence/README.md": "f8a4bcd8ad82f510afc54078fdb67e31e88f996c60a3e3c01d4f75fb72878577"
+  }
+}

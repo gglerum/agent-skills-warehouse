@@ -1,0 +1,17 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "scripts/patch.py",
+      "sha256": "8a62730bd4843d6196459d4c34a72599f276c19f8e35271cff1cf006ff0f1ebf"
+    }
+  ],
+  "adaptations": [
+    "Keep exact-match prevalidation and per-file atomic writes; document that writes across files are not transactional."
+  ],
+  "destination_hashes": {
+    "tools/exact-patch/patch.py": "8a62730bd4843d6196459d4c34a72599f276c19f8e35271cff1cf006ff0f1ebf",
+    "tools/exact-patch/README.md": "081ef0e16887ba6172e079fa9ea10c0423bc58b9887321422faeafe8b48dcd49"
+  }
+}

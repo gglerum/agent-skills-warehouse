@@ -1,0 +1,28 @@
+{
+  "origins": [
+    {
+      "project": "source-project-a",
+      "revision": "892c2c3d9f6ad6ba4a749c312c3fa6a42cdebd82",
+      "path": "docs/BENCHMARK_METHOD.md",
+      "sha256": "6663d82698f1c501658c03308cd2e873ca9b0d93d57640e0adb166c66b65eac7"
+    },
+    {
+      "project": "source-project-a",
+      "revision": "892c2c3d9f6ad6ba4a749c312c3fa6a42cdebd82",
+      "path": "docs/SCORING_AND_ACCEPTANCE.md",
+      "sha256": "efebda19a5d85aa81ada702f7cb39e5d111f0e49012e1030caf0bb61eff07022"
+    },
+    {
+      "project": "source-project-a",
+      "revision": "892c2c3d9f6ad6ba4a749c312c3fa6a42cdebd82",
+      "path": "experiments/EXPERIMENT_TEMPLATE.md",
+      "sha256": "e47f0764df91690a57bf268d6acbfa18e59553bab69c4c2f896a3f7fc356a73c"
+    }
+  ],
+  "adaptations": [
+    "Extract general, maintained operational lessons; remove private endpoints, IDs, product rules and obsolete version claims."
+  ],
+  "destination_hashes": {
+    "references/benchmark-method.md": "e70cbb5659e043a32af49282b458e27bb43c24eee65dda0d86a198b6b4665185"
+  }
+}

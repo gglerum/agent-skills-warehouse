@@ -1,0 +1,29 @@
+{
+  "origins": [
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "docs/developer-workflow.md",
+      "sha256": "5b512fd43f7ec018ff2ed20976ea84ad9cfd38be98b1908cb6ba58ce6abf969d"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "docs/merge-policy.md",
+      "sha256": "208a5a498abfb39c3349abe4fcbad203a9b2e62a7fc6e4f56a77ccd907e65728"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": "utils/workflow/tests/test_deployment_receipt_writer.py",
+      "sha256": "4ae1b9906eca0c90c52fce603d07ddba892bda3cf03991af0b2a9ed3e2896cc0"
+    }
+  ],
+  "adaptations": [
+    "Generalize receipt validation for exact revision, host, timestamp and deployment-specific health; omit dirty app writers."
+  ],
+  "destination_hashes": {
+    "tools/deployment-receipt/README.md": "c56420e84a8d2a6300d72b9f99871dc5c16542928685c07b5b3dceaf1ef9a49c",
+    "tools/deployment-receipt/receipt.py": "3992f5554de2358c4099295975ca0e8fba8fd9ab3fcf94d09d14bd6c47122e81"
+  }
+}

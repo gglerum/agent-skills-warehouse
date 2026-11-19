@@ -1,0 +1,5 @@
+{
+  "steps": [
+    {"args": ["python3", "-m", "unittest", "discover", "-s", "tests"], "globs": ["*.py"], "timeout": 300}
+  ]
+}

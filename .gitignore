@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+
+# Third-party checkouts are fetched by scripts/fetch-repos.sh (see repos.lock)
+/repos/addyosmani-agent-skills/
+/repos/cursor-plugins/
+/repos/dietrichgebert-ponytail/
+/repos/mattpocock-skills/
+
+# Local maintainer notes (development history, trials, private-source inventories); never published
+/reviews/

@@ -1,0 +1,24 @@
+{
+  "origins": [
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "scripts/sect.py",
+      "sha256": "1fc772238c688180d63094874ac12245b9d3a277b78209a91b0588c7ae81896a"
+    },
+    {
+      "project": "source-project-g",
+      "revision": "c3a72dc3d5bcf264c13568d01d5d285c70db4042",
+      "path": "scripts/code_map.py",
+      "sha256": "3d2221dc9008efc65afc804021ed597b326735a2beb423adaf0dd4f309fb5e23"
+    }
+  ],
+  "adaptations": [
+    "Retain section/symbol logic; replace project globs and code-map destination with CLI configuration."
+  ],
+  "destination_hashes": {
+    "tools/code-navigation/README.md": "efd1c8f1170cba4daf2f3a682b0b5485dc8bf329996d11a737ab20742908f934",
+    "tools/code-navigation/sect.py": "1fc772238c688180d63094874ac12245b9d3a277b78209a91b0588c7ae81896a",
+    "tools/code-navigation/code_map.py": "bd13d9d2ad8cabd846c15a25b2ab42159a8bd0f47c2ff9f0de6ff29cbda2e03e"
+  }
+}

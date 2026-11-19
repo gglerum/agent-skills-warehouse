@@ -1,0 +1,32 @@
+{
+  "origins": [
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "plugin/hooks/destructive_guard.py",
+      "sha256": "cf29c6008b8fbdb668b9ebba648ca804dbd4c35e65b26ed5be210357de9d2051"
+    },
+    {
+      "project": "source-project-d",
+      "revision": "09b0dd7c91311e7a1f97725f13c6116a3853913f",
+      "path": "plugin/hooks/session_review_pointer.py",
+      "sha256": "d7f3cef26e029b2b878ed0ad2f7628ad8f9fd407003b664a2733bdec6ca10769"
+    },
+    {
+      "project": "source-project-f",
+      "revision": "f1286de441446ae9d87b3151d593181ebfd6cc06",
+      "path": ".claude/hooks/guard.py",
+      "sha256": "7ed21f13603b72b7444cc8d7b4fbe13e04c44b78d29f9940d6afa00742a2c536"
+    }
+  ],
+  "adaptations": [
+    "Optional Claude adapter only; no activation; document shell heuristic limitations and configurable review pointer.",
+    "Optional Claude privacy/command guard; no settings installation or whole-project communication policy copied."
+  ],
+  "destination_hashes": {
+    "tools/hooks/README.md": "f3c13ecc9bd7cf8769639860a2caa19941598d17509e7962e447530b6fc059dd",
+    "tools/hooks/session_review_pointer.py": "d7f3cef26e029b2b878ed0ad2f7628ad8f9fd407003b664a2733bdec6ca10769",
+    "tools/hooks/destructive_guard.py": "cf29c6008b8fbdb668b9ebba648ca804dbd4c35e65b26ed5be210357de9d2051",
+    "tools/hooks/dotenv_guard.py": "7ed21f13603b72b7444cc8d7b4fbe13e04c44b78d29f9940d6afa00742a2c536"
+  }
+}
